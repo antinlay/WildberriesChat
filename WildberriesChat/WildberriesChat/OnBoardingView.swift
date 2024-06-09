@@ -11,7 +11,7 @@ struct OnBoardingView: View {
     @State private var isPresented = false
     
     var body: some View {
-        NavigationStack {
+        VStack {
             VStack {
                 Image(.illustration)
                     .imageScale(.large)
@@ -29,23 +29,22 @@ struct OnBoardingView: View {
                 Button("Пользовательское соглашение") {
                     isPresented = true
                 }
-                .font(.body)
+                .font(.system(size: 14, weight: .semibold))
                 .foregroundStyle(.neutral)
                 .sheet(isPresented: $isPresented, content: {
                     UserAgreementView()
                         .presentationBackground(.thinMaterial)
                 })
                 
-                Button("Начать общаться") {
-//                    NavigationLink("", destination: UserAgreementView())
-                }
-                .font(.system(size: 16, weight: .semibold))
-                .frame(maxWidth: .infinity)
-                .frame(height: 52)
-                .background(.accent)
-                .clipShape(.capsule)
-                .padding(EdgeInsets(top: 12, leading: 6, bottom: 12, trailing: 6))
-                .foregroundStyle(.white)
+                NavigationLink("Начать общаться", destination: UserAgreementView())
+                    .font(.system(size: 16, weight: .semibold))
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 52)
+                    .background(.accent)
+                    .clipShape(.capsule)
+                    .padding(EdgeInsets(top: 12, leading: 6, bottom: 12, trailing: 6))
+                    .foregroundStyle(.white)
+                
             }
             .padding()
         }
@@ -55,3 +54,4 @@ struct OnBoardingView: View {
 #Preview {
     OnBoardingView()
 }
+
