@@ -13,6 +13,10 @@
 		5C515DE32C11322600EFDB9C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C515DE22C11322600EFDB9C /* Preview Assets.xcassets */; };
 		5C515DEA2C14959500EFDB9C /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DE92C14959500EFDB9C /* OnBoardingView.swift */; };
 		5C515DEC2C14A58900EFDB9C /* UserAgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DEB2C14A58900EFDB9C /* UserAgreementView.swift */; };
+		5C8F59002C18A3DA004DA54D /* FontStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F58FF2C18A3DA004DA54D /* FontStyles.swift */; };
+		5C8F59022C18AB86004DA54D /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F59012C18AB86004DA54D /* ButtonStyles.swift */; };
+		5C8F59042C1A1B08004DA54D /* PrivacyAndTermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F59032C1A1B08004DA54D /* PrivacyAndTermsView.swift */; };
+		5C8F59062C1A1BEE004DA54D /* IllustrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F59052C1A1BEE004DA54D /* IllustrationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,10 @@
 		5C515DE22C11322600EFDB9C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5C515DE92C14959500EFDB9C /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		5C515DEB2C14A58900EFDB9C /* UserAgreementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAgreementView.swift; sourceTree = "<group>"; };
+		5C8F58FF2C18A3DA004DA54D /* FontStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyles.swift; sourceTree = "<group>"; };
+		5C8F59012C18AB86004DA54D /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		5C8F59032C1A1B08004DA54D /* PrivacyAndTermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyAndTermsView.swift; sourceTree = "<group>"; };
+		5C8F59052C1A1BEE004DA54D /* IllustrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +63,11 @@
 		5C515DDA2C11322500EFDB9C /* WildberriesChat */ = {
 			isa = PBXGroup;
 			children = (
+				5C8F59072C1A430E004DA54D /* OnBoarding */,
 				5C515DDB2C11322500EFDB9C /* WildberriesChatApp.swift */,
 				5C515DDD2C11322500EFDB9C /* ContentView.swift */,
-				5C515DE92C14959500EFDB9C /* OnBoardingView.swift */,
-				5C515DEB2C14A58900EFDB9C /* UserAgreementView.swift */,
+				5C8F58FF2C18A3DA004DA54D /* FontStyles.swift */,
+				5C8F59012C18AB86004DA54D /* ButtonStyles.swift */,
 				5C515DDF2C11322600EFDB9C /* Assets.xcassets */,
 				5C515DE12C11322600EFDB9C /* Preview Content */,
 			);
@@ -71,6 +80,17 @@
 				5C515DE22C11322600EFDB9C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5C8F59072C1A430E004DA54D /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				5C515DE92C14959500EFDB9C /* OnBoardingView.swift */,
+				5C8F59052C1A1BEE004DA54D /* IllustrationView.swift */,
+				5C8F59032C1A1B08004DA54D /* PrivacyAndTermsView.swift */,
+				5C515DEB2C14A58900EFDB9C /* UserAgreementView.swift */,
+			);
+			path = OnBoarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,8 +164,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C515DEC2C14A58900EFDB9C /* UserAgreementView.swift in Sources */,
+				5C8F59022C18AB86004DA54D /* ButtonStyles.swift in Sources */,
+				5C8F59002C18A3DA004DA54D /* FontStyles.swift in Sources */,
 				5C515DEA2C14959500EFDB9C /* OnBoardingView.swift in Sources */,
 				5C515DDE2C11322500EFDB9C /* ContentView.swift in Sources */,
+				5C8F59042C1A1B08004DA54D /* PrivacyAndTermsView.swift in Sources */,
+				5C8F59062C1A1BEE004DA54D /* IllustrationView.swift in Sources */,
 				5C515DDC2C11322500EFDB9C /* WildberriesChatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
