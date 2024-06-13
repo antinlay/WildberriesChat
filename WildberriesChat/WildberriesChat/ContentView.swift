@@ -10,10 +10,26 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        NavigationStack {
+//        NavigationStack {
+//            OnBoardingView()
+//                .background(.appBackground)
+//        }
+        TabView {
+            ContactsView()
+                .tabItem {
+                    Image(.BottomBar.userGroup)
+                }
             OnBoardingView()
-                .background(.appBackground)
+                .tabItem {
+                    Image(.BottomBar.messageCircle)
+                }
+            UserAgreementView()
+                .tabItem {
+                    Image(.BottomBar.moreHorizontal)
+                }
         }
+        .tint(.accent)
+        .background(.appBackground)
     }
 }
 

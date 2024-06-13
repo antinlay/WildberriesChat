@@ -23,6 +23,6 @@ extension Contact {
         .init(avatar: Image(.Avatars.maman), name: "Маман", onlineStatus: false, activeStories: true, phoneNumber: "+79999999997"),
         .init(avatar: Image(.Avatars.arbuz), name: "Арбуз Дыня", onlineStatus: true, activeStories: false, phoneNumber: "+79999999996"),
         .init(avatar: nil, name: "Иван Иванов", onlineStatus: true, activeStories: false, phoneNumber: "+79999999995"),
-        .init(avatar: nil, name: "Арбуз Дыня", onlineStatus: true, activeStories: false, phoneNumber: "+79999999994")
+        .init(avatar: nil, name: "Арбуз Дыня", onlineStatus: true, activeStories: true, phoneNumber: "+79999999994")
     ]
 }
