@@ -15,10 +15,13 @@
 		5C515DEC2C14A58900EFDB9C /* UserAgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DEB2C14A58900EFDB9C /* UserAgreementView.swift */; };
 		5C7B5B682C1B2C3000B84923 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B672C1B2C3000B84923 /* ContactsView.swift */; };
 		5C7B5B6A2C1B35FC00B84923 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B692C1B35FC00B84923 /* Contact.swift */; };
+		5C7B5B6C2C1B8D7A00B84923 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B6B2C1B8D7A00B84923 /* AvatarView.swift */; };
 		5C8F59002C18A3DA004DA54D /* FontStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F58FF2C18A3DA004DA54D /* FontStyles.swift */; };
 		5C8F59022C18AB86004DA54D /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F59012C18AB86004DA54D /* ButtonStyles.swift */; };
 		5C8F59042C1A1B08004DA54D /* PrivacyAndTermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F59032C1A1B08004DA54D /* PrivacyAndTermsView.swift */; };
 		5C8F59062C1A1BEE004DA54D /* IllustrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F59052C1A1BEE004DA54D /* IllustrationView.swift */; };
+		5CC89AEE2C1C3AD9005294A6 /* AvatarThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC89AED2C1C3AD9005294A6 /* AvatarThumbnail.swift */; };
+		5CC89AF02C1C3BBD005294A6 /* StoryBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC89AEF2C1C3BBD005294A6 /* StoryBorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,10 +34,13 @@
 		5C515DEB2C14A58900EFDB9C /* UserAgreementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAgreementView.swift; sourceTree = "<group>"; };
 		5C7B5B672C1B2C3000B84923 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		5C7B5B692C1B35FC00B84923 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		5C7B5B6B2C1B8D7A00B84923 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		5C8F58FF2C18A3DA004DA54D /* FontStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyles.swift; sourceTree = "<group>"; };
 		5C8F59012C18AB86004DA54D /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		5C8F59032C1A1B08004DA54D /* PrivacyAndTermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyAndTermsView.swift; sourceTree = "<group>"; };
 		5C8F59052C1A1BEE004DA54D /* IllustrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustrationView.swift; sourceTree = "<group>"; };
+		5CC89AED2C1C3AD9005294A6 /* AvatarThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarThumbnail.swift; sourceTree = "<group>"; };
+		5CC89AEF2C1C3BBD005294A6 /* StoryBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBorder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 				5C7B5B672C1B2C3000B84923 /* ContactsView.swift */,
 				5C7B5B692C1B35FC00B84923 /* Contact.swift */,
 				5C8F58FF2C18A3DA004DA54D /* FontStyles.swift */,
+				5C7B5B6B2C1B8D7A00B84923 /* AvatarView.swift */,
+				5CC89AEF2C1C3BBD005294A6 /* StoryBorder.swift */,
+				5CC89AED2C1C3AD9005294A6 /* AvatarThumbnail.swift */,
 				5C8F59012C18AB86004DA54D /* ButtonStyles.swift */,
 				5C515DDF2C11322600EFDB9C /* Assets.xcassets */,
 				5C515DE12C11322600EFDB9C /* Preview Content */,
@@ -172,7 +181,10 @@
 				5C515DEC2C14A58900EFDB9C /* UserAgreementView.swift in Sources */,
 				5C8F59022C18AB86004DA54D /* ButtonStyles.swift in Sources */,
 				5C7B5B6A2C1B35FC00B84923 /* Contact.swift in Sources */,
+				5CC89AEE2C1C3AD9005294A6 /* AvatarThumbnail.swift in Sources */,
 				5C7B5B682C1B2C3000B84923 /* ContactsView.swift in Sources */,
+				5C7B5B6C2C1B8D7A00B84923 /* AvatarView.swift in Sources */,
+				5CC89AF02C1C3BBD005294A6 /* StoryBorder.swift in Sources */,
 				5C8F59002C18A3DA004DA54D /* FontStyles.swift in Sources */,
 				5C515DEA2C14959500EFDB9C /* OnBoardingView.swift in Sources */,
 				5C515DDE2C11322500EFDB9C /* ContentView.swift in Sources */,
