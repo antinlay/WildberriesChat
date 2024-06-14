@@ -29,5 +29,16 @@ extension View {
             .frame(width: 48, height: 48)
             .clipShape(.rect(cornerRadius: 16))
     }
-
+    
+    func initialsAvatar(_ initials: String) -> some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 16)
+                .fill(.accent)
+                .frame(width: 48, height: 48)
+            Text(initials)
+                .font(FontStyles.bodyFirst)
+                .fontWeight(.bold)
+                .foregroundStyle(.white)
+        }
+    }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FontStyles: ViewModifier {
     static var bodyFirst = Font
-        .system(size: 10, weight: .semibold)
+        .system(size: 14, weight: .semibold)
     
     static var bodySecond = Font
         .system(size: 10, weight: .regular)
@@ -19,6 +19,9 @@ struct FontStyles: ViewModifier {
     
     static var headingSecond = Font
         .system(size: 24, weight: .bold)
+    
+    static var metadataFirst = Font
+        .system(size: 12)
     
     static var metadataSecond = Font
         .system(size: 10)
