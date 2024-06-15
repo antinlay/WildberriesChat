@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct InitialsAvatar: View {
+    var initials: String
     
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 16)
                 .fill(.accent)
                 .frame(width: 48, height: 48)
-            Text("ИИ")
+            Text(initials)
                 .font(FontStyles.bodyFirst)
                 .fontWeight(.bold)
                 .foregroundStyle(.white)
@@ -23,5 +24,5 @@ struct InitialsAvatar: View {
 }
 
 #Preview {
-    InitialsAvatar()
+    InitialsAvatar(initials: "BB")
 }

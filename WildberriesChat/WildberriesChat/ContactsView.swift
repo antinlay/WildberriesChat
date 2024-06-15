@@ -8,10 +8,19 @@
 import SwiftUI
 
 struct ContactsView: View {
+    @State private var searchText = ""
+    
     var body: some View {
-        NavigationStack {
-            ContactContainer()
+        ScrollView(.vertical) {
+            LazyVStack(content: {
+                ForEach(Contact.contacts.indices, id: \.self) { index in
+                    let contact = Contact.contacts[index]
+                    ContactContainer(contact: contact)
+                }
+            })
+            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
         }
+        .navigationTitle("Контакты")
     }
 }
 

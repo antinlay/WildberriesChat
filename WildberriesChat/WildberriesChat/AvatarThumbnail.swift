@@ -7,38 +7,19 @@
 
 import SwiftUI
 
-public struct AvatarThumbnail: ViewModifier {
-    static func thumbnail(_ imageResuorce: ImageResource) -> some View {
-        Image(imageResuorce)
+struct AvatarThumbnail: View {
+    var avatar: ImageResource
+    
+    var body: some View {
+        Image(avatar)
             .resizable()
             .scaledToFill()
             .frame(width: 48, height: 48)
             .clipShape(.rect(cornerRadius: 16))
     }
     
-    public func body(content: Content) -> some View {
-        content
-    }
 }
 
-extension View {
-    func thumbnail(_ imageResuorce: ImageResource) -> some View {
-        Image(imageResuorce)
-            .resizable()
-            .scaledToFill()
-            .frame(width: 48, height: 48)
-            .clipShape(.rect(cornerRadius: 16))
-    }
-    
-    func initialsAvatar(_ initials: String) -> some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 16)
-                .fill(.accent)
-                .frame(width: 48, height: 48)
-            Text(initials)
-                .font(FontStyles.bodyFirst)
-                .fontWeight(.bold)
-                .foregroundStyle(.white)
-        }
-    }
+#Preview {
+    AvatarThumbnail(avatar: .Avatars.anastasiya)
 }

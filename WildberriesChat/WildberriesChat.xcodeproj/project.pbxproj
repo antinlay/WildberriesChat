@@ -16,6 +16,7 @@
 		5C5CE4832C1CBC56009DCFF3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4822C1CBC56009DCFF3 /* Extensions.swift */; };
 		5C5CE4852C1CC144009DCFF3 /* CircleStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4842C1CC144009DCFF3 /* CircleStatus.swift */; };
 		5C5CE4872C1CC7A3009DCFF3 /* InitialsAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4862C1CC7A3009DCFF3 /* InitialsAvatar.swift */; };
+		5C5CE4892C1D8069009DCFF3 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4882C1D8069009DCFF3 /* AvatarView.swift */; };
 		5C7B5B682C1B2C3000B84923 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B672C1B2C3000B84923 /* ContactsView.swift */; };
 		5C7B5B6A2C1B35FC00B84923 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B692C1B35FC00B84923 /* Contact.swift */; };
 		5C7B5B6C2C1B8D7A00B84923 /* ContactContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B6B2C1B8D7A00B84923 /* ContactContainer.swift */; };
@@ -38,6 +39,7 @@
 		5C5CE4822C1CBC56009DCFF3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5C5CE4842C1CC144009DCFF3 /* CircleStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleStatus.swift; sourceTree = "<group>"; };
 		5C5CE4862C1CC7A3009DCFF3 /* InitialsAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialsAvatar.swift; sourceTree = "<group>"; };
+		5C5CE4882C1D8069009DCFF3 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		5C7B5B672C1B2C3000B84923 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		5C7B5B692C1B35FC00B84923 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		5C7B5B6B2C1B8D7A00B84923 /* ContactContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactContainer.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				5C7B5B692C1B35FC00B84923 /* Contact.swift */,
 				5C8F58FF2C18A3DA004DA54D /* FontStyles.swift */,
 				5C7B5B6B2C1B8D7A00B84923 /* ContactContainer.swift */,
+				5C5CE4882C1D8069009DCFF3 /* AvatarView.swift */,
 				5C5CE4862C1CC7A3009DCFF3 /* InitialsAvatar.swift */,
 				5C5CE4822C1CBC56009DCFF3 /* Extensions.swift */,
 				5CC89AEF2C1C3BBD005294A6 /* StoryBorder.swift */,
@@ -202,6 +205,7 @@
 				5C8F59042C1A1B08004DA54D /* PrivacyAndTermsView.swift in Sources */,
 				5C8F59062C1A1BEE004DA54D /* IllustrationView.swift in Sources */,
 				5C515DDC2C11322500EFDB9C /* WildberriesChatApp.swift in Sources */,
+				5C5CE4892C1D8069009DCFF3 /* AvatarView.swift in Sources */,
 				5C5CE4832C1CBC56009DCFF3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
