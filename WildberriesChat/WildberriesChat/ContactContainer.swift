@@ -37,6 +37,8 @@ struct ContactContainer: View {
             .padding(.leading, 12)
         }
         .frame(height: 56)
+        Divider()
+            .padding([.leading, .trailing], 24)
     }
 }
 

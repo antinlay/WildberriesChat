@@ -12,8 +12,6 @@ struct AvatarView: View {
         
     var body: some View {
         let initials = getInitials(from: contact.name)
-        let activeStories = contact.activeStories
-        let onlineStatus = contact.onlineStatus
 
         switch contact.avatar {
         case .some(let avatar):

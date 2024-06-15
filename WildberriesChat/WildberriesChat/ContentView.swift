@@ -8,26 +8,40 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var searchText = ""
     
     var body: some View {
-//        NavigationStack {
-//            OnBoardingView()
-//                .background(.appBackground)
-//        }
-        TabView {
-            ContactsView()
-                .tabItem {
-                    Image(.BottomBar.userGroup)
-                }
-            OnBoardingView()
-                .tabItem {
-                    Image(.BottomBar.messageCircle)
-                }
-            UserAgreementView()
-                .tabItem {
-                    Image(.BottomBar.moreHorizontal)
-                }
+        NavigationStack {
+            TabView {
+                ContactsView()
+                    .searchView(searchText)
+                    .toolbar {
+                        ToolbarItem(placement: .topBarLeading) {
+                            Text("Контакты")
+                                .font(FontStyles.subheadingFirst)
+                                .padding(.leading, 12)
+                        }
+                        ToolbarItem(placement: .topBarTrailing) {
+                            Text("+")
+                                .font(FontStyles.subheadingFirst)
+                                .padding(.trailing, 12)
+                        }
+                    }
+                
+                    .tabItem {
+                        Image(.BottomBar.userGroup)
+                    }
+                OnBoardingView()
+                    .tabItem {
+                        Image(.BottomBar.messageCircle)
+                    }
+                UserAgreementView()
+                    .tabItem {
+                        Image(.BottomBar.moreHorizontal)
+                    }
+            }
         }
+        
         .tint(.accent)
         .background(.appBackground)
     }

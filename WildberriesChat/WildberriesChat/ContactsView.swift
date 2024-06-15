@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-struct ContactsView: View {
-    @State private var searchText = ""
-    
+struct ContactsView: View {    
     var body: some View {
         ScrollView(.vertical) {
             LazyVStack(content: {
@@ -18,9 +16,7 @@ struct ContactsView: View {
                     ContactContainer(contact: contact)
                 }
             })
-            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
         }
-        .navigationTitle("Контакты")
     }
 }
 
