@@ -15,19 +15,24 @@ struct ContentView: View {
             TabView {
                 VStack {
                     SearchBarView(searchText: $searchText)
-                        .padding()
+                        .padding(.horizontal, 24)
+                        .padding(.vertical)
                     ContactsView()
                 }
                     .toolbar {
                         ToolbarItem(placement: .topBarLeading) {
                             Text("Контакты")
                                 .font(FontStyles.subheadingFirst)
+                                .padding(.leading, 10)
                         }
                         ToolbarItem(placement: .topBarTrailing) {
                             Image(.ToolBar.addContact)
                                 .font(FontStyles.headingSecond)
+                                .padding(.trailing, 10)
                         }
-                    }.padding(.bottom)
+                        
+                    }
+
                     .tabItem {
                         Image(.BottomBar.userGroup)
                     }

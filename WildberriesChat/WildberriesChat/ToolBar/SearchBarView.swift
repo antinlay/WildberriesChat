@@ -35,7 +35,7 @@ struct SearchBarView: View {
         }
         .background(
             RoundedRectangle(cornerRadius: 4)
-                .fill(.searchRect)
+                .fill(.neutralReverse)
                 .frame(height: 36)
         )
     }
