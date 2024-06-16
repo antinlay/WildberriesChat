@@ -13,21 +13,21 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             TabView {
-                ContactsView()
-                    .searchView(searchText)
+                VStack {
+                    SearchBarView(searchText: $searchText)
+                        .padding()
+                    ContactsView()
+                }
                     .toolbar {
                         ToolbarItem(placement: .topBarLeading) {
                             Text("Контакты")
                                 .font(FontStyles.subheadingFirst)
-                                .padding(.leading, 12)
                         }
                         ToolbarItem(placement: .topBarTrailing) {
-                            Text("+")
-                                .font(FontStyles.subheadingFirst)
-                                .padding(.trailing, 12)
+                            Image(.ToolBar.addContact)
+                                .font(FontStyles.headingSecond)
                         }
-                    }
-                
+                    }.padding(.bottom)
                     .tabItem {
                         Image(.BottomBar.userGroup)
                     }

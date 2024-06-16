@@ -10,13 +10,14 @@ import SwiftUI
 struct ContactsView: View {    
     var body: some View {
         ScrollView(.vertical) {
-            LazyVStack(content: {
+            LazyVStack(spacing: 0) {
                 ForEach(Contact.contacts.indices, id: \.self) { index in
                     let contact = Contact.contacts[index]
                     ContactContainer(contact: contact)
                 }
-            })
+            }
         }
+        .background(.appBackground)
     }
 }
 
