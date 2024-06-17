@@ -7,13 +7,18 @@
 
 import SwiftUI
 
-struct ContactsView: View {    
+struct ContactsView: View {
     var body: some View {
         ScrollView(.vertical) {
             LazyVStack(spacing: 0) {
                 ForEach(Contact.contacts.indices, id: \.self) { index in
                     let contact = Contact.contacts[index]
-                    ContactContainer(contact: contact)
+                    NavigationLink(destination: ContactDetails(contact: contact)) {
+                        ContactContainer(contact: contact)
+                    }
+                    Divider()
+                        .background(.divider)
+                        .padding(.horizontal, 24)
                 }
             }
         }

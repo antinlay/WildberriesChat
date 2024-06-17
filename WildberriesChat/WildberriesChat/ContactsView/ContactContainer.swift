@@ -12,14 +12,14 @@ struct ContactContainer: View {
     
     var body: some View {
         HStack(spacing: 0) {
-            ZStack {
-                RoundedRectangle(cornerRadius: 18)
-                    .fill(.clear)
-                    .frame(width: 56, height: 56)
-                AvatarView(contact: contact)
-                    .if (contact.activeStories) { $0.storyBorder() }
-                    .if (contact.onlineStatus == "Online") { $0.circleStatus() }
-            }
+            RoundedRectangle(cornerRadius: 18)
+                .fill(.clear)
+                .frame(width: 56, height: 56)
+                .overlay(alignment: .center) {
+                    AvatarView(contact: contact)
+                        .if (contact.activeStories) { $0.storyBorder() }
+                        .if (contact.onlineStatus == "Online") { $0.circleStatus() }
+                }
             
             VStack(alignment: .leading, spacing: 2) {
                 Text(contact.name)
@@ -38,10 +38,6 @@ struct ContactContainer: View {
         .padding(.top)
         .padding(.bottom, 12)
         .padding(.horizontal, 24)
-        Divider()
-            .background(.divider)
-            .padding(.horizontal, 24)
-
     }
 }
 
