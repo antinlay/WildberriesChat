@@ -9,15 +9,17 @@ import SwiftUI
 
 struct AvatarThumbnail: View {
     var avatar: ImageResource
+    var width: CGFloat?
+    var height: CGFloat?
+    var cornerRadius: CGFloat?
     
     var body: some View {
         Image(avatar)
             .resizable()
             .scaledToFill()
-            .frame(width: 48, height: 48)
-            .clipShape(.rect(cornerRadius: 16))
+            .frame(width: width ?? 48, height: height ?? 48)
+            .clipShape(.rect(cornerRadius: cornerRadius ?? 16))
     }
-    
 }
 
 #Preview {

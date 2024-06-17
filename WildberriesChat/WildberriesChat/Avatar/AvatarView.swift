@@ -16,6 +16,7 @@ struct AvatarView: View {
         switch contact.avatar {
         case .some(let avatar):
             AvatarThumbnail(avatar: avatar)
+                .clipShape(.rect(cornerRadius: 16))
         case .none:
             InitialsAvatar(initials: initials)
         }
@@ -34,5 +35,5 @@ extension View {
 }
 
 #Preview {
-    AvatarView(contact: Contact.contacts.last!)
+    AvatarView(contact: Contact.contacts.first!)
 }

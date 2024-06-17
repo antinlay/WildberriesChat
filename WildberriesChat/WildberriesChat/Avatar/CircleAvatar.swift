@@ -13,8 +13,7 @@ struct CircleAvatar: View {
     var body: some View {
         switch contact.avatar {
         case .some(let avatar):
-            Image(avatar)
-                .clipShape(.circle)
+            ProfileAvatar(avatar: avatar)
         case .none:
             PlaceholderAvatar()
         }

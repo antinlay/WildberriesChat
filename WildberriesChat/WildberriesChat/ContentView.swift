@@ -30,9 +30,8 @@ struct ContentView: View {
                                 .font(FontStyles.headingSecond)
                                 .padding(.trailing, 10)
                         }
-                        
                     }
-
+                    .background(.appBackground)
                     .tabItem {
                         Image(.BottomBar.userGroup)
                     }
@@ -46,7 +45,6 @@ struct ContentView: View {
                     }
             }
         }
-        
         .tint(.accent)
         .background(.appBackground)
     }

@@ -11,16 +11,16 @@ struct InitialsAvatar: View {
     var initials: String
     
     var body: some View {
-        RoundedRectangle(cornerRadius: 16)
-            .fill(.accent)
-            .frame(width: 48, height: 48)
-            .overlay {
-                Text(initials)
-                    .font(FontStyles.bodyFirst)
-                    .fontWeight(.bold)
-                    .foregroundStyle(.white)
-                
-            }
+            RoundedRectangle(cornerRadius: 16)
+                .fill(.accent)
+                .frame(width: 48, height: 48)
+                .overlay {
+                    Text(initials)
+                        .font(FontStyles.bodyFirst)
+                        .fontWeight(.bold)
+                        .foregroundStyle(.white)
+
+                }
     }
 }
 

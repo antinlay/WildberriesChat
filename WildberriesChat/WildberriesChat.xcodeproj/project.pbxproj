@@ -21,6 +21,7 @@
 		5C5CE4922C1EDCB2009DCFF3 /* ContactDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4912C1EDCB2009DCFF3 /* ContactDetails.swift */; };
 		5C5CE4942C203BFC009DCFF3 /* CircleAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4932C203BFC009DCFF3 /* CircleAvatar.swift */; };
 		5C5CE4962C203E98009DCFF3 /* PlaceholderAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4952C203E98009DCFF3 /* PlaceholderAvatar.swift */; };
+		5C5CE4982C204EB3009DCFF3 /* ProfileAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4972C204EB3009DCFF3 /* ProfileAvatar.swift */; };
 		5C7B5B682C1B2C3000B84923 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B672C1B2C3000B84923 /* ContactsView.swift */; };
 		5C7B5B6A2C1B35FC00B84923 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B692C1B35FC00B84923 /* Contact.swift */; };
 		5C7B5B6C2C1B8D7A00B84923 /* ContactContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B6B2C1B8D7A00B84923 /* ContactContainer.swift */; };
@@ -48,6 +49,7 @@
 		5C5CE4912C1EDCB2009DCFF3 /* ContactDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetails.swift; sourceTree = "<group>"; };
 		5C5CE4932C203BFC009DCFF3 /* CircleAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAvatar.swift; sourceTree = "<group>"; };
 		5C5CE4952C203E98009DCFF3 /* PlaceholderAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderAvatar.swift; sourceTree = "<group>"; };
+		5C5CE4972C204EB3009DCFF3 /* ProfileAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAvatar.swift; sourceTree = "<group>"; };
 		5C7B5B672C1B2C3000B84923 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		5C7B5B692C1B35FC00B84923 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		5C7B5B6B2C1B8D7A00B84923 /* ContactContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactContainer.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				5CC89AED2C1C3AD9005294A6 /* AvatarThumbnail.swift */,
+				5C5CE4972C204EB3009DCFF3 /* ProfileAvatar.swift */,
 				5C5CE4842C1CC144009DCFF3 /* CircleStatus.swift */,
 				5CC89AEF2C1C3BBD005294A6 /* StoryBorder.swift */,
 				5C5CE4932C203BFC009DCFF3 /* CircleAvatar.swift */,
@@ -246,6 +249,7 @@
 				5C8F59022C18AB86004DA54D /* ButtonStyles.swift in Sources */,
 				5C7B5B6A2C1B35FC00B84923 /* Contact.swift in Sources */,
 				5CC89AEE2C1C3AD9005294A6 /* AvatarThumbnail.swift in Sources */,
+				5C5CE4982C204EB3009DCFF3 /* ProfileAvatar.swift in Sources */,
 				5C7B5B682C1B2C3000B84923 /* ContactsView.swift in Sources */,
 				5C5CE4922C1EDCB2009DCFF3 /* ContactDetails.swift in Sources */,
 				5C5CE4962C203E98009DCFF3 /* PlaceholderAvatar.swift in Sources */,
