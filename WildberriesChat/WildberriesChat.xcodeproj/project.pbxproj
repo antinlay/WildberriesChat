@@ -22,6 +22,13 @@
 		5C5CE4942C203BFC009DCFF3 /* CircleAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4932C203BFC009DCFF3 /* CircleAvatar.swift */; };
 		5C5CE4962C203E98009DCFF3 /* PlaceholderAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4952C203E98009DCFF3 /* PlaceholderAvatar.swift */; };
 		5C5CE4982C204EB3009DCFF3 /* ProfileAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4972C204EB3009DCFF3 /* ProfileAvatar.swift */; };
+		5C5CE49B2C216313009DCFF3 /* TabButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE49A2C216313009DCFF3 /* TabButtonView.swift */; };
+		5C5CE49D2C2167B8009DCFF3 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE49C2C2167B8009DCFF3 /* TabBarView.swift */; };
+		5C5CE4A02C216CE2009DCFF3 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE49F2C216CE2009DCFF3 /* MessagesView.swift */; };
+		5C5CE4A32C216DE7009DCFF3 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4A22C216DE7009DCFF3 /* MoreView.swift */; };
+		5C5CE4A72C21CD89009DCFF3 /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4A62C21CD89009DCFF3 /* ToolBarView.swift */; };
+		5C5CE4A92C21E15C009DCFF3 /* TabNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4A82C21E15C009DCFF3 /* TabNavigationView.swift */; };
+		5C5CE4AB2C21E32F009DCFF3 /* NavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4AA2C21E32F009DCFF3 /* NavigationStackView.swift */; };
 		5C7B5B682C1B2C3000B84923 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B672C1B2C3000B84923 /* ContactsView.swift */; };
 		5C7B5B6A2C1B35FC00B84923 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B692C1B35FC00B84923 /* Contact.swift */; };
 		5C7B5B6C2C1B8D7A00B84923 /* ContactContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B6B2C1B8D7A00B84923 /* ContactContainer.swift */; };
@@ -50,6 +57,13 @@
 		5C5CE4932C203BFC009DCFF3 /* CircleAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAvatar.swift; sourceTree = "<group>"; };
 		5C5CE4952C203E98009DCFF3 /* PlaceholderAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderAvatar.swift; sourceTree = "<group>"; };
 		5C5CE4972C204EB3009DCFF3 /* ProfileAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAvatar.swift; sourceTree = "<group>"; };
+		5C5CE49A2C216313009DCFF3 /* TabButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButtonView.swift; sourceTree = "<group>"; };
+		5C5CE49C2C2167B8009DCFF3 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		5C5CE49F2C216CE2009DCFF3 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
+		5C5CE4A22C216DE7009DCFF3 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
+		5C5CE4A62C21CD89009DCFF3 /* ToolBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
+		5C5CE4A82C21E15C009DCFF3 /* TabNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationView.swift; sourceTree = "<group>"; };
+		5C5CE4AA2C21E32F009DCFF3 /* NavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackView.swift; sourceTree = "<group>"; };
 		5C7B5B672C1B2C3000B84923 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		5C7B5B692C1B35FC00B84923 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		5C7B5B6B2C1B8D7A00B84923 /* ContactContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactContainer.swift; sourceTree = "<group>"; };
@@ -94,6 +108,10 @@
 				5C8F59072C1A430E004DA54D /* OnBoarding */,
 				5C515DDB2C11322500EFDB9C /* WildberriesChatApp.swift */,
 				5C515DDD2C11322500EFDB9C /* ContentView.swift */,
+				5C5CE4AA2C21E32F009DCFF3 /* NavigationStackView.swift */,
+				5C5CE4A12C216DD3009DCFF3 /* MoreView */,
+				5C5CE49E2C216CCC009DCFF3 /* MessagesView */,
+				5C5CE4992C2162F5009DCFF3 /* NavigationBar */,
 				5C5CE4902C1ECCB2009DCFF3 /* Models */,
 				5C5CE48E2C1ECC10009DCFF3 /* ContactsView */,
 				5C5CE48F2C1ECC59009DCFF3 /* Extensions */,
@@ -117,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				5C5CE48A2C1DAA10009DCFF3 /* SearchBarView.swift */,
+				5C5CE4A62C21CD89009DCFF3 /* ToolBarView.swift */,
 			);
 			path = ToolBar;
 			sourceTree = "<group>";
@@ -162,6 +181,32 @@
 				5C7B5B692C1B35FC00B84923 /* Contact.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5C5CE4992C2162F5009DCFF3 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				5C5CE49A2C216313009DCFF3 /* TabButtonView.swift */,
+				5C5CE49C2C2167B8009DCFF3 /* TabBarView.swift */,
+				5C5CE4A82C21E15C009DCFF3 /* TabNavigationView.swift */,
+			);
+			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		5C5CE49E2C216CCC009DCFF3 /* MessagesView */ = {
+			isa = PBXGroup;
+			children = (
+				5C5CE49F2C216CE2009DCFF3 /* MessagesView.swift */,
+			);
+			path = MessagesView;
+			sourceTree = "<group>";
+		};
+		5C5CE4A12C216DD3009DCFF3 /* MoreView */ = {
+			isa = PBXGroup;
+			children = (
+				5C5CE4A22C216DE7009DCFF3 /* MoreView.swift */,
+			);
+			path = MoreView;
 			sourceTree = "<group>";
 		};
 		5C8F59072C1A430E004DA54D /* OnBoarding */ = {
@@ -248,13 +293,19 @@
 				5C515DEC2C14A58900EFDB9C /* UserAgreementView.swift in Sources */,
 				5C8F59022C18AB86004DA54D /* ButtonStyles.swift in Sources */,
 				5C7B5B6A2C1B35FC00B84923 /* Contact.swift in Sources */,
+				5C5CE4A32C216DE7009DCFF3 /* MoreView.swift in Sources */,
 				5CC89AEE2C1C3AD9005294A6 /* AvatarThumbnail.swift in Sources */,
+				5C5CE4AB2C21E32F009DCFF3 /* NavigationStackView.swift in Sources */,
 				5C5CE4982C204EB3009DCFF3 /* ProfileAvatar.swift in Sources */,
 				5C7B5B682C1B2C3000B84923 /* ContactsView.swift in Sources */,
 				5C5CE4922C1EDCB2009DCFF3 /* ContactDetails.swift in Sources */,
 				5C5CE4962C203E98009DCFF3 /* PlaceholderAvatar.swift in Sources */,
+				5C5CE4A72C21CD89009DCFF3 /* ToolBarView.swift in Sources */,
 				5C7B5B6C2C1B8D7A00B84923 /* ContactContainer.swift in Sources */,
 				5CC89AF02C1C3BBD005294A6 /* StoryBorder.swift in Sources */,
+				5C5CE4A02C216CE2009DCFF3 /* MessagesView.swift in Sources */,
+				5C5CE49D2C2167B8009DCFF3 /* TabBarView.swift in Sources */,
+				5C5CE49B2C216313009DCFF3 /* TabButtonView.swift in Sources */,
 				5C5CE4852C1CC144009DCFF3 /* CircleStatus.swift in Sources */,
 				5C8F59002C18A3DA004DA54D /* FontStyles.swift in Sources */,
 				5C5CE4942C203BFC009DCFF3 /* CircleAvatar.swift in Sources */,
@@ -264,6 +315,7 @@
 				5C5CE4872C1CC7A3009DCFF3 /* InitialsAvatar.swift in Sources */,
 				5C8F59042C1A1B08004DA54D /* PrivacyAndTermsView.swift in Sources */,
 				5C8F59062C1A1BEE004DA54D /* IllustrationView.swift in Sources */,
+				5C5CE4A92C21E15C009DCFF3 /* TabNavigationView.swift in Sources */,
 				5C515DDC2C11322500EFDB9C /* WildberriesChatApp.swift in Sources */,
 				5C5CE4892C1D8069009DCFF3 /* AvatarView.swift in Sources */,
 				5C5CE4832C1CBC56009DCFF3 /* Extensions.swift in Sources */,

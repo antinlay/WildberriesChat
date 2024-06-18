@@ -17,7 +17,7 @@ struct ContactsView: View {
                         ContactContainer(contact: contacts[index])
                     }
                     Divider()
-                        .background(.divider)
+                        .foregroundStyle(.divider)
                         .padding(.horizontal, 24)
                 }
             }
