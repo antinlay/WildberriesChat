@@ -23,21 +23,6 @@ struct AddContactView: View {
                     dissmis()
                 }
             }
-            
-            ToolbarItem(placement: .topBarLeading) {
-                Text("Profile")
-                    .font(FontStyles.subheadingFirst)
-                    .padding(.leading, 10)
-            }
-            
-            ToolbarItem(placement: .topBarTrailing) {
-//                NavigationLink(destination: AddContactView()) {
-                    Image(.ToolBar.editProfile)
-                        .font(FontStyles.headingSecond)
-                        .padding(.trailing, 10)
-//                }
-            }
-
         }
         .navigationBarBackButtonHidden(true)
         .background(.appBackground)
