@@ -20,7 +20,7 @@ struct SearchBarView: View {
                 .focused($searchIsFocused)
                 .font(FontStyles.bodyFirst)
                 .foregroundStyle(.appGray)
-                .autocorrectionDisabled()
+                .autocorrectionDisabled(true)
                 .overlay (
                     Image(systemName: "xmark")
                         .foregroundStyle(.accent)

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ToolBarView: ToolbarContent {
     var selectedTab: ImageResource
-
+    @State private var isAddContactViewActive = false
+    
     var body: some ToolbarContent {
         
         switch selectedTab {
@@ -35,12 +36,13 @@ struct ToolBarView: ToolbarContent {
     
     func addContact() -> some ToolbarContent {
         ToolbarItem(placement: .topBarTrailing) {
-            Image(.ToolBar.addContact)
-                .font(FontStyles.headingSecond)
-                .padding(.trailing, 10)
+            NavigationLink(destination: AddContactView()) {
+                Image(.ToolBar.addContact)
+                    .font(FontStyles.headingSecond)
+                    .padding(.trailing, 10)
+            }
         }
-
-    }
+    }    
 }
 
 //#Preview {

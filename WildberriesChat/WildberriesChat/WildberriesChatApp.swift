@@ -12,7 +12,7 @@ struct WildberriesChatApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-            //                    .background(.appBackground)
+                .background(.appBackground)
         }
     }
 }

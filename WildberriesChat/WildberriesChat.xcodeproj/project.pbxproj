@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C20E7802C2244D4009D5BF9 /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C20E77F2C2244D4009D5BF9 /* AddContactView.swift */; };
 		5C515DDC2C11322500EFDB9C /* WildberriesChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DDB2C11322500EFDB9C /* WildberriesChatApp.swift */; };
 		5C515DDE2C11322500EFDB9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DDD2C11322500EFDB9C /* ContentView.swift */; };
 		5C515DE02C11322600EFDB9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C515DDF2C11322600EFDB9C /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C20E77F2C2244D4009D5BF9 /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
 		5C515DD82C11322500EFDB9C /* WildberriesChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WildberriesChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C515DDB2C11322500EFDB9C /* WildberriesChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildberriesChatApp.swift; sourceTree = "<group>"; };
 		5C515DDD2C11322500EFDB9C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				5C7B5B672C1B2C3000B84923 /* ContactsView.swift */,
 				5C5CE4912C1EDCB2009DCFF3 /* ContactDetails.swift */,
 				5C7B5B6B2C1B8D7A00B84923 /* ContactContainer.swift */,
+				5C20E77F2C2244D4009D5BF9 /* AddContactView.swift */,
 			);
 			path = ContactsView;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				5C5CE4942C203BFC009DCFF3 /* CircleAvatar.swift in Sources */,
 				5C515DEA2C14959500EFDB9C /* OnBoardingView.swift in Sources */,
 				5C5CE48B2C1DAA10009DCFF3 /* SearchBarView.swift in Sources */,
+				5C20E7802C2244D4009D5BF9 /* AddContactView.swift in Sources */,
 				5C515DDE2C11322500EFDB9C /* ContentView.swift in Sources */,
 				5C5CE4872C1CC7A3009DCFF3 /* InitialsAvatar.swift in Sources */,
 				5C8F59042C1A1B08004DA54D /* PrivacyAndTermsView.swift in Sources */,

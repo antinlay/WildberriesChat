@@ -12,9 +12,9 @@ struct ContactDetails: View {
     var contact: Contact
     
     var body: some View {
-        let socials = [Image(.Social.twitter), Image(.Social.instagram), Image(.Social.linkedin), Image(.Social.facebook)]
+        let socials: [ImageResource] = [.Social.twitter, .Social.instagram, .Social.linkedin, .Social.facebook]
         
-        VStack {
+        ScrollView {
             CircleAvatar(contact: contact)
             Text(contact.name)
                 .font(FontStyles.headingSecond)
@@ -27,7 +27,7 @@ struct ContactDetails: View {
                 ForEach(socials.indices, id: \.self) { index in
                     Capsule()
                         .stroke(.accent, lineWidth: 1.67)
-                        .overlay(socials[index])
+                        .overlay(Image(socials[index]))
                         .onTapGesture {
                             //
                         }
@@ -37,16 +37,13 @@ struct ContactDetails: View {
             .frame(height: 40)
             .padding()
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .frame(maxWidth: .infinity)
         .background(.appBackground)
 
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 HStack {
                     Image(.shevron)
-                    Text("Контакт")
-                        .font(FontStyles.subheadingFirst)
-                        .padding(.leading, 10)
                 }
                 .onTapGesture {
                     dissmis()
@@ -54,11 +51,10 @@ struct ContactDetails: View {
             }
         }
         .navigationBarBackButtonHidden(true)
-        .transition(.scale)
         .background(.appBackground)
     }
 }
 
 #Preview {
-    ContactDetails(contact: Contact.contacts.first!)
+    ContactDetails(contact: Contact.contacts.last!)
 }

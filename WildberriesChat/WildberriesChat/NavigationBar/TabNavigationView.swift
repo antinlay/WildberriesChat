@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct TabNavigationView: View {
-    static let tabs: [ImageResource] = [.NavigationBar.userGroup, .NavigationBar.messageCircle, .NavigationBar.moreHorizontal]
+    let tabs: [ImageResource] = [.NavigationBar.userGroup, .NavigationBar.messageCircle, .NavigationBar.moreHorizontal]
     @State var selectedTab: ImageResource
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            ContactsView().tag(TabNavigationView.tabs[0])
-            MessagesView().tag(TabNavigationView.tabs[1])
-            MoreView().tag(TabNavigationView.tabs[2])
+            ContactsView().tag(tabs[0])
+            MessagesView().tag(tabs[1])
+            MoreView().tag(tabs[2])
         }
         .tabViewStyle(.page(indexDisplayMode: .never))
         .toolbar{
@@ -24,9 +24,9 @@ struct TabNavigationView: View {
         
         VStack {
             HStack {
-                ForEach(TabNavigationView.tabs.indices, id: \.self) { index in
-                    TabButtonView(image: TabNavigationView.tabs[index], selectedTab: $selectedTab)
-                    if index != TabNavigationView.tabs.count - 1 {
+                ForEach(tabs.indices, id: \.self) { index in
+                    TabButtonView(image: tabs[index], selectedTab: $selectedTab)
+                    if index != tabs.count - 1 {
                         Spacer(minLength: 0)
                     }
                 }
@@ -35,7 +35,6 @@ struct TabNavigationView: View {
             .padding(.top)
         }
         .frame(maxWidth: .infinity, minHeight: 60)
-        .ignoresSafeArea(.all, edges: [.bottom, .horizontal])
         .background(.appBackground)
         .shadow(color: Color(white: 0, opacity: 0.04), radius: 24, x: 0, y: -1)
     }

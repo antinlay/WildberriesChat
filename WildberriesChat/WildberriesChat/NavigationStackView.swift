@@ -19,13 +19,19 @@ struct NavigationStackView: View {
                     .padding(.vertical)
                 TabNavigationView(selectedTab: selectedTab)
             }
+            .background(.appBackground)
+            .ignoresSafeArea(.keyboard, edges: .bottom)
         }
         .tint(.accent)
-        .background(.appBackground)
         .transition(.slide)
     }
 }
 
 #Preview {
     NavigationStackView()
+}
+
+#Preview {
+    NavigationStackView()
+        .preferredColorScheme(.dark)
 }

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContactsView: View {
+    @Environment(\.isSearching) var isSearching
+    
     let contacts = Contact.contacts
     var body: some View {
         ScrollView(.vertical) {
@@ -22,7 +24,6 @@ struct ContactsView: View {
                 }
             }
         }
-        .background(.appBackground)
     }
 }
 
