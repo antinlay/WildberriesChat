@@ -8,21 +8,19 @@
 import SwiftUI
 
 struct ToolBarView: ToolbarContent {
-    var selectedTab: ImageResource
+    @Binding var selectedTab: Tabs
     @State private var isAddContactViewActive = false
     
     var body: some ToolbarContent {
         
         switch selectedTab {
-        case .NavigationBar.userGroup:
+        case .contacts:
             title("Contacts")
             addContact()
-        case .NavigationBar.messageCircle:
+        case .messages:
             title("Messages")
-        case .NavigationBar.moreHorizontal:
+        case .more:
             title("More")
-        default:
-            title("Contacts")
         }
     }
     

@@ -8,38 +8,23 @@
 import SwiftUI
 
 struct TabNavigationView: View {
-    let tabs: [ImageResource] = [.NavigationBar.userGroup, .NavigationBar.messageCircle, .NavigationBar.moreHorizontal]
-    @State var selectedTab: ImageResource
+    @State var selectedTab: Tabs
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            ContactsView().tag(tabs[0])
-            MessagesView().tag(tabs[1])
-            MoreView().tag(tabs[2])
+            ContactsView().tag(Tabs.contacts)
+            MessagesView().tag(Tabs.messages)
+            MoreView().tag(Tabs.more)
         }
         .tabViewStyle(.page(indexDisplayMode: .never))
         .toolbar{
-            ToolBarView(selectedTab: selectedTab)
+            ToolBarView(selectedTab: $selectedTab)
         }
         
-        VStack {
-            HStack {
-                ForEach(tabs.indices, id: \.self) { index in
-                    TabButtonView(image: tabs[index], selectedTab: $selectedTab)
-                    if index != tabs.count - 1 {
-                        Spacer(minLength: 0)
-                    }
-                }
-            }
-            .padding(.horizontal, 24)
-            .padding(.top)
-        }
-        .frame(maxWidth: .infinity, minHeight: 60)
-        .background(.appBackground)
-        .shadow(color: Color(white: 0, opacity: 0.04), radius: 24, x: 0, y: -1)
+        TabBarView(selectedTab: $selectedTab)
     }
 }
 
 #Preview {
-    TabNavigationView(selectedTab: .NavigationBar.userGroup)
+    TabNavigationView(selectedTab: .contacts)
 }

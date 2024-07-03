@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NavigationStackView: View {
     @State private var searchText = ""
-    @State private var selectedTab: ImageResource = .NavigationBar.userGroup
+    @EnvironmentObject var router: Router
 
     var body: some View {
         NavigationStack {
@@ -17,7 +17,7 @@ struct NavigationStackView: View {
                 SearchBarView(searchText: $searchText)
                     .padding(.horizontal, 24)
                     .padding(.vertical)
-                TabNavigationView(selectedTab: selectedTab)
+                TabNavigationView(selectedTab: router.selectedTab)
             }
             .background(.appBackground)
             .ignoresSafeArea(.keyboard, edges: .bottom)
@@ -29,9 +29,11 @@ struct NavigationStackView: View {
 
 #Preview {
     NavigationStackView()
+        .environmentObject(Router())
 }
 
 #Preview {
     NavigationStackView()
+        .environmentObject(Router())
         .preferredColorScheme(.dark)
 }
