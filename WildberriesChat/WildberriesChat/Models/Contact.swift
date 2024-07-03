@@ -25,4 +25,8 @@ extension Contact {
         .init(avatar: nil, name: "Иван Иванов", onlineStatus: "Online", activeStories: false, phoneNumber: "+79999999995"),
         .init(avatar: nil, name: "Лиса Алиса", onlineStatus: "Last seen 30 minutes ago", activeStories: true, phoneNumber: "+79999999994")
     ]
+    
+    static func filteredContact(_ searchText: String) -> [Contact] {
+        searchText.isEmpty ? Contact.contacts : Contact.contacts.filter { $0.name.lowercased().contains(searchText.lowercased())}
+    }
 }

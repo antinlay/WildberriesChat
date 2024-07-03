@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct ContactsView: View {
-    @Environment(\.isSearching) var isSearching
+    @EnvironmentObject var search: SearchText
     
-    let contacts = Contact.contacts
     var body: some View {
+        var contacts = Contact.filteredContact(search.text)
+        
         ScrollView(.vertical) {
             LazyVStack(spacing: 0) {
                 ForEach(contacts.indices, id: \.self) { index in

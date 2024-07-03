@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct NavigationStackView: View {
-    @State private var searchText = ""
+    @EnvironmentObject var searchText: SearchText
     @EnvironmentObject var router: Router
 
     var body: some View {
         NavigationStack {
             VStack {
-                SearchBarView(searchText: $searchText)
+                SearchBarView(searchText: $searchText.text)
                     .padding(.horizontal, 24)
                     .padding(.vertical)
                 TabNavigationView(selectedTab: router.selectedTab)
