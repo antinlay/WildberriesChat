@@ -11,7 +11,7 @@ struct ContactsView: View {
     @EnvironmentObject var search: SearchText
     
     var body: some View {
-        var contacts = Contact.filteredContact(search.text)
+        let contacts = Contact.filteredContact(search.text)
         
         ScrollView(.vertical) {
             LazyVStack(spacing: 0) {
@@ -30,4 +30,5 @@ struct ContactsView: View {
 
 #Preview {
     ContactsView()
+        .environmentObject(SearchText())
 }
