@@ -30,10 +30,12 @@ struct NavigationStackView: View {
 #Preview {
     NavigationStackView()
         .environmentObject(Router())
+        .environmentObject(SearchText())
 }
 
 #Preview {
     NavigationStackView()
         .environmentObject(Router())
+        .environmentObject(SearchText())
         .preferredColorScheme(.dark)
 }

@@ -12,7 +12,7 @@ import SwiftUI
 struct WildberriesChatWidgetBundle: WidgetBundle {
     var body: some Widget {
         WildberriesChatWidget()
-        WildberriesChatWidgetControl()
+//        WildberriesChatWidgetControl()
         WildberriesChatWidgetLiveActivity()
     }
 }

@@ -39,7 +39,7 @@ struct ContactDetails: View {
         }
         .frame(maxWidth: .infinity)
         .background(.appBackground)
-
+        
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 HStack {
@@ -57,11 +57,9 @@ struct ContactDetails: View {
             }
             
             ToolbarItem(placement: .topBarTrailing) {
-//                NavigationLink(destination: AddContactView()) {
-                    Image(.ToolBar.editProfile)
-                        .font(FontStyles.headingSecond)
-                        .padding(.trailing, 10)
-//                }
+                Image(.ToolBar.editProfile)
+                    .font(FontStyles.headingSecond)
+                    .padding(.trailing, 10)
             }
         }
         .navigationBarBackButtonHidden(true)

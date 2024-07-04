@@ -57,8 +57,18 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "5C1ED3C02C35473900124160"
+            BuildableName = "WildberriesChatWidgetExtension.appex"
+            BlueprintName = "WildberriesChatWidgetExtension"
+            ReferencedContainer = "container:WildberriesChat.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5C515DD72C11322500EFDB9C"
@@ -66,7 +76,7 @@
             BlueprintName = "WildberriesChat"
             ReferencedContainer = "container:WildberriesChat.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "_XCWidgetKind"
