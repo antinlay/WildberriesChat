@@ -14,8 +14,5 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
 
     // An example configurable parameter.
     @Parameter(title: "Suggestion Emoji", default: "💜")
-    var suggestEmoji: String
-    
-    @Parameter(title: "Sent Emoji", default: "")
-    var sentEmoji: String
+    var pulseEmoji: String
 }

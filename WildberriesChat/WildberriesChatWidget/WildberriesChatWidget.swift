@@ -51,12 +51,12 @@ struct WildberriesChatWidgetEntryView : View {
                 .bold()
             Text("You awesome!")
             Spacer()
-            Text("Suggest Emoji:")
+            Text("Pulse Emoji:")
                 .bold()
-            Text("\(entry.configuration.sentEmoji)\(entry.configuration.suggestEmoji)")
-            
-            Button (intent: ConfigurationAppIntent.sentReaction) {
-                Text("Reaction")
+            Text("\(entry.configuration.pulseEmoji)")
+                .invalidatableContent()
+            Button (intent: ConfigurationAppIntent.greenLove) {
+                Text("Pulse")
             }
             
         }
@@ -74,40 +74,18 @@ struct WildberriesChatWidget: Widget {
     }
 }
 
-struct SentReactionIntent: AppIntent {
-    static var title: LocalizedStringResource = "Sent Clicked"
-
-    init(){}
-    
-    func perform() async throws -> some IntentResult {
-        SimpleEntry(date: .now, configuration: .sentReaction)
-        print("Button Clicked*******: ")
-        return .result()
-    }
-}
-
-
 extension ConfigurationAppIntent {
     fileprivate static var blueLove: ConfigurationAppIntent {
         let intent = ConfigurationAppIntent()
-        intent.suggestEmoji = "💙"
-        intent.sentEmoji = ""
+        intent.pulseEmoji = "💙"
         return intent
     }
     
     fileprivate static var greenLove: ConfigurationAppIntent {
         let intent = ConfigurationAppIntent()
-        intent.suggestEmoji = "💚"
-        intent.sentEmoji = ""
+        intent.pulseEmoji = "💚"
         return intent
     }
-    
-    fileprivate static var sentReaction: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.sentEmoji = "Sent: "
-        return intent
-    }
-
 }
 
 #Preview(as: .systemSmall) {
@@ -115,5 +93,4 @@ extension ConfigurationAppIntent {
 } timeline: {
     SimpleEntry(date: .now, configuration: .blueLove)
     SimpleEntry(date: .now, configuration: .greenLove)
-    SimpleEntry(date: .now, configuration: .sentReaction)
 }
