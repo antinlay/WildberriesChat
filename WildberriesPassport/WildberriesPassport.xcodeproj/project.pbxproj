@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C45324C2C36DB38005408BF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C45324B2C36DB38005408BF /* main.swift */; };
+		5C45325F2C37F0CD005408BF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C45325E2C37F0CD005408BF /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5C4532462C36DB38005408BF /* CopyFiles */ = {
+		5C4532592C37F0CD005408BF /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5C4532482C36DB38005408BF /* WildberriesBank */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WildberriesBank; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C45324B2C36DB38005408BF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		5C45325B2C37F0CD005408BF /* WildberriesPassport */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WildberriesPassport; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C45325E2C37F0CD005408BF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5C4532452C36DB38005408BF /* Frameworks */ = {
+		5C4532582C37F0CD005408BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,66 +38,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5C45323F2C36DB38005408BF = {
+		5C4532522C37F0CD005408BF = {
 			isa = PBXGroup;
 			children = (
-				5C45324A2C36DB38005408BF /* WildberriesBank */,
-				5C4532492C36DB38005408BF /* Products */,
+				5C45325D2C37F0CD005408BF /* WildberriesPassport */,
+				5C45325C2C37F0CD005408BF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5C4532492C36DB38005408BF /* Products */ = {
+		5C45325C2C37F0CD005408BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5C4532482C36DB38005408BF /* WildberriesBank */,
+				5C45325B2C37F0CD005408BF /* WildberriesPassport */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5C45324A2C36DB38005408BF /* WildberriesBank */ = {
+		5C45325D2C37F0CD005408BF /* WildberriesPassport */ = {
 			isa = PBXGroup;
 			children = (
-				5C45324B2C36DB38005408BF /* main.swift */,
+				5C45325E2C37F0CD005408BF /* main.swift */,
 			);
-			path = WildberriesBank;
+			path = WildberriesPassport;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5C4532472C36DB38005408BF /* WildberriesBank */ = {
+		5C45325A2C37F0CD005408BF /* WildberriesPassport */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5C45324F2C36DB38005408BF /* Build configuration list for PBXNativeTarget "WildberriesBank" */;
+			buildConfigurationList = 5C4532622C37F0CD005408BF /* Build configuration list for PBXNativeTarget "WildberriesPassport" */;
 			buildPhases = (
-				5C4532442C36DB38005408BF /* Sources */,
-				5C4532452C36DB38005408BF /* Frameworks */,
-				5C4532462C36DB38005408BF /* CopyFiles */,
+				5C4532572C37F0CD005408BF /* Sources */,
+				5C4532582C37F0CD005408BF /* Frameworks */,
+				5C4532592C37F0CD005408BF /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = WildberriesBank;
-			productName = WildberriesBank;
-			productReference = 5C4532482C36DB38005408BF /* WildberriesBank */;
+			name = WildberriesPassport;
+			productName = WildberriesPassport;
+			productReference = 5C45325B2C37F0CD005408BF /* WildberriesPassport */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5C4532402C36DB38005408BF /* Project object */ = {
+		5C4532532C37F0CD005408BF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					5C4532472C36DB38005408BF = {
+					5C45325A2C37F0CD005408BF = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
 			};
-			buildConfigurationList = 5C4532432C36DB38005408BF /* Build configuration list for PBXProject "WildberriesBank" */;
+			buildConfigurationList = 5C4532562C37F0CD005408BF /* Build configuration list for PBXProject "WildberriesPassport" */;
 			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -105,29 +105,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 5C45323F2C36DB38005408BF;
-			productRefGroup = 5C4532492C36DB38005408BF /* Products */;
+			mainGroup = 5C4532522C37F0CD005408BF;
+			productRefGroup = 5C45325C2C37F0CD005408BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5C4532472C36DB38005408BF /* WildberriesBank */,
+				5C45325A2C37F0CD005408BF /* WildberriesPassport */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5C4532442C36DB38005408BF /* Sources */ = {
+		5C4532572C37F0CD005408BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C45324C2C36DB38005408BF /* main.swift in Sources */,
+				5C45325F2C37F0CD005408BF /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		5C45324D2C36DB38005408BF /* Debug */ = {
+		5C4532602C37F0CD005408BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -190,7 +190,7 @@
 			};
 			name = Debug;
 		};
-		5C45324E2C36DB38005408BF /* Release */ = {
+		5C4532612C37F0CD005408BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -245,7 +245,7 @@
 			};
 			name = Release;
 		};
-		5C4532502C36DB38005408BF /* Debug */ = {
+		5C4532632C37F0CD005408BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -257,7 +257,7 @@
 			};
 			name = Debug;
 		};
-		5C4532512C36DB38005408BF /* Release */ = {
+		5C4532642C37F0CD005408BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -272,25 +272,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5C4532432C36DB38005408BF /* Build configuration list for PBXProject "WildberriesBank" */ = {
+		5C4532562C37F0CD005408BF /* Build configuration list for PBXProject "WildberriesPassport" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5C45324D2C36DB38005408BF /* Debug */,
-				5C45324E2C36DB38005408BF /* Release */,
+				5C4532602C37F0CD005408BF /* Debug */,
+				5C4532612C37F0CD005408BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5C45324F2C36DB38005408BF /* Build configuration list for PBXNativeTarget "WildberriesBank" */ = {
+		5C4532622C37F0CD005408BF /* Build configuration list for PBXNativeTarget "WildberriesPassport" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5C4532502C36DB38005408BF /* Debug */,
-				5C4532512C36DB38005408BF /* Release */,
+				5C4532632C37F0CD005408BF /* Debug */,
+				5C4532642C37F0CD005408BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5C4532402C36DB38005408BF /* Project object */;
+	rootObject = 5C4532532C37F0CD005408BF /* Project object */;
 }
