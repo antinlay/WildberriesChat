@@ -1,0 +1,108 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Choose Date" : {
+      "localizations" : {
+        "bg-BG" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Изберете Дата"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odaberite datum"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбери дату"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyberte Dátum"
+          }
+        },
+        "sl-SI" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Izberite Datum"
+          }
+        }
+      }
+    },
+    "Choose Date and Flag" : {
+      "localizations" : {
+        "bg-BG" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Изберете дата и флаг"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odaberite datum i oznaku"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите дату и флаг"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyberte dátum a vlajku"
+          }
+        },
+        "sl-SI" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Izberite datum in zastavo"
+          }
+        }
+      }
+    },
+    "Country" : {
+      "localizations" : {
+        "bg-BG" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Страна"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zemlja"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Страна"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krajina"
+          }
+        },
+        "sl-SI" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Država"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
