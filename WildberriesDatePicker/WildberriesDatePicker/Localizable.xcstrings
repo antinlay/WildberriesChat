@@ -1,0 +1,312 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Choose Date" : {
+      "localizations" : {
+        "bg-BG" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Изберете Дата"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odaberite datum"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите дату"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyberte Dátum"
+          }
+        },
+        "sl-SI" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Izberite Datum"
+          }
+        }
+      }
+    },
+    "Choose Date and Flag" : {
+      "localizations" : {
+        "bg-BG" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Изберете дата и флаг"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odaberite datum i oznaku"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите дату и флаг"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyberte dátum a vlajku"
+          }
+        },
+        "sl-SI" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Izberite datum in zastavo"
+          }
+        }
+      }
+    },
+    "Choose Time" : {
+      "localizations" : {
+        "bg-BG" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Изберете Време"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odaberite vrijeme"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите время"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyberte Čas"
+          }
+        },
+        "sl-SI" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Izberite Čas"
+          }
+        }
+      }
+    },
+    "Country" : {
+      "localizations" : {
+        "bg-BG" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Страна"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zemlja"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Страна"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Krajina"
+          }
+        },
+        "sl-SI" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Država"
+          }
+        }
+      }
+    },
+    "The day after tomorrow:" : {
+      "localizations" : {
+        "bg-BG" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вдругиден:"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prekosutra:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Послезавтра:"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pozajtra:"
+          }
+        },
+        "sl-SI" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pojutrišnjem:"
+          }
+        }
+      }
+    },
+    "Today: " : {
+      "localizations" : {
+        "bg-BG" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Днес:"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danas:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сегодня:"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dnes:"
+          }
+        },
+        "sl-SI" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Danes:"
+          }
+        }
+      }
+    },
+    "Tomorrow:" : {
+      "localizations" : {
+        "bg-BG" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Утре:"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sutra:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Завтра:"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Budúcnosť:"
+          }
+        },
+        "sl-SI" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jutri:"
+          }
+        }
+      }
+    },
+    "Two days ago:" : {
+      "localizations" : {
+        "bg-BG" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Преди два дни:"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prije dva dana:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Позавчера:"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pred dvoma dňami:"
+          }
+        },
+        "sl-SI" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pred dvema dnevoma:"
+          }
+        }
+      }
+    },
+    "Yesterday: " : {
+      "localizations" : {
+        "bg-BG" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вчера:"
+          }
+        },
+        "hr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jučer:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вчера:"
+          }
+        },
+        "sk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Včerajší:"
+          }
+        },
+        "sl-SI" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Včeraj:"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
