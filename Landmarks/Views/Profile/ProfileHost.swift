@@ -9,15 +9,29 @@
 import SwiftUI
 
 struct ProfileHost: View {
-    @State private var draftProfile = Profile.default
+    @Environment(ModelData.self) var modelData
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            ProfileSummary(profile: draftProfile)
-        }.padding()
+        NavigationStack {
+            VStack(alignment: .leading, spacing: 20) {
+                ProfileSummary(profile: modelData.profile)
+                    .toolbar {
+                        ToolbarItem {
+                            NavigationLink {
+                                ProfileEdit(draftProfile: modelData.profile)
+                            } label: {
+                                Text("Edit")
+                            }
+                        }
+                    }
+            }.padding()
+        }
     }
 }
 
 #Preview {
-    ProfileHost()
+    NavigationStack {
+        ProfileHost()
+            .environment(ModelData())
+    }
 }

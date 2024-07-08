@@ -39,6 +39,8 @@ struct ProfileSummary: View {
 }
 
 #Preview {
-    ProfileSummary(profile: .default)
-        .environment(ModelData())
+    NavigationStack {
+        ProfileSummary(profile: .default)
+            .environment(ModelData())
+    }
 }
