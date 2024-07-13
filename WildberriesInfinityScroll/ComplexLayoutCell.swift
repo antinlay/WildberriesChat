@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ComplexLayoutCell: View {
+    var emojiSize: Double
     private var emojiView: some View {
             Text(Emoji.korean.randomElement()!)
-                .font(.system(size: 50))
+                .font(.system(size: emojiSize))
                 .opacity(0.5)
     }
     
@@ -40,5 +41,5 @@ struct ComplexLayoutCell: View {
 }
 
 #Preview {
-    ComplexLayoutCell()
+    ComplexLayoutCell(emojiSize: 100)
 }

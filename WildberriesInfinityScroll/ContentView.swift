@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    private var gridItemLayout = Array(repeating: GridItem(.fixed(100), spacing: 30), count: 3)
     
     var body: some View {
+        var gridSize: Double = 100
+        var gridItemLayout = Array(repeating: GridItem(.fixed(gridSize), spacing: 30), count: 3)
+
         ScrollView {
             LazyVGrid(columns: gridItemLayout, spacing: 20) {
-                ForEach(0...99999, id: \.self) { emoji in
-                        ComplexLayoutCell()
+                ForEach(0...99999, id: \.self) { _ in
+                    ComplexLayoutCell(emojiSize: gridSize)
                         .aspectRatio(contentMode: .fit)
                 }
             }
