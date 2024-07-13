@@ -3,26 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C515DDC2C11322500EFDB9C /* WildberriesChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DDB2C11322500EFDB9C /* WildberriesChatApp.swift */; };
-		5C515DDE2C11322500EFDB9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DDD2C11322500EFDB9C /* ContentView.swift */; };
-		5C515DE02C11322600EFDB9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C515DDF2C11322600EFDB9C /* Assets.xcassets */; };
-		5C515DE32C11322600EFDB9C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C515DE22C11322600EFDB9C /* Preview Assets.xcassets */; };
+		5C05FE3D2C3D4A290047F3B5 /* WildberriesInfinityScrollApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05FE3C2C3D4A290047F3B5 /* WildberriesInfinityScrollApp.swift */; };
+		5C05FE3F2C3D4A290047F3B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05FE3E2C3D4A290047F3B5 /* ContentView.swift */; };
+		5C05FE412C3D4A2B0047F3B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C05FE402C3D4A2B0047F3B5 /* Assets.xcassets */; };
+		5C05FE442C3D4A2B0047F3B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C05FE432C3D4A2B0047F3B5 /* Preview Assets.xcassets */; };
+		5C05FE4B2C3FC6870047F3B5 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05FE4A2C3FC6870047F3B5 /* Emoji.swift */; };
+		5C05FE4D2C3FC6B70047F3B5 /* ComplexLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05FE4C2C3FC6B70047F3B5 /* ComplexLayoutCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5C515DD82C11322500EFDB9C /* WildberriesChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WildberriesChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C515DDB2C11322500EFDB9C /* WildberriesChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildberriesChatApp.swift; sourceTree = "<group>"; };
-		5C515DDD2C11322500EFDB9C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		5C515DDF2C11322600EFDB9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5C515DE22C11322600EFDB9C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5C05FE392C3D4A290047F3B5 /* WildberriesInfinityScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WildberriesInfinityScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C05FE3C2C3D4A290047F3B5 /* WildberriesInfinityScrollApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildberriesInfinityScrollApp.swift; sourceTree = "<group>"; };
+		5C05FE3E2C3D4A290047F3B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5C05FE402C3D4A2B0047F3B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5C05FE432C3D4A2B0047F3B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5C05FE4A2C3FC6870047F3B5 /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
+		5C05FE4C2C3FC6B70047F3B5 /* ComplexLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexLayoutCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5C515DD52C11322500EFDB9C /* Frameworks */ = {
+		5C05FE362C3D4A290047F3B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,37 +36,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5C515DCF2C11322500EFDB9C = {
+		5C05FE302C3D4A290047F3B5 = {
 			isa = PBXGroup;
 			children = (
-				5C515DDA2C11322500EFDB9C /* WildberriesChat */,
-				5C515DD92C11322500EFDB9C /* Products */,
+				5C05FE3B2C3D4A290047F3B5 /* WildberriesInfinityScroll */,
+				5C05FE3A2C3D4A290047F3B5 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5C515DD92C11322500EFDB9C /* Products */ = {
+		5C05FE3A2C3D4A290047F3B5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5C515DD82C11322500EFDB9C /* WildberriesChat.app */,
+				5C05FE392C3D4A290047F3B5 /* WildberriesInfinityScroll.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5C515DDA2C11322500EFDB9C /* WildberriesChat */ = {
+		5C05FE3B2C3D4A290047F3B5 /* WildberriesInfinityScroll */ = {
 			isa = PBXGroup;
 			children = (
-				5C515DDB2C11322500EFDB9C /* WildberriesChatApp.swift */,
-				5C515DDD2C11322500EFDB9C /* ContentView.swift */,
-				5C515DDF2C11322600EFDB9C /* Assets.xcassets */,
-				5C515DE12C11322600EFDB9C /* Preview Content */,
+				5C05FE3C2C3D4A290047F3B5 /* WildberriesInfinityScrollApp.swift */,
+				5C05FE3E2C3D4A290047F3B5 /* ContentView.swift */,
+				5C05FE4A2C3FC6870047F3B5 /* Emoji.swift */,
+				5C05FE4C2C3FC6B70047F3B5 /* ComplexLayoutCell.swift */,
+				5C05FE402C3D4A2B0047F3B5 /* Assets.xcassets */,
+				5C05FE422C3D4A2B0047F3B5 /* Preview Content */,
 			);
-			path = WildberriesChat;
+			path = WildberriesInfinityScroll;
 			sourceTree = "<group>";
 		};
-		5C515DE12C11322600EFDB9C /* Preview Content */ = {
+		5C05FE422C3D4A2B0047F3B5 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				5C515DE22C11322600EFDB9C /* Preview Assets.xcassets */,
+				5C05FE432C3D4A2B0047F3B5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -70,82 +76,84 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5C515DD72C11322500EFDB9C /* WildberriesChat */ = {
+		5C05FE382C3D4A290047F3B5 /* WildberriesInfinityScroll */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5C515DE62C11322600EFDB9C /* Build configuration list for PBXNativeTarget "WildberriesChat" */;
+			buildConfigurationList = 5C05FE472C3D4A2B0047F3B5 /* Build configuration list for PBXNativeTarget "WildberriesInfinityScroll" */;
 			buildPhases = (
-				5C515DD42C11322500EFDB9C /* Sources */,
-				5C515DD52C11322500EFDB9C /* Frameworks */,
-				5C515DD62C11322500EFDB9C /* Resources */,
+				5C05FE352C3D4A290047F3B5 /* Sources */,
+				5C05FE362C3D4A290047F3B5 /* Frameworks */,
+				5C05FE372C3D4A290047F3B5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = WildberriesChat;
-			productName = WildberriesChat;
-			productReference = 5C515DD82C11322500EFDB9C /* WildberriesChat.app */;
+			name = WildberriesInfinityScroll;
+			productName = WildberriesInfinityScroll;
+			productReference = 5C05FE392C3D4A290047F3B5 /* WildberriesInfinityScroll.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5C515DD02C11322500EFDB9C /* Project object */ = {
+		5C05FE312C3D4A290047F3B5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					5C515DD72C11322500EFDB9C = {
-						CreatedOnToolsVersion = 15.3;
+					5C05FE382C3D4A290047F3B5 = {
+						CreatedOnToolsVersion = 16.0;
 					};
 				};
 			};
-			buildConfigurationList = 5C515DD32C11322500EFDB9C /* Build configuration list for PBXProject "WildberriesChat" */;
-			compatibilityVersion = "Xcode 14.0";
+			buildConfigurationList = 5C05FE342C3D4A290047F3B5 /* Build configuration list for PBXProject "WildberriesInfinityScroll" */;
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 5C515DCF2C11322500EFDB9C;
-			productRefGroup = 5C515DD92C11322500EFDB9C /* Products */;
+			mainGroup = 5C05FE302C3D4A290047F3B5;
+			productRefGroup = 5C05FE3A2C3D4A290047F3B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5C515DD72C11322500EFDB9C /* WildberriesChat */,
+				5C05FE382C3D4A290047F3B5 /* WildberriesInfinityScroll */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5C515DD62C11322500EFDB9C /* Resources */ = {
+		5C05FE372C3D4A290047F3B5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C515DE32C11322600EFDB9C /* Preview Assets.xcassets in Resources */,
-				5C515DE02C11322600EFDB9C /* Assets.xcassets in Resources */,
+				5C05FE442C3D4A2B0047F3B5 /* Preview Assets.xcassets in Resources */,
+				5C05FE412C3D4A2B0047F3B5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5C515DD42C11322500EFDB9C /* Sources */ = {
+		5C05FE352C3D4A290047F3B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C515DDE2C11322500EFDB9C /* ContentView.swift in Sources */,
-				5C515DDC2C11322500EFDB9C /* WildberriesChatApp.swift in Sources */,
+				5C05FE4D2C3FC6B70047F3B5 /* ComplexLayoutCell.swift in Sources */,
+				5C05FE4B2C3FC6870047F3B5 /* Emoji.swift in Sources */,
+				5C05FE3F2C3D4A290047F3B5 /* ContentView.swift in Sources */,
+				5C05FE3D2C3D4A290047F3B5 /* WildberriesInfinityScrollApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		5C515DE42C11322600EFDB9C /* Debug */ = {
+		5C05FE452C3D4A2B0047F3B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -197,7 +205,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -208,7 +216,7 @@
 			};
 			name = Debug;
 		};
-		5C515DE52C11322600EFDB9C /* Release */ = {
+		5C05FE462C3D4A2B0047F3B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -254,7 +262,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -264,14 +272,14 @@
 			};
 			name = Release;
 		};
-		5C515DE72C11322600EFDB9C /* Debug */ = {
+		5C05FE482C3D4A2B0047F3B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WildberriesChat/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WildberriesInfinityScroll/Preview Content\"";
 				DEVELOPMENT_TEAM = N9NN3CSS37;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -285,7 +293,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = janiecee.WildberriesChat;
+				PRODUCT_BUNDLE_IDENTIFIER = janiecee.WildberriesInfinityScroll;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -293,14 +301,14 @@
 			};
 			name = Debug;
 		};
-		5C515DE82C11322600EFDB9C /* Release */ = {
+		5C05FE492C3D4A2B0047F3B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WildberriesChat/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WildberriesInfinityScroll/Preview Content\"";
 				DEVELOPMENT_TEAM = N9NN3CSS37;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -314,7 +322,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = janiecee.WildberriesChat;
+				PRODUCT_BUNDLE_IDENTIFIER = janiecee.WildberriesInfinityScroll;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -325,25 +333,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5C515DD32C11322500EFDB9C /* Build configuration list for PBXProject "WildberriesChat" */ = {
+		5C05FE342C3D4A290047F3B5 /* Build configuration list for PBXProject "WildberriesInfinityScroll" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5C515DE42C11322600EFDB9C /* Debug */,
-				5C515DE52C11322600EFDB9C /* Release */,
+				5C05FE452C3D4A2B0047F3B5 /* Debug */,
+				5C05FE462C3D4A2B0047F3B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5C515DE62C11322600EFDB9C /* Build configuration list for PBXNativeTarget "WildberriesChat" */ = {
+		5C05FE472C3D4A2B0047F3B5 /* Build configuration list for PBXNativeTarget "WildberriesInfinityScroll" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5C515DE72C11322600EFDB9C /* Debug */,
-				5C515DE82C11322600EFDB9C /* Release */,
+				5C05FE482C3D4A2B0047F3B5 /* Debug */,
+				5C05FE492C3D4A2B0047F3B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5C515DD02C11322500EFDB9C /* Project object */;
+	rootObject = 5C05FE312C3D4A290047F3B5 /* Project object */;
 }
