@@ -57,6 +57,7 @@
 		5C8F59062C1A1BEE004DA54D /* IllustrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F59052C1A1BEE004DA54D /* IllustrationView.swift */; };
 		5CC89AEE2C1C3AD9005294A6 /* AvatarThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC89AED2C1C3AD9005294A6 /* AvatarThumbnail.swift */; };
 		5CC89AF02C1C3BBD005294A6 /* StoryBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC89AEF2C1C3BBD005294A6 /* StoryBorder.swift */; };
+		5CF5E72B2C45365C0091C93E /* ☎️Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5E72A2C45365C0091C93E /* ☎️Verification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +156,7 @@
 		5C8F59052C1A1BEE004DA54D /* IllustrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustrationView.swift; sourceTree = "<group>"; };
 		5CC89AED2C1C3AD9005294A6 /* AvatarThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarThumbnail.swift; sourceTree = "<group>"; };
 		5CC89AEF2C1C3BBD005294A6 /* StoryBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBorder.swift; sourceTree = "<group>"; };
+		5CF5E72A2C45365C0091C93E /* ☎️Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "☎️Verification.swift"; path = "../../../☎️Verification.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,6 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				5C515DE92C14959500EFDB9C /* OnBoardingView.swift */,
+				5CF5E72A2C45365C0091C93E /* ☎️Verification.swift */,
 				5C8F59052C1A1BEE004DA54D /* IllustrationView.swift */,
 				5C8F59032C1A1B08004DA54D /* PrivacyAndTermsView.swift */,
 				5C515DEB2C14A58900EFDB9C /* UserAgreementView.swift */,
@@ -549,6 +552,7 @@
 				5C8F59002C18A3DA004DA54D /* FontStyles.swift in Sources */,
 				5C5CE4942C203BFC009DCFF3 /* CircleAvatar.swift in Sources */,
 				5C515DEA2C14959500EFDB9C /* OnBoardingView.swift in Sources */,
+				5CF5E72B2C45365C0091C93E /* ☎️Verification.swift in Sources */,
 				5C5CE48B2C1DAA10009DCFF3 /* SearchBarView.swift in Sources */,
 				5C20E7802C2244D4009D5BF9 /* AddContactView.swift in Sources */,
 				5C515DDE2C11322500EFDB9C /* ContentView.swift in Sources */,

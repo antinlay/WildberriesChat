@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OnBoardingView: View {
     var body: some View {
-        VStack {
+        NavigationStack {
             IllustrationView()
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                 .ignoresSafeArea()

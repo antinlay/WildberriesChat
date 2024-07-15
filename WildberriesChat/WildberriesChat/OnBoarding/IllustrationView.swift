@@ -14,11 +14,10 @@ struct IllustrationView: View {
                 .resizable()
                 .scaledToFit()
                 .padding(EdgeInsets(top: 135, leading: 62, bottom: 42, trailing: 62))
-            Text("Общайтесь с друзьями и близкими легко")
+            Text("Общайтесь с друзьями\n и близкими легко")
                 .font(FontStyles.headingSecond)
                 .foregroundStyle(.neutral)
                 .multilineTextAlignment(.center)
-                .frame(width: 280.0, height: 58.0)
         }
     }
 }
