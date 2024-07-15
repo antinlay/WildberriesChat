@@ -16,6 +16,5 @@ public struct ActionButtonStyle: ViewModifier {
             .frame(height: 52)
             .background(.accent)
             .clipShape(.capsule)
-            .padding(EdgeInsets(top: 12, leading: 6, bottom: 12, trailing: 6))
     }
 }

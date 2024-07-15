@@ -17,6 +17,7 @@ struct OnBoardingView: View {
                 PrivacyAndTermsView()
                 NavigationLink("Начать общаться", destination: UserAgreementView())
                     .modifier(ActionButtonStyle())
+                    .padding(EdgeInsets(top: 12, leading: 6, bottom: 12, trailing: 6))
             }
             .padding()
         }

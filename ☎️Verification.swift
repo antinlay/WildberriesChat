@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct VerificationView: View {
-    @State var countryCode: String
-    @State var phoneNumber: String
-    @State var isValidPhoneNumber: Bool = true
+    @State var countryCode: String = "+7"
+    @State var phoneNumber: String = "9996613282"
+    private var isValidPhoneNumber: Bool {
+        phoneNumber.count != 10
+    }
     
     var body: some View {
         VStack {
@@ -23,7 +25,11 @@ struct VerificationView: View {
                 .lineSpacing(8)
                 .padding(.bottom, 50)
             HStack(alignment: .center, spacing: 8) {
-                Text("🇷🇺 +7")
+                HStack {
+                    Image(.Flags.russian)
+                        .clipShape(.rect(cornerRadius: 4))
+                    Text(countryCode)
+                }
                     .padding(.horizontal, 8)
                     .modifier(TextFieldStyle())
                     .modifier(InputBackgroundStyle())
@@ -34,7 +40,7 @@ struct VerificationView: View {
                     .modifier(InputBackgroundStyle())
                     .keyboardType(.numberPad)
             }
-            .padding(.horizontal)
+            .padding(.horizontal, 24)
             
             Button("Продолжить") {
                 //
@@ -43,10 +49,11 @@ struct VerificationView: View {
             .disabled(isValidPhoneNumber)
             .opacity(isValidPhoneNumber ? 0.5 : 1)
             .padding(.top, 69)
+            .padding(.horizontal, 24)
         }
     }
 }
 
 #Preview {
-    VerificationView(countryCode: "🇷🇺 +7", phoneNumber: "")
+    VerificationView()
 }
