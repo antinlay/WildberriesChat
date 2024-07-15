@@ -16,7 +16,7 @@ struct OnBoardingView: View {
             VStack {
                 PrivacyAndTermsView()
                 NavigationLink("Начать общаться", destination: UserAgreementView())
-                    .actionButton()
+                    .modifier(ActionButtonStyle())
             }
             .padding()
         }

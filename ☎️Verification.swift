@@ -10,6 +10,7 @@ import SwiftUI
 struct VerificationView: View {
     @State var countryCode: String
     @State var phoneNumber: String
+    @State var isValidPhoneNumber: Bool = true
     
     var body: some View {
         VStack {
@@ -38,7 +39,10 @@ struct VerificationView: View {
             Button("Продолжить") {
                 //
             }
-            .buttonStyle(<#T##style: PrimitiveButtonStyle##PrimitiveButtonStyle#>)
+            .modifier(ActionButtonStyle())
+            .disabled(isValidPhoneNumber)
+            .opacity(isValidPhoneNumber ? 0.5 : 1)
+            .padding(.top, 69)
         }
     }
 }
