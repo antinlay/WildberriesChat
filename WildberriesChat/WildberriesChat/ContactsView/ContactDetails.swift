@@ -12,7 +12,7 @@ struct ContactDetails: View {
     var contact: Contact
     
     var body: some View {
-        let socials: [ImageResource] = [.Social.twitter, .Social.instagram, .Social.linkedin, .Social.facebook]
+        let socials: [ImageResource] = [.Social.twitter, .Social.instagram, .Social.linkedin, .Social.faceBook]
         
         ScrollView {
             CircleAvatar(contact: contact)
