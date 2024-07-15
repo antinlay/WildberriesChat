@@ -12,7 +12,7 @@ struct FontStyles: ViewModifier {
         .system(size: 14, weight: .semibold)
     
     static var bodySecond = Font
-        .system(size: 10, weight: .regular)
+        .system(size: 14, weight: .regular)
     
     static var subheadingFirst = Font
         .system(size: 18, weight: .semibold)

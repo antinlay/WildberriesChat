@@ -17,9 +17,8 @@ struct SearchBarView: View {
                 .foregroundStyle(.appGray)
                 .padding(.leading)
             TextField("Search", text: $searchText)
+                .modifier(TextFieldStyle())
                 .focused($searchIsFocused)
-                .font(FontStyles.bodyFirst)
-                .foregroundStyle(.appGray)
                 .autocorrectionDisabled(true)
                 .overlay (
                     Image(systemName: "xmark")
@@ -33,11 +32,7 @@ struct SearchBarView: View {
                     , alignment: .trailing
                 )
         }
-        .background(
-            RoundedRectangle(cornerRadius: 4)
-                .fill(.neutralReverse)
-                .frame(height: 36)
-        )
+        .modifier(InputBackgroundStyle())
     }
 }
 

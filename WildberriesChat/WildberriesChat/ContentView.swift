@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ContentView: View {    
     var body: some View {
-        NavigationStackView()
-            .environmentObject(Router())
-            .environmentObject(SearchText())
+        VerificationView(countryCode: "+7", phoneNumber: "")
+//        NavigationStackView()
+//            .environmentObject(Router())
+//            .environmentObject(SearchText())
     }
 }
 
