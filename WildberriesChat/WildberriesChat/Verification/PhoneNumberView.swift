@@ -1,18 +1,15 @@
 //
-//  ☎️Verification.swift
+//  PhoneNumberView.swift
 //  WildberriesChat
 //
-//  Created by Janiece Eleonour on 15.07.2024.
+//  Created by Janiece Eleonour on 16.07.2024.
 //
 
 import SwiftUI
 
-struct VerificationView: View {
-    @State var countryCode: String = "+7"
-    @State var phoneNumber: String = "9996613282"
-    private var isValidPhoneNumber: Bool {
-        phoneNumber.count != 10
-    }
+struct PhoneNumberView: View {
+    @Binding var phoneNumber: String
+    @Binding var countryCode: String
     
     var body: some View {
         VStack {
@@ -30,9 +27,9 @@ struct VerificationView: View {
                         .clipShape(.rect(cornerRadius: 4))
                     Text(countryCode)
                 }
-                    .padding(.horizontal, 8)
-                    .modifier(TextFieldStyle())
-                    .modifier(InputBackgroundStyle())
+                .padding(.horizontal, 8)
+                .modifier(TextFieldStyle())
+                .modifier(InputBackgroundStyle())
                 
                 TextField("Номер телефона", text: $phoneNumber)
                     .padding(.horizontal, 8)
@@ -41,19 +38,10 @@ struct VerificationView: View {
                     .keyboardType(.numberPad)
             }
             .padding(.horizontal, 24)
-            
-            Button("Продолжить") {
-                //
-            }
-            .modifier(ActionButtonStyle())
-            .disabled(isValidPhoneNumber)
-            .opacity(isValidPhoneNumber ? 0.5 : 1)
-            .padding(.top, 69)
-            .padding(.horizontal, 24)
         }
     }
 }
 
 #Preview {
-    VerificationView()
+    PhoneNumberView(phoneNumber: .constant(""), countryCode: .constant("+7"))
 }

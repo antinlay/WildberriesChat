@@ -25,6 +25,7 @@
 		5C1ED3D82C35473B00124160 /* WildberriesChatWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5C1ED3C12C35473900124160 /* WildberriesChatWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5C1ED3DE2C354BAA00124160 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ED3DD2C354BAA00124160 /* Router.swift */; };
 		5C1ED3E02C357BE800124160 /* SearchText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ED3DF2C357BE800124160 /* SearchText.swift */; };
+		5C20BCE22C46BD3F00612E1E /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C20BCE12C46BD3F00612E1E /* PhoneNumberView.swift */; };
 		5C20E7802C2244D4009D5BF9 /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C20E77F2C2244D4009D5BF9 /* AddContactView.swift */; };
 		5C515DDC2C11322500EFDB9C /* WildberriesChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DDB2C11322500EFDB9C /* WildberriesChatApp.swift */; };
 		5C515DDE2C11322500EFDB9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DDD2C11322500EFDB9C /* ContentView.swift */; };
@@ -125,6 +126,7 @@
 		5C1ED3D42C35473B00124160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C1ED3DD2C354BAA00124160 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		5C1ED3DF2C357BE800124160 /* SearchText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchText.swift; sourceTree = "<group>"; };
+		5C20BCE12C46BD3F00612E1E /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
 		5C20E77F2C2244D4009D5BF9 /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
 		5C515DD82C11322500EFDB9C /* WildberriesChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WildberriesChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C515DDB2C11322500EFDB9C /* WildberriesChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildberriesChatApp.swift; sourceTree = "<group>"; };
@@ -158,7 +160,7 @@
 		5C8F59052C1A1BEE004DA54D /* IllustrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustrationView.swift; sourceTree = "<group>"; };
 		5CC89AED2C1C3AD9005294A6 /* AvatarThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarThumbnail.swift; sourceTree = "<group>"; };
 		5CC89AEF2C1C3BBD005294A6 /* StoryBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBorder.swift; sourceTree = "<group>"; };
-		5CF5E72A2C45365C0091C93E /* ☎️Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "☎️Verification.swift"; path = "../../../☎️Verification.swift"; sourceTree = "<group>"; };
+		5CF5E72A2C45365C0091C93E /* ☎️Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "☎️Verification.swift"; sourceTree = "<group>"; };
 		5CF5E72D2C4576C30091C93E /* TextFieldStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyles.swift; sourceTree = "<group>"; };
 		5CF5E72F2C457A7D0091C93E /* BackgroundStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundStyles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -236,6 +238,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		5C20BCE02C46BBF700612E1E /* Verification */ = {
+			isa = PBXGroup;
+			children = (
+				5CF5E72A2C45365C0091C93E /* ☎️Verification.swift */,
+				5C20BCE12C46BD3F00612E1E /* PhoneNumberView.swift */,
+			);
+			path = Verification;
+			sourceTree = "<group>";
+		};
 		5C515DCF2C11322500EFDB9C = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +271,7 @@
 		5C515DDA2C11322500EFDB9C /* WildberriesChat */ = {
 			isa = PBXGroup;
 			children = (
+				5C20BCE02C46BBF700612E1E /* Verification */,
 				5CF5E72C2C4575FD0091C93E /* Styles */,
 				5C1ED3DC2C354B7A00124160 /* Services */,
 				5C8F59072C1A430E004DA54D /* OnBoarding */,
@@ -369,7 +381,6 @@
 			isa = PBXGroup;
 			children = (
 				5C515DE92C14959500EFDB9C /* OnBoardingView.swift */,
-				5CF5E72A2C45365C0091C93E /* ☎️Verification.swift */,
 				5C8F59052C1A1BEE004DA54D /* IllustrationView.swift */,
 				5C8F59032C1A1B08004DA54D /* PrivacyAndTermsView.swift */,
 				5C515DEB2C14A58900EFDB9C /* UserAgreementView.swift */,
@@ -562,6 +573,7 @@
 				5C7B5B6C2C1B8D7A00B84923 /* ContactContainer.swift in Sources */,
 				5CC89AF02C1C3BBD005294A6 /* StoryBorder.swift in Sources */,
 				5C5CE4A02C216CE2009DCFF3 /* MessagesView.swift in Sources */,
+				5C20BCE22C46BD3F00612E1E /* PhoneNumberView.swift in Sources */,
 				5C5CE49D2C2167B8009DCFF3 /* TabBarView.swift in Sources */,
 				5C5CE49B2C216313009DCFF3 /* TabButtonView.swift in Sources */,
 				5C5CE4852C1CC144009DCFF3 /* CircleStatus.swift in Sources */,
