@@ -19,7 +19,7 @@ struct CodeTextField: View {
                 let digits = Array(code)
                 ZStack {
                     Circle()
-                        .frame(width: 32)
+                        .frame(width: 24, height: 24)
                         .foregroundColor(.inputGray)
                         .opacity(digits.count > index ? .zero : 1)
                     if let text = digits[safe: index] {
