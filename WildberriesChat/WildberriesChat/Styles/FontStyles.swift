@@ -20,6 +20,9 @@ struct FontStyles: ViewModifier {
     static var subheadingSecond = Font
         .system(size: 16, weight: .semibold)
     
+    static var headingFirst = Font
+        .system(size: 32, weight: .bold)
+    
     static var headingSecond = Font
         .system(size: 24, weight: .bold)
     
