@@ -30,10 +30,7 @@ struct OneTimePasswordSequence: Sequence, IteratorProtocol {
     var phoneNumber: String
     
     mutating func next() -> Int? {
-        if code == 0 {
-            code = Int.random(in: 1000...9999)
-        }
-        defer { code = 0 }
+        code = Int.random(in: 1000...9999)
         return code
     }
 }
