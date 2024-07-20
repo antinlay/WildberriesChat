@@ -16,5 +16,6 @@ public struct ActionButtonStyle: ViewModifier {
             .frame(height: 52)
             .background(.accent)
             .clipShape(.capsule)
+            .contentShape(.capsule)
     }
 }

@@ -7,6 +7,16 @@
 
 import Foundation
 
+struct OneTimePasswordSequence: Sequence, IteratorProtocol {
+    private(set) var code: Int = Int.random(in: 1000...9999)
+    var phoneNumber: String
+    
+    mutating func next() -> Int? {
+        code = Int.random(in: 1000...9999)
+        return code
+    }
+}
+
 class OneTimePassword: Observable {
     var phoneNumber: String
     var oneTimePasswordSequence: OneTimePasswordSequence
@@ -25,18 +35,9 @@ class OneTimePassword: Observable {
     }
 }
 
-struct OneTimePasswordSequence: Sequence, IteratorProtocol {
-    private(set) var code: Int = Int.random(in: 1000...9999)
-    var phoneNumber: String
-    
-    mutating func next() -> Int? {
-        code = Int.random(in: 1000...9999)
-        return code
-    }
-}
-
-extension OneTimePasswordSequence {
-    func codesIsEqual(_ codeTextField: String) -> Bool {
-        String(code) == codeTextField
+postfix operator ±
+extension OneTimePassword {
+    static postfix func ±(sequence: OneTimePassword) {
+        sequence.nextCode()
     }
 }

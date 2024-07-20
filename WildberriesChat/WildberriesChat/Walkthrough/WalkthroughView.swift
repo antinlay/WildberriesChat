@@ -1,5 +1,5 @@
 //
-//  OnBoardingView.swift
+//  WalkthroughView.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 08.06.2024.
@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct OnBoardingView: View {
+struct WalkthroughView: View {
+    @State private var isPresentedVerification: Bool = false
+    
     var body: some View {
         NavigationStack {
             IllustrationView()
@@ -15,16 +17,22 @@ struct OnBoardingView: View {
                 .ignoresSafeArea()
             VStack {
                 PrivacyAndTermsView()
-                NavigationLink("Начать общаться", destination: VerificationView())
+                Button {
+                    isPresentedVerification = true
+                } label: {
+                    Text("Начать общаться")
                     .modifier(ActionButtonStyle())
-                    .padding(EdgeInsets(top: 12, leading: 6, bottom: 12, trailing: 6))
+                }
             }
             .padding()
+            .navigationDestination(isPresented: $isPresentedVerification) {
+                VerificationView()
+            }
         }
     }
 }
 
 #Preview {
-    OnBoardingView()
+    WalkthroughView()
 }
 

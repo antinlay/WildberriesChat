@@ -39,7 +39,7 @@ struct OneTimePasswordView: View {
                 Button("Запросить код повторно" + (timeRemaining == 0 ? "" : " (\(timeRemaining))")) {
                     timeRemaining = 12
                     buttonDisabled = true
-                    oneTimePassword.nextCode()
+                    oneTimePassword±
                     timer()
                 }
                 .font(FontStyles.subheadingSecond)

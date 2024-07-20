@@ -9,26 +9,30 @@ import SwiftUI
 
 struct VerificationView: View {
     @State var countryCode: String = "+7"
-    @State var phoneNumber: String = ""
+    @State var phoneNumber: String = "9999999999"
     @State var isLoading: Bool = false
-    @State var isShowingOTP: Bool = false
+    @State var isPresentedOTP: Bool = false
     
     private var isValidPhoneNumber: Bool {
         phoneNumber.count != 10
     }
     
     private func sendSMS() {
-        sleep(3)
-        isLoading = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // Задержка в 2 секунды
+            self.isLoading = false
+            self.isPresentedOTP = true
+        }
     }
     
     private var continueButton: some View {
-        NavigationLink("Продолжить") {
-            OneTimePasswordView(countryCode: $countryCode, phoneNumber: $phoneNumber)
-                .environment(OneTimePassword(phoneNumber: "\(countryCode)\(phoneNumber)"))
+        Button {
+            isLoading = true
+            sendSMS()
+        } label: {
+            Text("Продолжить")
+                .modifier(ActionButtonStyle())
         }
-        .modifier(ActionButtonStyle())
-        .disabled(isValidPhoneNumber || isLoading)
+        .disabled(isValidPhoneNumber)
         .opacity(isValidPhoneNumber || isLoading ? 0.5 : 1)
         .padding(.top, 69)
         .padding(.horizontal, 24)
@@ -39,15 +43,18 @@ struct VerificationView: View {
             ZStack {
                 VStack {
                     PhoneNumberView(phoneNumber: $phoneNumber, countryCode: $countryCode)
-                        .transition(.blurReplace)
                     continueButton
-                        .transition(.opacity)
                 }
-                .animation(.smooth, value: isLoading)
+                .blur(radius: isLoading ? .pi : .zero)
                 
                 ProgressView()
                     .scaleEffect(.pi)
                     .opacity(isLoading ? 1 : .zero)
+            }
+            .animation(.easeOut, value: isLoading)
+            .navigationDestination(isPresented: $isPresentedOTP) {
+                OneTimePasswordView(countryCode: $countryCode, phoneNumber: $phoneNumber)
+                    .environment(OneTimePassword(phoneNumber: "\(countryCode)\(phoneNumber)"))
             }
         }
     }

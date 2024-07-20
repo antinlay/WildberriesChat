@@ -1,5 +1,5 @@
 //
-//  NavigationStackView.swift
+//  👥💬⃛TabsView.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 18.06.2024.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct NavigationStackView: View {
+struct TabsView: View {
     @EnvironmentObject var searchText: SearchText
-    @EnvironmentObject var router: Router
+    @Environment(Router.self) var router
 
     var body: some View {
         NavigationStack {
@@ -28,14 +28,14 @@ struct NavigationStackView: View {
 }
 
 #Preview {
-    NavigationStackView()
-        .environmentObject(Router())
+    TabsView()
+        .environment(Router())
         .environmentObject(SearchText())
 }
 
 #Preview {
-    NavigationStackView()
-        .environmentObject(Router())
+    TabsView()
+        .environment(Router())
         .environmentObject(SearchText())
         .preferredColorScheme(.dark)
 }

@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ContentView: View {    
     var body: some View {
-        OnBoardingView()
+        WalkthroughView()
 //        OneTimePasswordView(countryCode: .constant("+7"), phoneNumber: .constant("9999999999"))
-//        NavigationStackView()
-//            .environmentObject(Router())
+//        TabsView()
+//            .environment(Router())
 //            .environmentObject(SearchText())
     }
 }

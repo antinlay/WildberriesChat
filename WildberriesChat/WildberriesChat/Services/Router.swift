@@ -25,6 +25,14 @@ enum Tabs: CaseIterable {
     }
 }
 
-final class Router: ObservableObject {
-    @Published var selectedTab: Tabs = .contacts
+enum FirstEntry {
+    case walkthrough
+    case verification
+    case otp
+    case createProfile
+}
+
+final class Router: Observable {
+    var selectedTab: Tabs = .contacts
+    var firstEntry: FirstEntry = .walkthrough
 }
