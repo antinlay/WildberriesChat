@@ -15,7 +15,7 @@ struct OnBoardingView: View {
                 .ignoresSafeArea()
             VStack {
                 PrivacyAndTermsView()
-                NavigationLink("Начать общаться", destination: UserAgreementView())
+                NavigationLink("Начать общаться", destination: VerificationView())
                     .modifier(ActionButtonStyle())
                     .padding(EdgeInsets(top: 12, leading: 6, bottom: 12, trailing: 6))
             }

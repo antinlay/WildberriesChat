@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5C0DC0772C492D98007073E9 /* 🔢OneTimePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0DC0762C492D98007073E9 /* 🔢OneTimePasswordView.swift */; };
 		5C0DC0792C493ACF007073E9 /* ⚪️CodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0DC0782C493ACF007073E9 /* ⚪️CodeTextField.swift */; };
+		5C0DC07B2C4A8CFB007073E9 /* OneTimePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0DC07A2C4A8CFB007073E9 /* OneTimePassword.swift */; };
+		5C0DC07E2C4BC52B007073E9 /* 🪪CreateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0DC07D2C4BC52B007073E9 /* 🪪CreateProfile.swift */; };
 		5C1ED3A82C33284A00124160 /* WildberriesChatIntentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ED3A72C33284A00124160 /* WildberriesChatIntentsExtension.swift */; };
 		5C1ED3AA2C33284A00124160 /* WildberriesChatIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ED3A92C33284A00124160 /* WildberriesChatIntents.swift */; };
 		5C1ED3AE2C33284A00124160 /* WildberriesChatIntents.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 5C1ED3A52C33284A00124160 /* WildberriesChatIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -110,6 +112,8 @@
 /* Begin PBXFileReference section */
 		5C0DC0762C492D98007073E9 /* 🔢OneTimePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🔢OneTimePasswordView.swift"; sourceTree = "<group>"; };
 		5C0DC0782C493ACF007073E9 /* ⚪️CodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "⚪️CodeTextField.swift"; sourceTree = "<group>"; };
+		5C0DC07A2C4A8CFB007073E9 /* OneTimePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTimePassword.swift; sourceTree = "<group>"; };
+		5C0DC07D2C4BC52B007073E9 /* 🪪CreateProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🪪CreateProfile.swift"; sourceTree = "<group>"; };
 		5C1ED3A52C33284A00124160 /* WildberriesChatIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = WildberriesChatIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1ED3A72C33284A00124160 /* WildberriesChatIntentsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildberriesChatIntentsExtension.swift; sourceTree = "<group>"; };
 		5C1ED3A92C33284A00124160 /* WildberriesChatIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildberriesChatIntents.swift; sourceTree = "<group>"; };
@@ -196,6 +200,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C0DC07C2C4BC429007073E9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5C0DC07D2C4BC52B007073E9 /* 🪪CreateProfile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		5C1ED3A62C33284A00124160 /* WildberriesChatIntents */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +289,7 @@
 		5C515DDA2C11322500EFDB9C /* WildberriesChat */ = {
 			isa = PBXGroup;
 			children = (
+				5C0DC07C2C4BC429007073E9 /* Profile */,
 				5C20BCE02C46BBF700612E1E /* Verification */,
 				5CF5E72C2C4575FD0091C93E /* Styles */,
 				5C1ED3DC2C354B7A00124160 /* Services */,
@@ -353,6 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				5C7B5B692C1B35FC00B84923 /* Contact.swift */,
+				5C0DC07A2C4A8CFB007073E9 /* OneTimePassword.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -566,7 +580,9 @@
 				5CF5E72E2C4576C30091C93E /* TextFieldStyles.swift in Sources */,
 				5C8F59022C18AB86004DA54D /* ButtonStyles.swift in Sources */,
 				5CF5E7302C457A7D0091C93E /* BackgroundStyles.swift in Sources */,
+				5C0DC07E2C4BC52B007073E9 /* 🪪CreateProfile.swift in Sources */,
 				5C7B5B6A2C1B35FC00B84923 /* Contact.swift in Sources */,
+				5C0DC07B2C4A8CFB007073E9 /* OneTimePassword.swift in Sources */,
 				5C5CE4A32C216DE7009DCFF3 /* MoreView.swift in Sources */,
 				5C0DC0772C492D98007073E9 /* 🔢OneTimePasswordView.swift in Sources */,
 				5CC89AEE2C1C3AD9005294A6 /* AvatarThumbnail.swift in Sources */,

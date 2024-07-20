@@ -8,24 +8,29 @@
 import SwiftUI
 
 struct CodeTextField: View {
-    @State private var code: String = ""
+    @Binding var code: String
     @FocusState private var isCodeFocused: Bool
     
     var limit: Int = 4
+    
+    private func text(_ digit: String.Element) -> some View {
+            Text("\(digit)")
+                .font(FontStyles.headingFirst)
+                .multilineTextAlignment(.center)
+    }
         
     var body: some View {
+        let digits = Array(code)
+
         HStack(spacing: 48) {
             ForEach(0..<limit, id:\.self) { index in
-                let digits = Array(code)
                 ZStack {
                     Circle()
                         .frame(width: 24, height: 24)
                         .foregroundColor(.inputGray)
                         .opacity(digits.count > index ? .zero : 1)
-                    if let text = digits[safe: index] {
-                        Text("\(text)")
-                            .font(FontStyles.headingFirst)
-                            .multilineTextAlignment(.center)
+                    if let digit = digits[safe: index] {
+                        text(digit)
                     }
                 }
                 .animation(.easeOut, value: digits.count > index)
@@ -44,5 +49,5 @@ struct CodeTextField: View {
 }
 
 #Preview {
-    CodeTextField()
+    CodeTextField(code: .constant(""))
 }
