@@ -16,3 +16,8 @@ struct CreateProfile: View {
 #Preview {
     CreateProfile()
 }
+
+#Preview {
+    CreateProfile()
+        .preferredColorScheme(.dark)
+}

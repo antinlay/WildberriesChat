@@ -22,7 +22,7 @@ class OneTimePassword: Observable {
     var oneTimePasswordSequence: OneTimePasswordSequence
     var code: String
     
-    init(phoneNumber: String) {
+    init(phoneNumber: String = "") {
         self.phoneNumber = phoneNumber
         self.oneTimePasswordSequence = OneTimePasswordSequence(phoneNumber: phoneNumber)
         self.code = String(oneTimePasswordSequence.code)

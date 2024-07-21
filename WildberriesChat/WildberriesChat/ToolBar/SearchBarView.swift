@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SearchBarView: View {
-    @Binding var searchText: String
+    @State var searchText: String = ""
     @FocusState private var searchIsFocused: Bool
     
     var body: some View {
@@ -37,6 +37,6 @@ struct SearchBarView: View {
 }
 
 #Preview {
-    SearchBarView(searchText: .constant(""))
+    SearchBarView()
 }
 

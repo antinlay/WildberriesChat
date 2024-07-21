@@ -7,6 +7,6 @@
 
 import Foundation
 
-final class SearchText: ObservableObject {
-    @Published var text = ""
+final class SearchText: Observable {
+    var text = ""
 }

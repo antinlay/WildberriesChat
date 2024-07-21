@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct ContentView: View {    
+struct ContentView: View {
     var body: some View {
-        WalkthroughView()
-//        OneTimePasswordView(countryCode: .constant("+7"), phoneNumber: .constant("9999999999"))
-//        TabsView()
-//            .environment(Router())
-//            .environmentObject(SearchText())
+        FirstEntryView()
+        //        OneTimePasswordView(countryCode: .constant("+7"), phoneNumber: .constant("9999999999"))
+//                TabsView()
+//                    .environment(SearchText())
     }
 }
 
 #Preview {
     ContentView()
+        .environment(SearchText())
 }

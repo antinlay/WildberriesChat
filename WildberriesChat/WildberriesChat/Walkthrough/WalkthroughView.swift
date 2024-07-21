@@ -8,31 +8,34 @@
 import SwiftUI
 
 struct WalkthroughView: View {
-    @State private var isPresentedVerification: Bool = false
+    @Environment(Router.self) var router
     
     var body: some View {
-        NavigationStack {
+        VStack {
             IllustrationView()
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                 .ignoresSafeArea()
             VStack {
                 PrivacyAndTermsView()
                 Button {
-                    isPresentedVerification = true
+                    router.firstEntry = .verification
                 } label: {
-                    Text("Начать общаться")
-                    .modifier(ActionButtonStyle())
+                    Text("Начать общаться \(router.firstEntry)")
+                        .modifier(ActionButtonStyle())
                 }
             }
             .padding()
-            .navigationDestination(isPresented: $isPresentedVerification) {
-                VerificationView()
-            }
         }
     }
 }
 
 #Preview {
     WalkthroughView()
+        .environment(Router())
 }
 
+#Preview {
+    WalkthroughView()
+        .environment(Router())
+        .preferredColorScheme(.dark)
+}

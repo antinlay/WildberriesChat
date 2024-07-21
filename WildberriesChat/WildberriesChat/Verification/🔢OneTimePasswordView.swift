@@ -8,12 +8,9 @@
 import SwiftUI
 
 struct OneTimePasswordView: View {
-    @Environment(OneTimePassword.self) private var oneTimePassword
-    @Binding var countryCode: String
-    @Binding var phoneNumber: String
-    
+    @Environment(OneTimePassword.self) private var otp
     @State private var code = ""
-
+    
     @State private var buttonDisabled: Bool = true
     @State private var timeRemaining = 12
     
@@ -21,41 +18,37 @@ struct OneTimePasswordView: View {
     @State private var isCreateProfilePresented = false
     
     var body: some View {
-        NavigationStack {
-            VStack {
-                Text("Введите код")
-                    .font(FontStyles.headingSecond)
-                    .padding(.bottom, 8)
-                Text("Отправили код на номер\n \(oneTimePassword.code) \(phoneNumber)")
-                    .font(FontStyles.bodySecond)
-                    .multilineTextAlignment(.center)
-                    .lineSpacing(8)
-                    .padding(.bottom, 50)
-                CodeTextField(code: $code)
-                    .frame(height: 40)
-                    .onChange(of: code) { oldValue, newValue in
-                        isCreateProfilePresented = (newValue == oneTimePassword.code)
-                    }
-                Button("Запросить код повторно" + (timeRemaining == 0 ? "" : " (\(timeRemaining))")) {
-                    timeRemaining = 12
-                    buttonDisabled = true
-                    oneTimePassword±
-                    timer()
+        VStack {
+            Text("Введите код")
+                .font(FontStyles.headingSecond)
+                .padding(.bottom, 8)
+            Text("Отправили код на номер\n \(otp.code) \(otp.phoneNumber)")
+                .font(FontStyles.bodySecond)
+                .multilineTextAlignment(.center)
+                .lineSpacing(8)
+                .padding(.bottom, 50)
+            CodeTextField(code: $code)
+                .frame(height: 40)
+                .onChange(of: code) { oldValue, newValue in
+                    isCreateProfilePresented = (newValue == otp.code)
                 }
-                .font(FontStyles.subheadingSecond)
-                .disabled(buttonDisabled)
-                .padding(.top, 69)
-                .padding(.horizontal, 24)
-            }
-            .onAppear(perform: {
+            Button("Запросить код повторно" + (timeRemaining == 0 ? "" : " (\(timeRemaining))")) {
+                timeRemaining = 12
+                buttonDisabled = true
+                otp±
                 timer()
-//                sendSMS(oneTimePassword)
-            })
-            .navigationDestination(isPresented: $isCreateProfilePresented) {
-                CreateProfile()
             }
+            .font(FontStyles.subheadingSecond)
+            .disabled(buttonDisabled)
+            .padding(.top, 69)
+            .padding(.horizontal, 24)
         }
-
+        .onAppear(perform: {
+            timer()
+        })
+        .navigationDestination(isPresented: $isCreateProfilePresented) {
+            CreateProfile()
+        }
     }
     
     private func timer() {
@@ -77,5 +70,16 @@ struct OneTimePasswordView: View {
 }
 
 #Preview {
-    OneTimePasswordView(countryCode: .constant("+7"), phoneNumber: .constant("9009009090"))
+    NavigationStack {
+        OneTimePasswordView()
+            .environment(OneTimePassword(phoneNumber: "9009009090"))
+    }
+}
+
+#Preview {
+    NavigationStack {
+        OneTimePasswordView()
+            .environment(OneTimePassword(phoneNumber: "9009009090"))
+            .preferredColorScheme(.dark)
+    }
 }

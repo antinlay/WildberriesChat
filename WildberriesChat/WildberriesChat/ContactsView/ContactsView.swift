@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContactsView: View {
-    @EnvironmentObject var search: SearchText
+    @Environment(SearchText.self) var search
     
     var body: some View {
         let contacts = Contact.filteredContact(search.text)
@@ -30,5 +30,5 @@ struct ContactsView: View {
 
 #Preview {
     ContactsView()
-        .environmentObject(SearchText())
+        .environment(SearchText())
 }

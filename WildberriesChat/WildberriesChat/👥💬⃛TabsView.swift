@@ -8,18 +8,16 @@
 import SwiftUI
 
 struct TabsView: View {
-    @EnvironmentObject var searchText: SearchText
     @Environment(Router.self) var router
 
     var body: some View {
         NavigationStack {
             VStack {
-                SearchBarView(searchText: $searchText.text)
+                SearchBarView()
                     .padding(.horizontal, 24)
                     .padding(.vertical)
                 TabNavigationView(selectedTab: router.selectedTab)
             }
-            .background(.appBackground)
             .ignoresSafeArea(.keyboard, edges: .bottom)
         }
         .tint(.accent)
@@ -30,12 +28,12 @@ struct TabsView: View {
 #Preview {
     TabsView()
         .environment(Router())
-        .environmentObject(SearchText())
+        .environment(SearchText())
 }
 
 #Preview {
     TabsView()
         .environment(Router())
-        .environmentObject(SearchText())
+        .environment(SearchText())
         .preferredColorScheme(.dark)
 }

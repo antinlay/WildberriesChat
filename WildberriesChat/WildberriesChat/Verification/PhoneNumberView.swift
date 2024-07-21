@@ -45,3 +45,8 @@ struct PhoneNumberView: View {
 #Preview {
     PhoneNumberView(phoneNumber: .constant(""), countryCode: .constant("+7"))
 }
+
+#Preview {
+    PhoneNumberView(phoneNumber: .constant(""), countryCode: .constant("+7"))
+        .preferredColorScheme(.dark)
+}

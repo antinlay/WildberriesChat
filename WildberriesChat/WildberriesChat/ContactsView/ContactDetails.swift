@@ -38,7 +38,6 @@ struct ContactDetails: View {
             .padding()
         }
         .frame(maxWidth: .infinity)
-        .background(.appBackground)
         
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
@@ -63,7 +62,6 @@ struct ContactDetails: View {
             }
         }
         .navigationBarBackButtonHidden(true)
-        .background(.appBackground)
     }
 }
 

@@ -25,7 +25,6 @@ struct AddContactView: View {
             }
         }
         .navigationBarBackButtonHidden(true)
-        .background(.appBackground)
     }
 }
 

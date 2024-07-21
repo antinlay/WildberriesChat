@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C05461C2C4D9919004C8039 /* ☎️🔢🪪FirstEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C05461B2C4D9919004C8039 /* ☎️🔢🪪FirstEntryView.swift */; };
 		5C0DC0772C492D98007073E9 /* 🔢OneTimePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0DC0762C492D98007073E9 /* 🔢OneTimePasswordView.swift */; };
 		5C0DC0792C493ACF007073E9 /* ⚪️CodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0DC0782C493ACF007073E9 /* ⚪️CodeTextField.swift */; };
 		5C0DC07B2C4A8CFB007073E9 /* OneTimePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0DC07A2C4A8CFB007073E9 /* OneTimePassword.swift */; };
@@ -110,6 +111,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5C05461B2C4D9919004C8039 /* ☎️🔢🪪FirstEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "☎️🔢🪪FirstEntryView.swift"; sourceTree = "<group>"; };
 		5C0DC0762C492D98007073E9 /* 🔢OneTimePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🔢OneTimePasswordView.swift"; sourceTree = "<group>"; };
 		5C0DC0782C493ACF007073E9 /* ⚪️CodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "⚪️CodeTextField.swift"; sourceTree = "<group>"; };
 		5C0DC07A2C4A8CFB007073E9 /* OneTimePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTimePassword.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 		5C1ED3DC2C354B7A00124160 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5C0DC07A2C4A8CFB007073E9 /* OneTimePassword.swift */,
 				5C1ED3DD2C354BAA00124160 /* Router.swift */,
 				5C1ED3DF2C357BE800124160 /* SearchText.swift */,
 			);
@@ -297,6 +300,7 @@
 				5C515DDB2C11322500EFDB9C /* WildberriesChatApp.swift */,
 				5C515DDD2C11322500EFDB9C /* ContentView.swift */,
 				5C5CE4AA2C21E32F009DCFF3 /* 👥💬⃛TabsView.swift */,
+				5C05461B2C4D9919004C8039 /* ☎️🔢🪪FirstEntryView.swift */,
 				5C5CE4A12C216DD3009DCFF3 /* MoreView */,
 				5C5CE49E2C216CCC009DCFF3 /* MessagesView */,
 				5C5CE4992C2162F5009DCFF3 /* NavigationBar */,
@@ -366,7 +370,6 @@
 			isa = PBXGroup;
 			children = (
 				5C7B5B692C1B35FC00B84923 /* Contact.swift */,
-				5C0DC07A2C4A8CFB007073E9 /* OneTimePassword.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -595,6 +598,7 @@
 				5C5CE4962C203E98009DCFF3 /* PlaceholderAvatar.swift in Sources */,
 				5C5CE4A72C21CD89009DCFF3 /* ToolBarView.swift in Sources */,
 				5C7B5B6C2C1B8D7A00B84923 /* ContactContainer.swift in Sources */,
+				5C05461C2C4D9919004C8039 /* ☎️🔢🪪FirstEntryView.swift in Sources */,
 				5CC89AF02C1C3BBD005294A6 /* StoryBorder.swift in Sources */,
 				5C5CE4A02C216CE2009DCFF3 /* MessagesView.swift in Sources */,
 				5C20BCE22C46BD3F00612E1E /* PhoneNumberView.swift in Sources */,

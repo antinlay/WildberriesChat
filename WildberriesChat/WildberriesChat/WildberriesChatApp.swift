@@ -11,8 +11,14 @@ import SwiftUI
 struct WildberriesChatApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .background(.appBackground)
+            NavigationStack {
+                ZStack {
+                    ContentView()
+                        .environment(Router())
+                        .environment(SearchText())
+                }
+                .background(.appBackground, ignoresSafeAreaEdges: .all)
+            }
         }
     }
 }
