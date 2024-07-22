@@ -7,7 +7,35 @@
 		<key>WildberriesChat.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>WildberriesChatIntents.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>WildberriesChatWidgetExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>5C1ED3A42C33284A00124160</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5C1ED3C02C35473900124160</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5C515DD72C11322500EFDB9C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
