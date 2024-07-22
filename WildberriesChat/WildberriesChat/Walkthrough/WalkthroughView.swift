@@ -18,14 +18,15 @@ struct WalkthroughView: View {
             VStack {
                 PrivacyAndTermsView()
                 Button {
-                    router.firstEntry = .verification
+                    router.navigate(to: .verification)
                 } label: {
-                    Text("Начать общаться \(router.firstEntry)")
+                    Text("Начать общаться")
                         .modifier(ActionButtonStyle())
                 }
             }
             .padding()
         }
+        .background(.appBackground, ignoresSafeAreaEdges: .all)
     }
 }
 

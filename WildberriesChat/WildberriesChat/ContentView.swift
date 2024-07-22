@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        FirstEntryView()
+//        FirstEntryView()
+        WalkthroughView()
         //        OneTimePasswordView(countryCode: .constant("+7"), phoneNumber: .constant("9999999999"))
 //                TabsView()
 //                    .environment(SearchText())

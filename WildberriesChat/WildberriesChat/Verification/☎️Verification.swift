@@ -22,7 +22,7 @@ struct VerificationView: View {
     private func sendSMS() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.isLoading = false
-            router.firstEntry = .otp
+            router.navigate(to: .otp)
         }
     }
     
@@ -42,7 +42,9 @@ struct VerificationView: View {
     }
     
     var body: some View {
-        VStack {
+        ZStack {
+            Color.appBackground
+                .ignoresSafeArea()
             VStack {
                 PhoneNumberView(phoneNumber: $phoneNumber, countryCode: $countryCode)
                 continueButton
@@ -53,7 +55,6 @@ struct VerificationView: View {
                 .scaleEffect(.pi)
                 .opacity(isLoading ? 1 : .zero)
         }
-        .ignoresSafeArea()
         .animation(.easeOut, value: isLoading)
     }
 }
@@ -61,12 +62,16 @@ struct VerificationView: View {
 #Preview {
     NavigationStack {
         VerificationView()
+            .environment(Router())
+            .environment(OneTimePassword())
     }
 }
 
 #Preview {
     NavigationStack {
         VerificationView()
+            .environment(Router())
+            .environment(OneTimePassword())
             .preferredColorScheme(.dark)
     }
 }

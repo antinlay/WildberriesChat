@@ -9,13 +9,12 @@ import SwiftUI
 
 struct OneTimePasswordView: View {
     @Environment(OneTimePassword.self) private var otp
+    @Environment(Router.self) private var router
+    
     @State private var code = ""
     
     @State private var buttonDisabled: Bool = true
     @State private var timeRemaining = 12
-    
-    
-    @State private var isCreateProfilePresented = false
     
     var body: some View {
         VStack {
@@ -30,7 +29,9 @@ struct OneTimePasswordView: View {
             CodeTextField(code: $code)
                 .frame(height: 40)
                 .onChange(of: code) { oldValue, newValue in
-                    isCreateProfilePresented = (newValue == otp.code)
+                    if newValue == otp.code {
+                        router.navigate(to: .createProfile)
+                    }
                 }
             Button("Запросить код повторно" + (timeRemaining == 0 ? "" : " (\(timeRemaining))")) {
                 timeRemaining = 12
@@ -43,12 +44,11 @@ struct OneTimePasswordView: View {
             .padding(.top, 69)
             .padding(.horizontal, 24)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.appBackground, ignoresSafeAreaEdges: .all)
         .onAppear(perform: {
             timer()
         })
-        .navigationDestination(isPresented: $isCreateProfilePresented) {
-            CreateProfile()
-        }
     }
     
     private func timer() {
@@ -72,6 +72,7 @@ struct OneTimePasswordView: View {
 #Preview {
     NavigationStack {
         OneTimePasswordView()
+            .environment(Router())
             .environment(OneTimePassword(phoneNumber: "9009009090"))
     }
 }
@@ -79,6 +80,7 @@ struct OneTimePasswordView: View {
 #Preview {
     NavigationStack {
         OneTimePasswordView()
+            .environment(Router())
             .environment(OneTimePassword(phoneNumber: "9009009090"))
             .preferredColorScheme(.dark)
     }

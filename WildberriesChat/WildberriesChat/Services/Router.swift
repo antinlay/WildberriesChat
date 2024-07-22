@@ -25,14 +25,29 @@ enum Tabs: CaseIterable {
     }
 }
 
-enum FirstEntry {
-    case walkthrough
-    case verification
-    case otp
-    case createProfile
-}
+@Observable
+final class Router {
+    var navigationPath = NavigationPath()
 
-final class Router: Observable {
+    enum Destination: Hashable {
+        case walkthrough
+        case verification
+        case otp
+        case createProfile
+    }
+
     var selectedTab: Tabs = .contacts
-    var firstEntry: FirstEntry = .walkthrough
+    var destination: Destination = .walkthrough
+    
+    func navigate(to destination: Destination) {
+        navigationPath.append(destination)
+    }
+    
+    func navigateBack() {
+        navigationPath.removeLast()
+    }
+    
+    func navigateRoot() {
+        navigationPath.removeLast(navigationPath.count)
+    }
 }
