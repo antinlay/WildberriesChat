@@ -11,33 +11,41 @@ struct ContactDetails: View {
     @Environment(\.dismiss) var dissmis
     var contact: Contact
     
-    var body: some View {
+    private var socialButtons: some View {
         let socials: [ImageResource] = [.Social.twitter, .Social.instagram, .Social.linkedin, .Social.faceBook]
         
-        ScrollView {
-            CircleAvatar(contact: contact)
-            Text(contact.name)
-                .font(FontStyles.headingSecond)
-            Text(contact.phoneNumber.applyPhoneMask())
-                .font(FontStyles.subheadingSecond)
-                .fontWeight(.regular)
-                .foregroundStyle(.appGray)
-            
-            HStack {
-                ForEach(socials.indices, id: \.self) { index in
-                    Capsule()
-                        .stroke(.accent, lineWidth: 1.67)
-                        .overlay(Image(socials[index]))
-                        .onTapGesture {
-                            //
-                        }
-                }
+        return HStack(spacing: 12) {
+            ForEach(socials.indices, id: \.self) { index in
+                Capsule()
+                    .stroke(.accent, lineWidth: 1.67)
+                    .overlay(Image(socials[index]))
+                    .onTapGesture {
+                        //
+                    }
             }
-            .frame(maxWidth: .infinity)
-            .frame(height: 40)
-            .padding()
         }
         .frame(maxWidth: .infinity)
+        .frame(height: 40)
+        .padding(.horizontal, 26)
+    }
+    
+    var body: some View {
+        VStack {
+            CircleAvatar(contact: contact)
+                .padding(.bottom, 20)
+            VStack {
+                Text(contact.name)
+                    .font(FontStyles.headingSecond)
+                Text(contact.phoneNumber.applyPhoneMask())
+                    .font(FontStyles.subheadingSecond)
+                    .fontWeight(.regular)
+                    .foregroundStyle(.appGray)
+            }
+            .padding(.bottom, 40)
+            socialButtons
+        }
+        .frame(maxHeight: .infinity, alignment: .top)
+        .padding(.top, 46)
         
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
@@ -66,5 +74,7 @@ struct ContactDetails: View {
 }
 
 #Preview {
-    ContactDetails(contact: Contact.contacts.last!)
+    NavigationStack {
+        ContactDetails(contact: Contact.contacts.last!)
+    }
 }

@@ -62,6 +62,7 @@
 		5C8F59062C1A1BEE004DA54D /* IllustrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F59052C1A1BEE004DA54D /* IllustrationView.swift */; };
 		5CC89AEE2C1C3AD9005294A6 /* AvatarThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC89AED2C1C3AD9005294A6 /* AvatarThumbnail.swift */; };
 		5CC89AF02C1C3BBD005294A6 /* StoryBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC89AEF2C1C3BBD005294A6 /* StoryBorder.swift */; };
+		5CE802DF2C635EFE007609E2 /* UISystem in Frameworks */ = {isa = PBXBuildFile; productRef = 5CE802DE2C635EFE007609E2 /* UISystem */; };
 		5CF5E72B2C45365C0091C93E /* ☎️Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5E72A2C45365C0091C93E /* ☎️Verification.swift */; };
 		5CF5E72E2C4576C30091C93E /* TextFieldStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5E72D2C4576C30091C93E /* TextFieldStyles.swift */; };
 		5CF5E7302C457A7D0091C93E /* BackgroundStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5E72F2C457A7D0091C93E /* BackgroundStyles.swift */; };
@@ -168,6 +169,7 @@
 		5C8F59052C1A1BEE004DA54D /* IllustrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustrationView.swift; sourceTree = "<group>"; };
 		5CC89AED2C1C3AD9005294A6 /* AvatarThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarThumbnail.swift; sourceTree = "<group>"; };
 		5CC89AEF2C1C3BBD005294A6 /* StoryBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBorder.swift; sourceTree = "<group>"; };
+		5CE802DD2C635EB2007609E2 /* UISystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UISystem; sourceTree = "<group>"; };
 		5CF5E72A2C45365C0091C93E /* ☎️Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "☎️Verification.swift"; sourceTree = "<group>"; };
 		5CF5E72D2C4576C30091C93E /* TextFieldStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyles.swift; sourceTree = "<group>"; };
 		5CF5E72F2C457A7D0091C93E /* BackgroundStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundStyles.swift; sourceTree = "<group>"; };
@@ -194,12 +196,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CE802DF2C635EFE007609E2 /* UISystem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C00F5E82C635B750076DF6E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5CE802DD2C635EB2007609E2 /* UISystem */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		5C0DC07C2C4BC429007073E9 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +301,7 @@
 		5C515DDA2C11322500EFDB9C /* WildberriesChat */ = {
 			isa = PBXGroup;
 			children = (
+				5C00F5E82C635B750076DF6E /* Modules */,
 				5C0DC07C2C4BC429007073E9 /* Profile */,
 				5C20BCE02C46BBF700612E1E /* Verification */,
 				5CF5E72C2C4575FD0091C93E /* Styles */,
@@ -473,6 +485,9 @@
 				5C1ED3D62C35473B00124160 /* PBXTargetDependency */,
 			);
 			name = WildberriesChat;
+			packageProductDependencies = (
+				5CE802DE2C635EFE007609E2 /* UISystem */,
+			);
 			productName = WildberriesChat;
 			productReference = 5C515DD82C11322500EFDB9C /* WildberriesChat.app */;
 			productType = "com.apple.product-type.application";
@@ -882,7 +897,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -914,7 +929,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -969,6 +984,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5CE802DE2C635EFE007609E2 /* UISystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UISystem;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5C515DD02C11322500EFDB9C /* Project object */;
 }
