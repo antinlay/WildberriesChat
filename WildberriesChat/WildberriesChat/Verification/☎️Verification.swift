@@ -43,8 +43,6 @@ struct VerificationView: View {
     
     var body: some View {
         ZStack {
-            Color.appBackground
-                .ignoresSafeArea()
             VStack {
                 PhoneNumberView(phoneNumber: $phoneNumber, countryCode: $countryCode)
                 continueButton
@@ -56,6 +54,7 @@ struct VerificationView: View {
                 .opacity(isLoading ? 1 : .zero)
         }
         .animation(.easeOut, value: isLoading)
+        .modifier(AppBackgroundStyle())
     }
 }
 

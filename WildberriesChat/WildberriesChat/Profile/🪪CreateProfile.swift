@@ -12,8 +12,7 @@ struct CreateProfile: View {
         VStack {
             Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(.appBackground, ignoresSafeAreaEdges: .all)
+        .modifier(AppBackgroundStyle())
     }
 }
 

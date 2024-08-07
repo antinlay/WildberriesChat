@@ -17,3 +17,11 @@ public struct InputBackgroundStyle: ViewModifier {
             )
     }
 }
+
+public struct AppBackgroundStyle: ViewModifier {
+    public func body(content: Content) -> some View {
+        content
+            .background(ignoresSafeAreaEdges: .all)
+        
+    }
+}

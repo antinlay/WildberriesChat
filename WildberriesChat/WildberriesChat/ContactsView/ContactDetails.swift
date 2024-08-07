@@ -10,7 +10,7 @@ import SwiftUI
 struct ContactDetails: View {
     @Environment(\.dismiss) var dissmis
     var contact: Contact
-    
+        
     private var socialButtons: some View {
         let socials: [ImageResource] = [.Social.twitter, .Social.instagram, .Social.linkedin, .Social.faceBook]
         

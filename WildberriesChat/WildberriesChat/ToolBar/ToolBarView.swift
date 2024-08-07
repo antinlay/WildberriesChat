@@ -42,10 +42,3 @@ struct ToolBarView: ToolbarContent {
         }
     }    
 }
-
-//#Preview {
-//    ContactsView()
-//        .toolbar {
-//            ToolBarView(title: .constant("Контакты"))
-//        }
-//}

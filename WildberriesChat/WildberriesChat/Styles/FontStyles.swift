@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FontStyles: ViewModifier {
+public struct FontStyles: ViewModifier {
     static var bodyFirst = Font
         .system(size: 14, weight: .semibold)
     
