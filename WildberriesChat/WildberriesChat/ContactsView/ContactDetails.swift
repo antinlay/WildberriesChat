@@ -30,14 +30,16 @@ struct ContactDetails: View {
     }
     
     var body: some View {
+        let phoneNumber = contact.phoneNumber.getRussianPhoneMask()
+        
         VStack {
             CircleAvatar(contact: contact)
                 .padding(.bottom, 20)
             VStack {
                 Text(contact.name)
-                    .font(FontStyles.headingSecond)
-                Text(contact.phoneNumber.applyPhoneMask())
-                    .font(FontStyles.subheadingSecond)
+                    .font(.headingSecond)
+                Text(phoneNumber)
+                    .font(.subheadingSecond)
                     .fontWeight(.regular)
                     .foregroundStyle(.appGray)
             }
@@ -59,13 +61,13 @@ struct ContactDetails: View {
             
             ToolbarItem(placement: .topBarLeading) {
                 Text("Profile")
-                    .font(FontStyles.subheadingFirst)
+                    .font(.subheadingFirst)
                     .padding(.leading, 10)
             }
             
             ToolbarItem(placement: .topBarTrailing) {
                 Image(.ToolBar.editProfile)
-                    .font(FontStyles.headingSecond)
+                    .font(.headingSecond)
                     .padding(.trailing, 10)
             }
         }

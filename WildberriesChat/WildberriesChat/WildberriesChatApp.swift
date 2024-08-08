@@ -17,14 +17,14 @@ struct WildberriesChatApp: App {
         WindowGroup {
             NavigationStack(path: $router.navigationPath) {
                 ContentView()
-                    .navigationDestination(for: Router.Destination.self) { destination in
+                    .navigationDestination(for: Destination.self) { destination in
                         switch destination {
                         case .walkthrough:
-                            WalkthroughView()
+                            Walkthrough()
                         case .verification:
                             VerificationView()
                         case .otp:
-                            OneTimePasswordView()
+                            EnterCode()
                         case .createProfile:
                             CreateProfile()
                         }

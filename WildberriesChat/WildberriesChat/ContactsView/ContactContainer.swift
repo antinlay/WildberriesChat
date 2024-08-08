@@ -23,11 +23,11 @@ struct ContactContainer: View {
             
             VStack(alignment: .leading, spacing: 2) {
                 Text(contact.name)
-                    .font(FontStyles.bodyFirst)
+                    .font(.bodyFirst)
                     .foregroundStyle(.neutral)
                     .frame(height: 24)
                 Text(contact.onlineStatus)
-                    .font(FontStyles.metadataFirst)
+                    .font(.metadataFirst)
                     .foregroundStyle(.appGray)
                     .frame(height: 20)
             }

@@ -16,7 +16,7 @@ struct InitialsAvatar: View {
                 .frame(width: 48, height: 48)
                 .overlay {
                     Text(initials)
-                        .font(FontStyles.bodyFirst)
+                        .font(.bodyFirst)
                         .fontWeight(.bold)
                         .foregroundStyle(.white)
 

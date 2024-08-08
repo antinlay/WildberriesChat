@@ -1,5 +1,5 @@
 //
-//  WalkthroughView.swift
+//  🚶🏻‍♂️‍➡️Walkthrough.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 08.06.2024.
@@ -7,36 +7,35 @@
 
 import SwiftUI
 
-struct WalkthroughView: View {
+struct Walkthrough: View {
     @Environment(Router.self) var router
     
     var body: some View {
         VStack {
-            IllustrationView()
+            Illustration()
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                 .ignoresSafeArea()
             VStack {
-                PrivacyAndTermsView()
-                Button {
+                PrivacyAndTerms()
+                Button("Начать общаться") {
                     router.navigate(to: .verification)
-                } label: {
-                    Text("Начать общаться")
-                        .modifier(ActionButtonStyle())
                 }
+                .buttonStyle(ActionButton(isDisabled: false))
+                .padding(.top, 13)
             }
             .padding()
         }
-        .background(.appBackground, ignoresSafeAreaEdges: .all)
+        .modifier(AppBackground())
     }
 }
 
 #Preview {
-    WalkthroughView()
+    Walkthrough()
         .environment(Router())
 }
 
 #Preview {
-    WalkthroughView()
+    Walkthrough()
         .environment(Router())
         .preferredColorScheme(.dark)
 }

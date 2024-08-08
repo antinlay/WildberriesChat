@@ -1,5 +1,5 @@
 //
-//  PrivacyAndTermsView.swift
+//  🕵🏻‍♂️PrivacyAndTerms.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 12.06.2024.
@@ -7,37 +7,37 @@
 
 import SwiftUI
 
-struct PrivacyAndTermsView: View {
+struct PrivacyAndTerms: View {
     @State private var isPolicyPresented = false
     @State private var isTermsPresented = false
     
     var body: some View {
         Text("Нажимая кнопку продолжить я соглашаюсь с ")
-            .font(FontStyles.metadataSecond)
+            .font(.metadataSecond)
             .foregroundStyle(.appGray)
             .padding(2)
         HStack(spacing: 0) {
             Text("Политикой Конфиденциальности")
-                .font(FontStyles.metadataSecond)
+                .font(.metadataSecond)
                 .foregroundStyle(.accent)
                 .onTapGesture {
                     isPolicyPresented = true
                 }
                 .sheet(isPresented: $isTermsPresented, content: {
-                    UserAgreementView()
+                    UserAgreement()
                         .presentationBackground(.thinMaterial)
                 })
             Text(" и ")
-                .font(FontStyles.metadataSecond)
+                .font(.metadataSecond)
                 .foregroundStyle(.appGray)
             Text("Условиями Использования")
-                .font(FontStyles.metadataSecond)
+                .font(.metadataSecond)
                 .foregroundColor(.accent)
                 .onTapGesture {
                     isTermsPresented = true
                 }
                 .sheet(isPresented: $isPolicyPresented, content: {
-                    UserAgreementView()
+                    UserAgreement()
                         .presentationBackground(.thinMaterial)
                 })
         }
@@ -45,5 +45,5 @@ struct PrivacyAndTermsView: View {
 }
 
 #Preview {
-    PrivacyAndTermsView()
+    PrivacyAndTerms()
 }

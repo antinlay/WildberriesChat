@@ -1,5 +1,5 @@
 //
-//  ☎️Verification.swift
+//  🔐Verification.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 15.07.2024.
@@ -16,7 +16,7 @@ struct VerificationView: View {
     @State var isLoading: Bool = false
     
     private var isValidPhoneNumber: Bool {
-        phoneNumber.count != 10
+        phoneNumber.filter { "0"..."9" ~= $0 }.count != 10
     }
     
     private func sendSMS() {
@@ -27,34 +27,37 @@ struct VerificationView: View {
     }
     
     private var continueButton: some View {
-        Button {
+        Button("Продолжить") {
             isLoading = true
             otp.phoneNumber = "\(countryCode)\(phoneNumber)"
             sendSMS()
-        } label: {
-            Text("Продолжить")
-                .modifier(ActionButtonStyle())
         }
+        .buttonStyle(ActionButton(isDisabled: isValidPhoneNumber || isLoading))
         .disabled(isValidPhoneNumber)
         .opacity(isValidPhoneNumber || isLoading ? 0.5 : 1)
-        .padding(.top, 69)
-        .padding(.horizontal, 24)
+    }
+    
+    private var waiting: some View {
+        ProgressView()
+            .scaleEffect(.pi)
     }
     
     var body: some View {
         ZStack {
             VStack {
-                PhoneNumberView(phoneNumber: $phoneNumber, countryCode: $countryCode)
+                PhoneNumber(phoneNumber: $phoneNumber, countryCode: $countryCode)
+                    .padding(.bottom, 69)
                 continueButton
+                    .padding(.horizontal, 24)
+
             }
             .blur(radius: isLoading ? .pi : .zero)
             
-            ProgressView()
-                .scaleEffect(.pi)
+            waiting
                 .opacity(isLoading ? 1 : .zero)
         }
         .animation(.easeOut, value: isLoading)
-        .modifier(AppBackgroundStyle())
+        .modifier(AppBackground())
     }
 }
 

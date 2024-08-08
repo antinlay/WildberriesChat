@@ -15,8 +15,21 @@ struct CodeTextField: View {
     
     private func text(_ digit: String.Element) -> some View {
             Text("\(digit)")
-                .font(FontStyles.headingFirst)
+                .font(.headingFirst)
                 .multilineTextAlignment(.center)
+    }
+    
+    private var placeHolder: some View {
+        Circle()
+            .frame(width: 24, height: 24)
+            .foregroundColor(.inputGray)
+    }
+    
+    private var customTextField: some View {
+        TextField("", text: $code)
+            .opacity(.zero)
+            .keyboardType(.numberPad)
+            .focused($isCodeFocused)
     }
         
     var body: some View {
@@ -25,9 +38,7 @@ struct CodeTextField: View {
         HStack(spacing: 48) {
             ForEach(0..<limit, id:\.self) { index in
                 ZStack {
-                    Circle()
-                        .frame(width: 24, height: 24)
-                        .foregroundColor(.inputGray)
+                    placeHolder
                         .opacity(digits.count > index ? .zero : 1)
                     if let digit = digits[safe: index] {
                         text(digit)
@@ -40,10 +51,7 @@ struct CodeTextField: View {
             }
         }
         .background {
-            TextField("", text: $code)
-                .opacity(.zero)
-                .keyboardType(.numberPad)
-                .focused($isCodeFocused)
+            customTextField
         }
     }
 }

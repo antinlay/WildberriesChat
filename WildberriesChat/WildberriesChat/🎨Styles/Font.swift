@@ -1,5 +1,5 @@
 //
-//  FontStyles.swift
+//  .swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 11.06.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct FontStyles: ViewModifier {
+extension Font {
     static var bodyFirst = Font
         .system(size: 14, weight: .semibold)
     
@@ -31,8 +31,4 @@ public struct FontStyles: ViewModifier {
     
     static var metadataSecond = Font
         .system(size: 10)
-    
-    public func body(content: Content) -> some View {
-        content
-    }
 }

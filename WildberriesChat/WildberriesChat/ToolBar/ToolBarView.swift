@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct ToolBarView: ToolbarContent {
-    @Binding var selectedTab: Tabs
-    @State private var isAddContactViewActive = false
+    @Binding var selectedTab: TabBottomBar
     
     var body: some ToolbarContent {
         
@@ -27,7 +26,7 @@ struct ToolBarView: ToolbarContent {
     func title(_ title: String) -> some ToolbarContent {
         ToolbarItem(placement: .topBarLeading) {
             Text(title)
-                .font(FontStyles.subheadingFirst)
+                .font(.subheadingFirst)
                 .padding(.leading, 10)
         }
     }
@@ -36,7 +35,7 @@ struct ToolBarView: ToolbarContent {
         ToolbarItem(placement: .topBarTrailing) {
             NavigationLink(destination: AddContactView()) {
                 Image(.ToolBar.addContact)
-                    .font(FontStyles.headingSecond)
+                    .font(.headingSecond)
                     .padding(.trailing, 10)
             }
         }

@@ -1,5 +1,5 @@
 //
-//  BackgroundStyles.swift
+//  Background.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 15.07.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct InputBackgroundStyle: ViewModifier {
+public struct InputBackground: ViewModifier {
     public func body(content: Content) -> some View {
         content
             .background(
@@ -18,10 +18,11 @@ public struct InputBackgroundStyle: ViewModifier {
     }
 }
 
-public struct AppBackgroundStyle: ViewModifier {
+public struct AppBackground: ViewModifier {
     public func body(content: Content) -> some View {
-        content
-            .background(ignoresSafeAreaEdges: .all)
-        
+        ZStack {
+            Color.appBackground.ignoresSafeArea()
+            content
+        }
     }
 }

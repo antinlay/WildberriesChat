@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct TabBarView: View {
-    @Binding var selectedTab: Tabs
+    @Binding var selectedTab: TabBottomBar
     
     var body: some View {            
         VStack {
             HStack {
-                ForEach(Tabs.allCases, id: \.self) { tab in
+                ForEach(TabBottomBar.allCases, id: \.self) { tab in
                     TabButtonView(image: tab.imageResource)
                         .foregroundStyle(selectedTab == tab ? .accent : .neutral)
                         .onTapGesture {
@@ -35,5 +35,6 @@ struct TabBarView: View {
 }
 
 #Preview {
-    TabBarView(selectedTab: .constant(.contacts))
+    let selectedTab: TabBottomBar = .contacts
+    return TabBarView(selectedTab: .constant((selectedTab)) )
 }

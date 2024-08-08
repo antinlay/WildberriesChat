@@ -1,5 +1,5 @@
 //
-//  🔢OneTimePasswordView.swift
+//  🔢EnterCode.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 18.07.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OneTimePasswordView: View {
+struct EnterCode: View {
     @Environment(OneTimePassword.self) private var otp
     @Environment(Router.self) private var router
     
@@ -16,36 +16,47 @@ struct OneTimePasswordView: View {
     @State private var buttonDisabled: Bool = true
     @State private var timeRemaining = 12
     
+    private var actionText: some View {
+        Text("Введите код")
+            .font(.headingSecond)
+    }
+    
+    private var interpretationText: some View {
+        Text("Отправили код \(otp.code) на номер\n +7  \(otp.phoneNumber.getRussianPhoneMask())")
+            .font(.bodySecond)
+            .multilineTextAlignment(.center)
+            .lineSpacing(8)
+    }
+    
+    private var resendCodeButton: some View {
+        Button("Запросить код повторно" + (timeRemaining == 0 ? "" : " (\(timeRemaining))")) {
+            timeRemaining = 12
+            buttonDisabled = true
+            otp±
+            timer()
+        }
+        .font(.subheadingSecond)
+        .disabled(buttonDisabled)
+    }
+    
     var body: some View {
         VStack {
-            Text("Введите код")
-                .font(FontStyles.headingSecond)
+            actionText
                 .padding(.bottom, 8)
-            Text("Отправили код на номер\n \(otp.code) \(otp.phoneNumber)")
-                .font(FontStyles.bodySecond)
-                .multilineTextAlignment(.center)
-                .lineSpacing(8)
+            interpretationText
                 .padding(.bottom, 50)
             CodeTextField(code: $code)
                 .frame(height: 40)
-                .onChange(of: code) { oldValue, newValue in
+                .onChange(of: code) { _, newValue in
                     if newValue == otp.code {
                         router.navigate(to: .createProfile)
                     }
                 }
-            Button("Запросить код повторно" + (timeRemaining == 0 ? "" : " (\(timeRemaining))")) {
-                timeRemaining = 12
-                buttonDisabled = true
-                otp±
-                timer()
-            }
-            .font(FontStyles.subheadingSecond)
-            .disabled(buttonDisabled)
-            .padding(.top, 69)
-            .padding(.horizontal, 24)
+            resendCodeButton
+                .padding(.top, 69)
+                .padding(.horizontal, 24)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(.appBackground, ignoresSafeAreaEdges: .all)
+        .modifier(AppBackground())
         .onAppear(perform: {
             timer()
         })
@@ -61,17 +72,11 @@ struct OneTimePasswordView: View {
             }
         }
     }
-    
-    private func sendSMS(_ oneTimePassword: OneTimePassword) {
-        for code in oneTimePassword.oneTimePasswordSequence {
-            print("Generated code for phone number \(oneTimePassword.oneTimePasswordSequence.phoneNumber): \(code)")
-        }
-    }
 }
 
 #Preview {
     NavigationStack {
-        OneTimePasswordView()
+        EnterCode()
             .environment(Router())
             .environment(OneTimePassword(phoneNumber: "9009009090"))
     }
@@ -79,7 +84,7 @@ struct OneTimePasswordView: View {
 
 #Preview {
     NavigationStack {
-        OneTimePasswordView()
+        EnterCode()
             .environment(Router())
             .environment(OneTimePassword(phoneNumber: "9009009090"))
             .preferredColorScheme(.dark)

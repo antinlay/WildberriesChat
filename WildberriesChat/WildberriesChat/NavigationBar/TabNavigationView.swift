@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct TabNavigationView: View {
-    @State var selectedTab: Tabs
+    @State var selectedTab: TabBottomBar
     
     var body: some View {
-        TabView(selection: $selectedTab) {
-            ContactsView().tag(Tabs.contacts)
-            MessagesView().tag(Tabs.messages)
-            MoreView().tag(Tabs.more)
+        VStack {
+            SearchBarView()
+                .padding(.horizontal, 24)
+                .padding(.vertical)
+            TabView(selection: $selectedTab) {
+                ContactsView().tag(TabBottomBar.contacts)
+                MessagesView().tag(TabBottomBar.messages)
+                MoreView().tag(TabBottomBar.more)
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .toolbar{
+                ToolBarView(selectedTab: $selectedTab)
+            }
+            TabBarView(selectedTab: $selectedTab)
         }
-        .tabViewStyle(.page(indexDisplayMode: .never))
-        .toolbar{
-            ToolBarView(selectedTab: $selectedTab)
-        }
-        
-        TabBarView(selectedTab: $selectedTab)
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  UserAgreementView.swift
+//  👍🏼UserAgreement.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 08.06.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct UserAgreementView: View {
+struct UserAgreement: View {
     @Environment(\.dismiss) var dissmis
     
     var body: some View {
@@ -18,5 +18,5 @@ struct UserAgreementView: View {
 }
 
 #Preview {
-    UserAgreementView()
+    UserAgreement()
 }

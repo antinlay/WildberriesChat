@@ -8,7 +8,9 @@
 import Foundation
 import SwiftUI
 
-enum Tabs: CaseIterable {
+//protocol TabsProtocol { }
+
+enum TabBottomBar: CaseIterable {
     case contacts
     case messages
     case more
@@ -23,20 +25,21 @@ enum Tabs: CaseIterable {
             return .NavigationBar.moreHorizontal
         }
     }
+    
+}
+
+enum Destination: Hashable {
+    case walkthrough
+    case verification
+    case otp
+    case createProfile
 }
 
 @Observable
 final class Router {
     var navigationPath = NavigationPath()
 
-    enum Destination: Hashable {
-        case walkthrough
-        case verification
-        case otp
-        case createProfile
-    }
-
-    var selectedTab: Tabs = .contacts
+    var selectedTab: TabBottomBar = .contacts
     var destination: Destination = .walkthrough
     
     func navigate(to destination: Destination) {
