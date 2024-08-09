@@ -17,18 +17,6 @@ struct WildberriesChatApp: App {
         WindowGroup {
             NavigationStack(path: $router.navigationPath) {
                 ContentView()
-                    .navigationDestination(for: Destination.self) { destination in
-                        switch destination {
-                        case .walkthrough:
-                            Walkthrough()
-                        case .verification:
-                            VerificationView()
-                        case .otp:
-                            EnterCode()
-                        case .createProfile:
-                            CreateProfile()
-                        }
-                    }
             }
             .environment(router)
             .environment(otp)

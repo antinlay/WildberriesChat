@@ -18,7 +18,7 @@ struct Walkthrough: View {
             VStack {
                 PrivacyAndTerms()
                 Button("Начать общаться") {
-                    router.navigate(to: .verification)
+                    router.navigate(to: OnBoardingRoutes.verification)
                 }
                 .buttonStyle(ActionButton(isDisabled: false))
                 .padding(.top, 13)

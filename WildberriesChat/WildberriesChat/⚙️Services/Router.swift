@@ -8,42 +8,66 @@
 import Foundation
 import SwiftUI
 
-//protocol TabsProtocol { }
+protocol Route: Hashable { }
 
-enum TabBottomBar: CaseIterable {
+enum BottomBarRoutes: Route, CaseIterable {
     case contacts
     case messages
     case more
     
+    @ViewBuilder
+    var view: some View {
+        switch self {
+        case .contacts:
+            ContactsView()
+        case .messages:
+            MessagesView()
+        case .more:
+            MoreView()
+        }
+    }
+    
     var imageResource: ImageResource {
         switch self {
         case .contacts:
-            return .NavigationBar.userGroup
+            .NavigationBar.userGroup
         case .messages:
-            return .NavigationBar.messageCircle
+            .NavigationBar.messageCircle
         case .more:
-            return .NavigationBar.moreHorizontal
+            .NavigationBar.moreHorizontal
         }
     }
     
 }
 
-enum Destination: Hashable {
+enum OnBoardingRoutes: Route {
     case walkthrough
     case verification
     case otp
     case createProfile
+    
+    @ViewBuilder
+    var view: some View {
+        switch self {
+        case .walkthrough:
+            Walkthrough()
+        case .verification:
+            Verification()
+        case .otp:
+            EnterCode()
+        case .createProfile:
+            CreateProfile()
+        }
+    }
 }
 
 @Observable
 final class Router {
     var navigationPath = NavigationPath()
-
-    var selectedTab: TabBottomBar = .contacts
-    var destination: Destination = .walkthrough
+    var selectedTab: any Route = OnBoardingRoutes.walkthrough
     
-    func navigate(to destination: Destination) {
-        navigationPath.append(destination)
+    func navigate(to route: any Route) {
+        navigationPath.append(route)
     }
     
     func navigateBack() {

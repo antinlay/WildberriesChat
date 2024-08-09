@@ -1,5 +1,5 @@
 //
-//  TabBarView.swift
+//  BottomTabBar.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 18.06.2024.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct TabBarView: View {
-    @Binding var selectedTab: TabBottomBar
+struct BottomTabBar: View {
+    @Binding var selectedTab: BottomBarRoutes
     
     var body: some View {            
         VStack {
             HStack {
-                ForEach(TabBottomBar.allCases, id: \.self) { tab in
-                    TabButtonView(image: tab.imageResource)
+                ForEach(BottomBarRoutes.allCases, id: \.self) { tab in
+                    TabButton(image: tab.imageResource)
                         .foregroundStyle(selectedTab == tab ? .accent : .neutral)
                         .onTapGesture {
                             withAnimation {
@@ -22,7 +22,7 @@ struct TabBarView: View {
                             }
                         }
                     if tab != .more {
-                        Spacer(minLength: 0)
+                        Spacer()
                     }
                 }
             }
@@ -35,6 +35,6 @@ struct TabBarView: View {
 }
 
 #Preview {
-    let selectedTab: TabBottomBar = .contacts
-    return TabBarView(selectedTab: .constant((selectedTab)) )
+    let selectedTab: BottomBarRoutes = .contacts
+    return BottomTabBar(selectedTab: .constant((selectedTab)) )
 }

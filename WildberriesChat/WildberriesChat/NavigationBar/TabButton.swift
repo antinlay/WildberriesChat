@@ -1,5 +1,5 @@
 //
-//  TabButtonView.swift
+//  TabButton.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 18.06.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TabButtonView: View {
+struct TabButton: View {
     var image: ImageResource
     
     var body: some View {
@@ -23,5 +23,5 @@ struct TabButtonView: View {
 }
 
 #Preview {
-    TabButtonView(image: .NavigationBar.userGroup)
+    TabButton(image: .NavigationBar.userGroup)
 }

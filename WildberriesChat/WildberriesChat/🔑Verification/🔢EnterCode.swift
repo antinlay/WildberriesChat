@@ -22,7 +22,7 @@ struct EnterCode: View {
     }
     
     private var interpretationText: some View {
-        Text("Отправили код \(otp.code) на номер\n +7  \(otp.phoneNumber.getRussianPhoneMask())")
+        Text("Отправили код \(otp.code) на номер\n  \(otp.phoneNumber.getRussianPhoneMask())")
             .font(.bodySecond)
             .multilineTextAlignment(.center)
             .lineSpacing(8)
@@ -49,7 +49,7 @@ struct EnterCode: View {
                 .frame(height: 40)
                 .onChange(of: code) { _, newValue in
                     if newValue == otp.code {
-                        router.navigate(to: .createProfile)
+                        router.navigate(to: OnBoardingRoutes.createProfile)
                     }
                 }
             resendCodeButton

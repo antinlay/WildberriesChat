@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ToolBarView: ToolbarContent {
-    @Binding var selectedTab: TabBottomBar
+    @Binding var selectedTab: BottomBarRoutes
     
     var body: some ToolbarContent {
         

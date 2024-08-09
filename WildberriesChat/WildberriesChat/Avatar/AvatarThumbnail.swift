@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct AvatarThumbnail: View {
-    var avatar: ImageResource
+    var avatar: UIImage
     var width: CGFloat?
     var height: CGFloat?
     var cornerRadius: CGFloat?
     
     var body: some View {
-        Image(avatar)
+        Image(uiImage: avatar)
             .resizable()
             .scaledToFill()
             .frame(width: width ?? 48, height: height ?? 48)

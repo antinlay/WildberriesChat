@@ -16,7 +16,7 @@ struct TabsView: View {
                 SearchBarView()
                     .padding(.horizontal, 24)
                     .padding(.vertical)
-                TabNavigationView(selectedTab: router.selectedTab)
+                TabNavigationView(selectedTab: router.selectedTab as! BottomBarRoutes)
             }
             .ignoresSafeArea(.keyboard, edges: .bottom)
         }

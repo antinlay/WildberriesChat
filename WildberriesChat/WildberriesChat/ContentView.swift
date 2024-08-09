@@ -10,6 +10,9 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         Walkthrough()
+            .navigationDestination(for: OnBoardingRoutes.self) { route in
+                route.view
+            }
     }
 }
 

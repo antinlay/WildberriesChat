@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct VerificationView: View {
+struct Verification: View {
     @Environment(Router.self) var router
     @Environment(OneTimePassword.self) var otp
     
@@ -22,7 +22,7 @@ struct VerificationView: View {
     private func sendSMS() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.isLoading = false
-            router.navigate(to: .otp)
+            router.navigate(to: OnBoardingRoutes.otp)
         }
     }
     
@@ -63,7 +63,7 @@ struct VerificationView: View {
 
 #Preview {
     NavigationStack {
-        VerificationView()
+        Verification()
             .environment(Router())
             .environment(OneTimePassword())
     }
@@ -71,7 +71,7 @@ struct VerificationView: View {
 
 #Preview {
     NavigationStack {
-        VerificationView()
+        Verification()
             .environment(Router())
             .environment(OneTimePassword())
             .preferredColorScheme(.dark)
