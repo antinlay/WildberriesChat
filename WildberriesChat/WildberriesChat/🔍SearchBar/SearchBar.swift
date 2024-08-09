@@ -1,5 +1,5 @@
 //
-//  SearchBarView.swift
+//  SearchBar.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 15.06.2024.
@@ -8,8 +8,8 @@
 import SwiftUI
 import UISystem
 
-struct SearchBarView: View {
-    @State var searchText: String = ""
+struct SearchBar: View {
+    @State var searchText: String
     @FocusState private var searchIsFocused: Bool
     
     private var searchBarIcon: some View {
@@ -50,7 +50,7 @@ struct SearchBarView: View {
 }
 
 #Preview {
-    SearchBarView()
+    SearchBar(searchText: "")
         .environment(Router())
 }
 

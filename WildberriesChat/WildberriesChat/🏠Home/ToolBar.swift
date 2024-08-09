@@ -1,5 +1,5 @@
 //
-//  ToolBarView.swift
+//  ToolBar.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 18.06.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ToolBarView: ToolbarContent {
+struct ToolBar: ToolbarContent {
     var selectedTab: BottomBarRoutes
     
     var body: some ToolbarContent {

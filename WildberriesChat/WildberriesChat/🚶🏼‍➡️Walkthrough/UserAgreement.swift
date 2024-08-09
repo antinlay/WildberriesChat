@@ -1,5 +1,5 @@
 //
-//  👍🏼UserAgreement.swift
+//  UserAgreement.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 08.06.2024.

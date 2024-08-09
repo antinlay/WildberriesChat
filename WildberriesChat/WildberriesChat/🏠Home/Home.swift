@@ -9,11 +9,12 @@ import SwiftUI
 import UISystem
 
 struct Home: View {
+    @Environment(SearchText.self) var search
     @State var selectedTab: BottomBarRoutes
     
     var body: some View {
         VStack {
-            SearchBarView()
+            SearchBar(searchText: search.text)
                 .padding(.horizontal, 24)
                 .padding(.vertical)
             TabView(selection: $selectedTab) {
@@ -23,13 +24,14 @@ struct Home: View {
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
             .toolbar{
-                ToolBarView(selectedTab: selectedTab)
+                ToolBar(selectedTab: selectedTab)
             }
             Spacer()
             BottomBar(selectedTab: $selectedTab)
         }
         .ignoresSafeArea(edges: .bottom)
         .ignoresSafeArea(.keyboard, edges: .bottom)
+        .modifier(AppBackground())
     }
 }
 

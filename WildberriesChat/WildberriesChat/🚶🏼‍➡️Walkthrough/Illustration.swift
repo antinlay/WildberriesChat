@@ -1,5 +1,5 @@
 //
-//  🏞️Illustration.swift
+//  Illustration.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 12.06.2024.

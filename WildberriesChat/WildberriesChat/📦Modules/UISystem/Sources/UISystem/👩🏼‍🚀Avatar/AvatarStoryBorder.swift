@@ -7,21 +7,18 @@
 
 import SwiftUI
 
-public struct AvatarStoryBorder: ViewModifier {
+public struct AvatarStoryBorder: View {
     public init() {}
-    public func body(content: Content) -> some View {
-        ZStack {
-            content
-            RoundedRectangle(cornerRadius: 18)
-                .stroke(
-                    LinearGradient(
-                        colors: [Color("Gradient/StoryFirst", bundle: .main), Color("Gradient/StorySecond", bundle: .main)],
-                        startPoint: .leading,
-                        endPoint: .trailing
-                    ),
-                    lineWidth: 2
-                )
-                .frame(width: 56, height: 56)
-        }
+    public var body: some View {
+        RoundedRectangle(cornerRadius: 18)
+            .stroke(
+                LinearGradient(
+                    colors: [Color("Gradients/StoryFirst", bundle: .main), Color("Gradients/StorySecond", bundle: .main)],
+                    startPoint: .leading,
+                    endPoint: .trailing
+                ),
+                lineWidth: 2
+            )
+            .frame(width: 56, height: 56)
     }
 }

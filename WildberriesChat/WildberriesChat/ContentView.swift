@@ -13,7 +13,7 @@ struct ContentView: View {
 //            .navigationDestination(for: OnBoardingRoutes.self) { route in
 //                route.view
 //            }
-        Contacts()
+        Home(selectedTab: .contacts)
     }
 }
 

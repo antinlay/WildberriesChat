@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Contacts: View {
     @Environment(SearchText.self) var search
+    @State var contacts: [Contact] = Contact.contacts
     
     private var divider: some View {
         Divider()
@@ -16,8 +17,6 @@ struct Contacts: View {
     }
     
     var body: some View {
-        let contacts = Contact.filteredContact(search.text)
-        
         ScrollView(.vertical) {
             LazyVStack(spacing: 0) {
                 ForEach(contacts, id: \.id) { contact in
@@ -31,6 +30,10 @@ struct Contacts: View {
                         .padding(.horizontal, 24)
                 }
             }
+        }
+        .onChange(of: search.text) { _, newValue in
+            contacts = Contact.filteredContact(newValue)
+            print(search.text)
         }
     }
 }

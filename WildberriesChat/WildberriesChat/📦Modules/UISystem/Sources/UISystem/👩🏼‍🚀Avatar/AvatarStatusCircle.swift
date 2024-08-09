@@ -7,16 +7,13 @@
 
 import SwiftUI
 
-public struct AvatarStatusCircle: ViewModifier {
+public struct AvatarStatusCircle: View {
     public init() {}
-    public func body(content: Content) -> some View {
-        ZStack(alignment: .topTrailing) {
-            content
-            Circle()
-                .fill(Color("OnlineStatusColor", bundle: .main))
-                .stroke(.white, lineWidth: 2)
-                .frame(width: 14)
-                .padding([.top, .trailing], -3)
-        }
+    public var body: some View {
+        Circle()
+            .fill(Color("OnlineStatusColor", bundle: .main))
+            .stroke(.white, lineWidth: 2)
+            .frame(width: 14)
+            .padding([.top, .trailing], -3)
     }
 }

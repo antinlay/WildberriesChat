@@ -16,14 +16,13 @@ struct ContactContainer: View {
             .fill(.clear)
             .frame(width: 56, height: 56)
             .overlay(alignment: .center) {
-                Avatar(contact: contact)
-                if contact.activeStories {
-                    modifier(AvatarStoryBorder())
+                AvatarStoryBorder()
+                    .opacity(contact.activeStories ? 1 : .zero)
+                ZStack(alignment: .topTrailing) {
+                    Avatar(contact: contact)
+                    AvatarStatusCircle()
+                        .opacity(contact.onlineStatus == "Online" ? 1 : .zero)
                 }
-                if contact.onlineStatus == "Online" {
-                    modifier(AvatarStoryBorder())
-                }
-                
             }
     }
     

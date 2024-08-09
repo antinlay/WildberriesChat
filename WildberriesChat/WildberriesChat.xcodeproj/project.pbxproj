@@ -35,24 +35,24 @@
 		5C515DDC2C11322500EFDB9C /* WildberriesChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DDB2C11322500EFDB9C /* WildberriesChatApp.swift */; };
 		5C515DDE2C11322500EFDB9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DDD2C11322500EFDB9C /* ContentView.swift */; };
 		5C515DE32C11322600EFDB9C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C515DE22C11322600EFDB9C /* Preview Assets.xcassets */; };
-		5C515DEA2C14959500EFDB9C /* 🚶🏻‍♂️‍➡️Walkthrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DE92C14959500EFDB9C /* 🚶🏻‍♂️‍➡️Walkthrough.swift */; };
-		5C515DEC2C14A58900EFDB9C /* 👍🏼UserAgreement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DEB2C14A58900EFDB9C /* 👍🏼UserAgreement.swift */; };
+		5C515DEA2C14959500EFDB9C /* Walkthrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DE92C14959500EFDB9C /* Walkthrough.swift */; };
+		5C515DEC2C14A58900EFDB9C /* UserAgreement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DEB2C14A58900EFDB9C /* UserAgreement.swift */; };
 		5C5CE4832C1CBC56009DCFF3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4822C1CBC56009DCFF3 /* Extensions.swift */; };
 		5C5CE4892C1D8069009DCFF3 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4882C1D8069009DCFF3 /* Avatar.swift */; };
-		5C5CE48B2C1DAA10009DCFF3 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE48A2C1DAA10009DCFF3 /* SearchBarView.swift */; };
+		5C5CE48B2C1DAA10009DCFF3 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE48A2C1DAA10009DCFF3 /* SearchBar.swift */; };
 		5C5CE4922C1EDCB2009DCFF3 /* ContactDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4912C1EDCB2009DCFF3 /* ContactDetails.swift */; };
 		5C5CE4942C203BFC009DCFF3 /* AvatarProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4932C203BFC009DCFF3 /* AvatarProfile.swift */; };
 		5C5CE49B2C216313009DCFF3 /* BottomBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE49A2C216313009DCFF3 /* BottomBarButton.swift */; };
 		5C5CE49D2C2167B8009DCFF3 /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE49C2C2167B8009DCFF3 /* BottomBar.swift */; };
 		5C5CE4A02C216CE2009DCFF3 /* Chats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE49F2C216CE2009DCFF3 /* Chats.swift */; };
 		5C5CE4A32C216DE7009DCFF3 /* More.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4A22C216DE7009DCFF3 /* More.swift */; };
-		5C5CE4A72C21CD89009DCFF3 /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4A62C21CD89009DCFF3 /* ToolBarView.swift */; };
+		5C5CE4A72C21CD89009DCFF3 /* ToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4A62C21CD89009DCFF3 /* ToolBar.swift */; };
 		5C5CE4A92C21E15C009DCFF3 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4A82C21E15C009DCFF3 /* Home.swift */; };
 		5C7B5B682C1B2C3000B84923 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B672C1B2C3000B84923 /* Contacts.swift */; };
 		5C7B5B6A2C1B35FC00B84923 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B692C1B35FC00B84923 /* Contact.swift */; };
 		5C7B5B6C2C1B8D7A00B84923 /* ContactContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B6B2C1B8D7A00B84923 /* ContactContainer.swift */; };
-		5C8F59042C1A1B08004DA54D /* 🕵🏻‍♂️PrivacyAndTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F59032C1A1B08004DA54D /* 🕵🏻‍♂️PrivacyAndTerms.swift */; };
-		5C8F59062C1A1BEE004DA54D /* 🏞️Illustration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F59052C1A1BEE004DA54D /* 🏞️Illustration.swift */; };
+		5C8F59042C1A1B08004DA54D /* PrivacyAndTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F59032C1A1B08004DA54D /* PrivacyAndTerms.swift */; };
+		5C8F59062C1A1BEE004DA54D /* Illustration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F59052C1A1BEE004DA54D /* Illustration.swift */; };
 		5CDF5FE32C65FC4C00DDCDC4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF5FE22C65FC4C00DDCDC4 /* User.swift */; };
 		5CDF5FE52C65FE1600DDCDC4 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF5FE42C65FE1600DDCDC4 /* LocalStorage.swift */; };
 		5CDF5FE72C662EA100DDCDC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CDF5FE62C662EA000DDCDC4 /* Assets.xcassets */; };
@@ -136,24 +136,24 @@
 		5C515DDB2C11322500EFDB9C /* WildberriesChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildberriesChatApp.swift; sourceTree = "<group>"; };
 		5C515DDD2C11322500EFDB9C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5C515DE22C11322600EFDB9C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5C515DE92C14959500EFDB9C /* 🚶🏻‍♂️‍➡️Walkthrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🚶🏻‍♂️‍➡️Walkthrough.swift"; sourceTree = "<group>"; };
-		5C515DEB2C14A58900EFDB9C /* 👍🏼UserAgreement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "👍🏼UserAgreement.swift"; sourceTree = "<group>"; };
+		5C515DE92C14959500EFDB9C /* Walkthrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walkthrough.swift; sourceTree = "<group>"; };
+		5C515DEB2C14A58900EFDB9C /* UserAgreement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAgreement.swift; sourceTree = "<group>"; };
 		5C5CE4822C1CBC56009DCFF3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5C5CE4882C1D8069009DCFF3 /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
-		5C5CE48A2C1DAA10009DCFF3 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		5C5CE48A2C1DAA10009DCFF3 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		5C5CE4912C1EDCB2009DCFF3 /* ContactDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetails.swift; sourceTree = "<group>"; };
 		5C5CE4932C203BFC009DCFF3 /* AvatarProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarProfile.swift; sourceTree = "<group>"; };
 		5C5CE49A2C216313009DCFF3 /* BottomBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarButton.swift; sourceTree = "<group>"; };
 		5C5CE49C2C2167B8009DCFF3 /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
 		5C5CE49F2C216CE2009DCFF3 /* Chats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chats.swift; sourceTree = "<group>"; };
 		5C5CE4A22C216DE7009DCFF3 /* More.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = More.swift; sourceTree = "<group>"; };
-		5C5CE4A62C21CD89009DCFF3 /* ToolBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
+		5C5CE4A62C21CD89009DCFF3 /* ToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBar.swift; sourceTree = "<group>"; };
 		5C5CE4A82C21E15C009DCFF3 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		5C7B5B672C1B2C3000B84923 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		5C7B5B692C1B35FC00B84923 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		5C7B5B6B2C1B8D7A00B84923 /* ContactContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactContainer.swift; sourceTree = "<group>"; };
-		5C8F59032C1A1B08004DA54D /* 🕵🏻‍♂️PrivacyAndTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🕵🏻‍♂️PrivacyAndTerms.swift"; sourceTree = "<group>"; };
-		5C8F59052C1A1BEE004DA54D /* 🏞️Illustration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "🏞️Illustration.swift"; sourceTree = "<group>"; };
+		5C8F59032C1A1B08004DA54D /* PrivacyAndTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyAndTerms.swift; sourceTree = "<group>"; };
+		5C8F59052C1A1BEE004DA54D /* Illustration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Illustration.swift; sourceTree = "<group>"; };
 		5CDF5FE22C65FC4C00DDCDC4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5CDF5FE42C65FE1600DDCDC4 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		5CDF5FE62C662EA000DDCDC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -204,13 +204,21 @@
 			path = "👤Profile";
 			sourceTree = "<group>";
 		};
-		5C1D4BA32C654018008E007B /* 🚈BottomBar */ = {
+		5C1230F92C665AA00080DEB7 /* 🔍SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				5C5CE48A2C1DAA10009DCFF3 /* SearchBar.swift */,
+			);
+			path = "🔍SearchBar";
+			sourceTree = "<group>";
+		};
+		5C1D4BA32C654018008E007B /* BottomBar */ = {
 			isa = PBXGroup;
 			children = (
 				5C5CE49C2C2167B8009DCFF3 /* BottomBar.swift */,
 				5C5CE49A2C216313009DCFF3 /* BottomBarButton.swift */,
 			);
-			path = "🚈BottomBar";
+			path = BottomBar;
 			sourceTree = "<group>";
 		};
 		5C1ED3A62C33284A00124160 /* WildberriesChatIntents */ = {
@@ -299,21 +307,20 @@
 			children = (
 				5C1D4B8A2C63BE12008E007B /* Info.plist */,
 				5C00F5E82C635B750076DF6E /* 📦Modules */,
+				5C5CE48D2C1ECB76009DCFF3 /* 👩🏼‍🚀Avatar */,
+				5C5CE49E2C216CCC009DCFF3 /* 💬Chats */,
+				5C5CE48E2C1ECC10009DCFF3 /* 👥Contacts */,
+				5C5CE4992C2162F5009DCFF3 /* 🏠Home */,
+				5C5CE4A12C216DD3009DCFF3 /* 💠More */,
+				5C5CE4902C1ECCB2009DCFF3 /* Models */,
 				5C0DC07C2C4BC429007073E9 /* 👤Profile */,
 				5C20BCE02C46BBF700612E1E /* 🔑Verification */,
+				5C1230F92C665AA00080DEB7 /* 🔍SearchBar */,
 				5C1ED3DC2C354B7A00124160 /* ⚙️Services */,
-				5C8F59072C1A430E004DA54D /* Walkthrough */,
+				5C8F59072C1A430E004DA54D /* 🚶🏼‍➡️Walkthrough */,
 				5C515DDB2C11322500EFDB9C /* WildberriesChatApp.swift */,
 				5C515DDD2C11322500EFDB9C /* ContentView.swift */,
-				5C5CE48E2C1ECC10009DCFF3 /* 👥Contacts */,
-				5C5CE4A12C216DD3009DCFF3 /* 💠More */,
-				5C5CE49E2C216CCC009DCFF3 /* 💬Chats */,
-				5C1D4BA32C654018008E007B /* 🚈BottomBar */,
-				5C5CE4992C2162F5009DCFF3 /* 🏠Home */,
-				5C5CE4902C1ECCB2009DCFF3 /* Models */,
 				5C5CE48F2C1ECC59009DCFF3 /* Extensions */,
-				5C5CE48C2C1ECB4A009DCFF3 /* ToolBar */,
-				5C5CE48D2C1ECB76009DCFF3 /* 👩🏼‍🚀Avatar */,
 				5C515DE12C11322600EFDB9C /* Preview Content */,
 			);
 			path = WildberriesChat;
@@ -325,15 +332,6 @@
 				5C515DE22C11322600EFDB9C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		5C5CE48C2C1ECB4A009DCFF3 /* ToolBar */ = {
-			isa = PBXGroup;
-			children = (
-				5C5CE48A2C1DAA10009DCFF3 /* SearchBarView.swift */,
-				5C5CE4A62C21CD89009DCFF3 /* ToolBarView.swift */,
-			);
-			path = ToolBar;
 			sourceTree = "<group>";
 		};
 		5C5CE48D2C1ECB76009DCFF3 /* 👩🏼‍🚀Avatar */ = {
@@ -376,6 +374,8 @@
 		5C5CE4992C2162F5009DCFF3 /* 🏠Home */ = {
 			isa = PBXGroup;
 			children = (
+				5C5CE4A62C21CD89009DCFF3 /* ToolBar.swift */,
+				5C1D4BA32C654018008E007B /* BottomBar */,
 				5C5CE4A82C21E15C009DCFF3 /* Home.swift */,
 			);
 			path = "🏠Home";
@@ -397,15 +397,15 @@
 			path = "💠More";
 			sourceTree = "<group>";
 		};
-		5C8F59072C1A430E004DA54D /* Walkthrough */ = {
+		5C8F59072C1A430E004DA54D /* 🚶🏼‍➡️Walkthrough */ = {
 			isa = PBXGroup;
 			children = (
-				5C515DE92C14959500EFDB9C /* 🚶🏻‍♂️‍➡️Walkthrough.swift */,
-				5C8F59052C1A1BEE004DA54D /* 🏞️Illustration.swift */,
-				5C8F59032C1A1B08004DA54D /* 🕵🏻‍♂️PrivacyAndTerms.swift */,
-				5C515DEB2C14A58900EFDB9C /* 👍🏼UserAgreement.swift */,
+				5C515DE92C14959500EFDB9C /* Walkthrough.swift */,
+				5C8F59052C1A1BEE004DA54D /* Illustration.swift */,
+				5C8F59032C1A1B08004DA54D /* PrivacyAndTerms.swift */,
+				5C515DEB2C14A58900EFDB9C /* UserAgreement.swift */,
 			);
-			path = Walkthrough;
+			path = "🚶🏼‍➡️Walkthrough";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -569,7 +569,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C515DEC2C14A58900EFDB9C /* 👍🏼UserAgreement.swift in Sources */,
+				5C515DEC2C14A58900EFDB9C /* UserAgreement.swift in Sources */,
 				5CDF5FE52C65FE1600DDCDC4 /* LocalStorage.swift in Sources */,
 				5C0DC0792C493ACF007073E9 /* ⚪️CodeTextField.swift in Sources */,
 				5C0DC07E2C4BC52B007073E9 /* 🪪CreateProfile.swift in Sources */,
@@ -581,7 +581,7 @@
 				5C1ED3E02C357BE800124160 /* SearchText.swift in Sources */,
 				5C7B5B682C1B2C3000B84923 /* Contacts.swift in Sources */,
 				5C5CE4922C1EDCB2009DCFF3 /* ContactDetails.swift in Sources */,
-				5C5CE4A72C21CD89009DCFF3 /* ToolBarView.swift in Sources */,
+				5C5CE4A72C21CD89009DCFF3 /* ToolBar.swift in Sources */,
 				5C7B5B6C2C1B8D7A00B84923 /* ContactContainer.swift in Sources */,
 				5CDF5FE32C65FC4C00DDCDC4 /* User.swift in Sources */,
 				5C5CE4A02C216CE2009DCFF3 /* Chats.swift in Sources */,
@@ -589,13 +589,13 @@
 				5C5CE49D2C2167B8009DCFF3 /* BottomBar.swift in Sources */,
 				5C5CE49B2C216313009DCFF3 /* BottomBarButton.swift in Sources */,
 				5C5CE4942C203BFC009DCFF3 /* AvatarProfile.swift in Sources */,
-				5C515DEA2C14959500EFDB9C /* 🚶🏻‍♂️‍➡️Walkthrough.swift in Sources */,
+				5C515DEA2C14959500EFDB9C /* Walkthrough.swift in Sources */,
 				5CF5E72B2C45365C0091C93E /* 🔐Verification.swift in Sources */,
-				5C5CE48B2C1DAA10009DCFF3 /* SearchBarView.swift in Sources */,
+				5C5CE48B2C1DAA10009DCFF3 /* SearchBar.swift in Sources */,
 				5C20E7802C2244D4009D5BF9 /* AddContact.swift in Sources */,
 				5C515DDE2C11322500EFDB9C /* ContentView.swift in Sources */,
-				5C8F59042C1A1B08004DA54D /* 🕵🏻‍♂️PrivacyAndTerms.swift in Sources */,
-				5C8F59062C1A1BEE004DA54D /* 🏞️Illustration.swift in Sources */,
+				5C8F59042C1A1B08004DA54D /* PrivacyAndTerms.swift in Sources */,
+				5C8F59062C1A1BEE004DA54D /* Illustration.swift in Sources */,
 				5C5CE4A92C21E15C009DCFF3 /* Home.swift in Sources */,
 				5C515DDC2C11322500EFDB9C /* WildberriesChatApp.swift in Sources */,
 				5C5CE4892C1D8069009DCFF3 /* Avatar.swift in Sources */,
