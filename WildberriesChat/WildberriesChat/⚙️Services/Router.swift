@@ -12,18 +12,18 @@ protocol Route: Hashable { }
 
 enum BottomBarRoutes: Route, CaseIterable {
     case contacts
-    case messages
+    case chats
     case more
     
     @ViewBuilder
     var view: some View {
         switch self {
         case .contacts:
-            ContactsView()
-        case .messages:
-            MessagesView()
+            Contacts()
+        case .chats:
+            Chats()
         case .more:
-            MoreView()
+            More()
         }
     }
     
@@ -31,7 +31,7 @@ enum BottomBarRoutes: Route, CaseIterable {
         switch self {
         case .contacts:
             .NavigationBar.userGroup
-        case .messages:
+        case .chats:
             .NavigationBar.messageCircle
         case .more:
             .NavigationBar.moreHorizontal

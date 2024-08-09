@@ -1,5 +1,5 @@
 //
-//  AddContactView.swift
+//  AddContact.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 19.06.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddContactView: View {
+struct AddContact: View {
     @Environment(\.dismiss) var dissmis
     
     var body: some View {
@@ -29,5 +29,5 @@ struct AddContactView: View {
 }
 
 #Preview {
-    AddContactView()
+    AddContact()
 }

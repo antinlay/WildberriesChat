@@ -1,5 +1,5 @@
 //
-//  ProfileAvatar.swift
+//  AvatarCircle.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 17.06.2024.
@@ -7,10 +7,14 @@
 
 import SwiftUI
 
-struct ProfileAvatar: View {
+public struct AvatarCircle: View {
     var avatar: UIImage
     
-    var body: some View {
+    public init(avatar: UIImage) {
+        self.avatar = avatar
+    }
+    
+    public var body: some View {
         Image(uiImage: avatar)
             .resizable()
             .scaledToFill()
@@ -18,7 +22,7 @@ struct ProfileAvatar: View {
             .clipShape(Circle())
     }
 }
-
-#Preview {
-    ProfileAvatar(avatar: .Avatars.maman)
-}
+//
+//#Preview {
+//    AvatarCircle(avatar: .Avatars.maman)
+//}

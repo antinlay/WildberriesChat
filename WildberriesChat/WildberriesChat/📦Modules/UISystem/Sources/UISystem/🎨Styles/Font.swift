@@ -8,27 +8,27 @@
 import SwiftUI
 
 extension Font {
-    static var bodyFirst = Font
+    public static var bodyFirst = Font
         .system(size: 14, weight: .semibold)
     
-    static var bodySecond = Font
+    public static var bodySecond = Font
         .system(size: 14, weight: .regular)
     
-    static var subheadingFirst = Font
+    public static var subheadingFirst = Font
         .system(size: 18, weight: .semibold)
     
-    static var subheadingSecond = Font
+    public static var subheadingSecond = Font
         .system(size: 16, weight: .semibold)
     
-    static var headingFirst = Font
+    public static var headingFirst = Font
         .system(size: 32, weight: .bold)
     
-    static var headingSecond = Font
+    public static var headingSecond = Font
         .system(size: 24, weight: .bold)
     
-    static var metadataFirst = Font
+    public static var metadataFirst = Font
         .system(size: 12)
     
-    static var metadataSecond = Font
+    public static var metadataSecond = Font
         .system(size: 10)
 }

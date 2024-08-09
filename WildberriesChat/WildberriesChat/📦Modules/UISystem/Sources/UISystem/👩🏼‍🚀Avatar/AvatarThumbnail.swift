@@ -7,13 +7,20 @@
 
 import SwiftUI
 
-struct AvatarThumbnail: View {
+public struct AvatarThumbnail: View {
     var avatar: UIImage
     var width: CGFloat?
     var height: CGFloat?
     var cornerRadius: CGFloat?
     
-    var body: some View {
+    public init(avatar: UIImage, width: CGFloat? = nil, height: CGFloat? = nil, cornerRadius: CGFloat? = nil) {
+        self.avatar = avatar
+        self.width = width
+        self.height = height
+        self.cornerRadius = cornerRadius
+    }
+    
+    public var body: some View {
         Image(uiImage: avatar)
             .resizable()
             .scaledToFill()
@@ -22,6 +29,6 @@ struct AvatarThumbnail: View {
     }
 }
 
-#Preview {
-    AvatarThumbnail(avatar: .Avatars.anastasiya)
-}
+//#Preview {
+//    AvatarThumbnail(avatar: .Avatars.anastasiya)
+//}

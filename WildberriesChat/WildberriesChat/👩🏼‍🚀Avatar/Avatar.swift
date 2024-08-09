@@ -1,13 +1,14 @@
 //
-//  AvatarView.swift
+//  Avatar.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 15.06.2024.
 //
 
 import SwiftUI
+import UISystem
 
-struct AvatarView: View {
+struct Avatar: View {
     var contact: Contact
         
     var body: some View {
@@ -18,7 +19,7 @@ struct AvatarView: View {
             AvatarThumbnail(avatar: avatar)
                 .clipShape(.rect(cornerRadius: 16))
         case .none:
-            InitialsAvatar(initials: initials)
+            AvatarContactInitials(initials: initials)
         }
     }
     
@@ -35,5 +36,5 @@ extension View {
 }
 
 #Preview {
-    AvatarView(contact: Contact.contacts.first!)
+    Avatar(contact: Contact.contacts.first!)
 }

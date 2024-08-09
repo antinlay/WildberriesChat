@@ -1,5 +1,5 @@
 //
-//  StoryBorder.swift
+//  AvatarStoryBorder.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 14.06.2024.
@@ -7,14 +7,15 @@
 
 import SwiftUI
 
-public struct StoryBorder: ViewModifier {
+public struct AvatarStoryBorder: ViewModifier {
+    public init() {}
     public func body(content: Content) -> some View {
         ZStack {
             content
             RoundedRectangle(cornerRadius: 18)
                 .stroke(
                     LinearGradient(
-                        colors: [.Gradients.storyFirst, .Gradients.storySecond],
+                        colors: [Color("Gradient/StoryFirst", bundle: .main), Color("Gradient/StorySecond", bundle: .main)],
                         startPoint: .leading,
                         endPoint: .trailing
                     ),
@@ -22,11 +23,5 @@ public struct StoryBorder: ViewModifier {
                 )
                 .frame(width: 56, height: 56)
         }
-    }
-}
-
-extension View {
-    func storyBorder() -> some View {
-        modifier(StoryBorder())
     }
 }

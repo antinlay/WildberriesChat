@@ -1,5 +1,5 @@
 //
-//  MessagesView.swift
+//  Chats.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 18.06.2024.
@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct MessagesView: View {
+struct Chats: View {
     var body: some View {
-        Text("Messages")
+        Text("Chats")
             .font(.headingSecond)
     }
 }
 
 #Preview {
-    MessagesView()
+    Chats()
 }

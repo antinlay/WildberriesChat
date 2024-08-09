@@ -1,5 +1,5 @@
 //
-//  TabButton.swift
+//  BottomBarButton.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 18.06.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TabButton: View {
+struct BottomBarButton: View {
     var image: ImageResource
     
     var body: some View {
@@ -23,5 +23,10 @@ struct TabButton: View {
 }
 
 #Preview {
-    TabButton(image: .NavigationBar.userGroup)
+    BottomBarButton(image: .NavigationBar.userGroup)
+}
+
+#Preview {
+    BottomBarButton(image: .NavigationBar.userGroup)
+        .preferredColorScheme(.dark)
 }

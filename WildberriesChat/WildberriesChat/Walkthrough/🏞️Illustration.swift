@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UISystem
 
 struct Illustration: View {
     private var illustration: some View {

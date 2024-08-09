@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import UISystem
 
 struct Verification: View {
     @Environment(Router.self) var router
     @Environment(OneTimePassword.self) var otp
     
     @State var countryCode: String = "+7"
-    @State var phoneNumber: String = "9999999999"
+    @State var phoneNumber: String = ""
     @State var isLoading: Bool = false
     
     private var isValidPhoneNumber: Bool {

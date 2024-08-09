@@ -33,7 +33,7 @@ struct ContactDetails: View {
         let phoneNumber = contact.phoneNumber.getRussianPhoneMask()
         
         VStack {
-            CircleAvatar(contact: contact)
+            AvatarProfile(contact: contact)
                 .padding(.bottom, 20)
             VStack {
                 Text(contact.name)

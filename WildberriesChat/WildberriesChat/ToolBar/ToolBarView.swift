@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct ToolBarView: ToolbarContent {
-    @Binding var selectedTab: BottomBarRoutes
+    var selectedTab: BottomBarRoutes
     
     var body: some ToolbarContent {
-        
         switch selectedTab {
         case .contacts:
             title("Contacts")
             addContact()
-        case .messages:
-            title("Messages")
+        case .chats:
+            title("Chats")
         case .more:
             title("More")
         }
@@ -33,7 +32,7 @@ struct ToolBarView: ToolbarContent {
     
     func addContact() -> some ToolbarContent {
         ToolbarItem(placement: .topBarTrailing) {
-            NavigationLink(destination: AddContactView()) {
+            NavigationLink(destination: AddContact()) {
                 Image(.ToolBar.addContact)
                     .font(.headingSecond)
                     .padding(.trailing, 10)
