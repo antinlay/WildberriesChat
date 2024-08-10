@@ -374,9 +374,9 @@
 		5C5CE4992C2162F5009DCFF3 /* 🏠Home */ = {
 			isa = PBXGroup;
 			children = (
-				5C5CE4A62C21CD89009DCFF3 /* ToolBar.swift */,
-				5C1D4BA32C654018008E007B /* BottomBar */,
 				5C5CE4A82C21E15C009DCFF3 /* Home.swift */,
+				5C1D4BA32C654018008E007B /* BottomBar */,
+				5C5CE4A62C21CD89009DCFF3 /* ToolBar.swift */,
 			);
 			path = "🏠Home";
 			sourceTree = "<group>";
@@ -863,6 +863,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WildberriesChat/Info.plist;
+				INFOPLIST_KEY_NSContactsUsageDescription = "For quick access to your contacts";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -895,6 +896,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WildberriesChat/Info.plist;
+				INFOPLIST_KEY_NSContactsUsageDescription = "For quick access to your contacts";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

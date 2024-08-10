@@ -9,7 +9,8 @@ import SwiftUI
 import UISystem
 
 struct SearchBar: View {
-    @State var searchText: String
+    @Environment(SearchText.self) private var searchText
+    
     @FocusState private var searchIsFocused: Bool
     
     private var searchBarIcon: some View {
@@ -21,24 +22,22 @@ struct SearchBar: View {
         Image(systemName: "xmark")
             .foregroundStyle(.accent)
     }
-    
-    private var searchLine: some View {
-        TextField("Search", text: $searchText)
-            .modifier(InputTextField())
-    }
-    
+        
     var body: some View {
+        @Bindable var search = searchText
+
         HStack {
             searchBarIcon
                 .padding(.leading)
-            searchLine
+            TextField("Search", text: $search.text)
+                .modifier(InputTextField())
                 .overlay (
                     eraseIcon
-                        .opacity(searchText.isEmpty ? 0.0 : 1.0)
+                        .opacity(search.text.isEmpty ? 0.0 : 1.0)
                         .padding(.trailing)
                         .onTapGesture {
                             searchIsFocused = false
-                            searchText = ""
+                            search.text = ""
                         }
                     , alignment: .trailing
                 )
@@ -50,7 +49,7 @@ struct SearchBar: View {
 }
 
 #Preview {
-    SearchBar(searchText: "")
+    SearchBar()
         .environment(Router())
 }
 

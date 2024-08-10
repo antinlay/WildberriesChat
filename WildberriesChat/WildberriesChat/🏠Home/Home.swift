@@ -9,12 +9,11 @@ import SwiftUI
 import UISystem
 
 struct Home: View {
-    @Environment(SearchText.self) var search
     @State var selectedTab: BottomBarRoutes
     
     var body: some View {
         VStack {
-            SearchBar(searchText: search.text)
+            SearchBar()
                 .padding(.horizontal, 24)
                 .padding(.vertical)
             TabView(selection: $selectedTab) {

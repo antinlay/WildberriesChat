@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import Contacts
 
 struct Contacts: View {
-    @Environment(SearchText.self) var search
+    @Environment(SearchText.self) private var search
     @State var contacts: [Contact] = Contact.contacts
     
     private var divider: some View {
@@ -31,9 +32,38 @@ struct Contacts: View {
                 }
             }
         }
+        .onAppear {
+            let status = CNContactStore.authorizationStatus(for: .contacts)
+            switch status {
+            case .authorized:
+                // Fetch and add contacts
+                let newContacts = DefaultStorage.shared.fetchContacts()
+                DefaultStorage.shared.addContactsToSystem(newContacts)
+                contacts = newContacts
+            case .notDetermined:
+                // Request access to contacts
+                CNContactStore().requestAccess(for: .contacts) { granted, error in
+                    if granted {
+                        // Fetch and add contacts
+                        let newContacts = DefaultStorage.shared.fetchContacts()
+                        DefaultStorage.shared.addContactsToSystem(newContacts)
+                        DispatchQueue.main.async {
+                            contacts = newContacts
+                        }
+                    } else {
+                        // Handle error
+                        print("Error: \(error?.localizedDescription ?? "Unknown error")")
+                    }
+                }
+            default:
+                // Handle other authorization statuses
+                break
+            }
+        }
         .onChange(of: search.text) { _, newValue in
-            contacts = Contact.filteredContact(newValue)
-            print(search.text)
+            withAnimation(.interactiveSpring) {
+                contacts = Contact.filteredContact(newValue)
+            }
         }
     }
 }

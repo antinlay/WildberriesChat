@@ -1,5 +1,5 @@
 //
-//  LocalStorage.swift
+//  DefaultStorage.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 09.08.2024.
@@ -8,8 +8,8 @@
 import SwiftUI
 import Contacts
 
-final class LocalStorage {
-    static let shared = LocalStorage()
+final class DefaultStorage {
+    static let shared = DefaultStorage()
     
     private let userDefaults = UserDefaults.standard
     private let userKey = "user"
@@ -29,9 +29,9 @@ final class LocalStorage {
     }
 }
 
-extension LocalStorage {
+extension DefaultStorage {
     func fetchContacts() -> [Contact] {
-        var contacts = [Contact]()
+        var contacts = Contact.contacts
         let store = CNContactStore()
         let keys = [CNContactPhoneNumbersKey, CNContactGivenNameKey, CNContactFamilyNameKey, CNContactImageDataAvailableKey, CNContactThumbnailImageDataKey]
         let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
