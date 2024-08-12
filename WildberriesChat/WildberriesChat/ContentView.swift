@@ -8,33 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isPresented = false
+    @EnvironmentObject private var defaultStorage: DefaultStorage
+    @Environment(Router.self) private var router
     
     var body: some View {
-        VStack {
-            Image(.illustration)
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-                .padding()
-            Text("Общайтесь с друзьями и близкими легко")
-                .font(.system(size: 24, weight: .bold))
-                .multilineTextAlignment(.center)
-                .frame(width: 280.0, height: 58.0)
-            Spacer()
-            Text("Польззовательское соглашение")
-                .padding()
-            Button("Начать общаться") {
-                isPresented = true
-            }
-            .background(.accent)
-            .clipShape(RoundedRectangle(cornerRadius: 30))
-            .padding(EdgeInsets(top: 12, leading: 48, bottom: 12, trailing: 48))
-            .foregroundStyle(.white)
+        switch defaultStorage.user?.isLoggedIn {
+        case .some(_):
+            Home(selectedTab: .contacts)
+                .navigationDestination(for: OnBoardingRoutes.self) { route in
+                    route.view
+                }
+        case .none:
+            Walkthrough()
+                .navigationDestination(for: OnBoardingRoutes.self) { route in
+                    route.view
+                }
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+        .environment(Search())
+        .environment(Router())
+        .environmentObject(DefaultStorage())
 }
