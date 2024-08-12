@@ -8,9 +8,24 @@
 import SwiftUI
 import Contacts
 
-final class DefaultStorage {
-    static let shared = DefaultStorage()
-    
+enum ContactError: Error, LocalizedError {
+    case accessDenied
+    case unhandledCase
+
+    var errorDescription: String? {
+        switch self {
+        case .accessDenied:
+            return "Access to contacts is denied"
+        case .unhandledCase:
+            return "Authorization status case not handled"
+        }
+    }
+}
+
+final class DefaultStorage: ObservableObject {
+    @Published var contacts = Contact.contacts
+
+    private let store = CNContactStore()    
     private let userDefaults = UserDefaults.standard
     private let userKey = "user"
     
@@ -30,9 +45,28 @@ final class DefaultStorage {
 }
 
 extension DefaultStorage {
-    func fetchContacts() -> [Contact] {
+    func filteredContact(_ searchText: String) -> [Contact] {
+        searchText.isEmpty ? contacts : contacts.filter { $0.name.lowercased().contains(searchText.lowercased())}
+    }
+    
+    private func checkAuthorization() async throws {
+            switch CNContactStore.authorizationStatus(for: .contacts) {
+            case .authorized:
+                // All ok
+                return
+            case .restricted, .denied:
+                throw ContactError.accessDenied
+            case .notDetermined:
+                // Request authorization
+                try await store.requestAccess(for: .contacts)
+            @unknown default:
+                throw ContactError.unhandledCase
+            }
+        }
+
+    func fetchContacts() async throws -> [Contact] {
+        try await checkAuthorization()
         var contacts = Contact.contacts
-        let store = CNContactStore()
         let keys = [CNContactPhoneNumbersKey, CNContactGivenNameKey, CNContactFamilyNameKey, CNContactImageDataAvailableKey, CNContactThumbnailImageDataKey]
         let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
 
@@ -44,35 +78,14 @@ extension DefaultStorage {
                 let photo = contact.imageDataAvailable ? UIImage(data: contact.thumbnailImageData!) : nil
 
                 let contact = Contact(avatar: photo, name: firstName + " " + lastName, onlineStatus: "", activeStories: false, phoneNumber: phoneNumbers.first ?? "")
-                contacts.append(contact)
-            }
+                // Проверяем, существует ли уже контакт с таким же номером телефона
+                if !contacts.contains(where: { $0.phoneNumber == contact.phoneNumber }) {
+                    contacts.append(contact)
+                }            }
         } catch {
             print("Error fetching contacts: \(error)")
         }
-
+        
         return contacts
-    }
-
-    func addContactsToSystem(_ contacts: [Contact]) {
-        let store = CNContactStore()
-        let saveRequest = CNSaveRequest()
-        
-        for contact in contacts {
-            let newContact = CNMutableContact()
-            newContact.givenName = contact.name
-            newContact.phoneNumbers = [CNLabeledValue(label: CNLabelHome, value: CNPhoneNumber(stringValue: contact.phoneNumber))]
-            
-            if let avatar = contact.avatar {
-                newContact.imageData = avatar.pngData()
-            }
-            
-            saveRequest.add(newContact, toContainerWithIdentifier: nil)
-        }
-        
-        do {
-            try store.execute(saveRequest)
-        } catch {
-            print("Error adding contacts: \(error)")
-        }
     }
 }

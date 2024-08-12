@@ -9,7 +9,7 @@ import SwiftUI
 import UISystem
 
 struct SearchBar: View {
-    @Environment(SearchText.self) private var searchText
+    @Environment(Search.self) private var search
     
     @FocusState private var searchIsFocused: Bool
     
@@ -24,20 +24,20 @@ struct SearchBar: View {
     }
         
     var body: some View {
-        @Bindable var search = searchText
+        @Bindable var searchQuery = search
 
         HStack {
             searchBarIcon
                 .padding(.leading)
-            TextField("Search", text: $search.text)
+            TextField("Search", text: $searchQuery.text)
                 .modifier(InputTextField())
                 .overlay (
                     eraseIcon
-                        .opacity(search.text.isEmpty ? 0.0 : 1.0)
+                        .opacity(searchQuery.text.isEmpty ? 0.0 : 1.0)
                         .padding(.trailing)
                         .onTapGesture {
                             searchIsFocused = false
-                            search.text = ""
+                            searchQuery.text = ""
                         }
                     , alignment: .trailing
                 )
@@ -51,5 +51,6 @@ struct SearchBar: View {
 #Preview {
     SearchBar()
         .environment(Router())
+        .environment(Search())
 }
 

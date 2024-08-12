@@ -9,10 +9,10 @@ import SwiftUI
 import UISystem
 
 struct AvatarProfile: View {
-    var contact: Contact
+    var uiImage: UIImage?
 
     var body: some View {
-        switch contact.avatar {
+        switch uiImage {
         case .some(let avatar):
             AvatarCircle(avatar: avatar)
         case .none:
@@ -22,5 +22,5 @@ struct AvatarProfile: View {
 }
 
 #Preview {
-    AvatarProfile(contact: Contact.contacts.first!)
+    AvatarProfile(uiImage: Contact.contacts.first!.avatar)
 }

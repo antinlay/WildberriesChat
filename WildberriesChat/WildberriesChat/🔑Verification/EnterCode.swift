@@ -1,5 +1,5 @@
 //
-//  🔢EnterCode.swift
+//  EnterCode.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 18.07.2024.
@@ -9,8 +9,10 @@ import SwiftUI
 import UISystem
 
 struct EnterCode: View {
+    @Environment(\.dismiss) private var dismiss
     @Environment(OneTimePassword.self) private var otp
     @Environment(Router.self) private var router
+    @EnvironmentObject private var defaultStorage: DefaultStorage
     
     @State private var code = ""
     
@@ -50,12 +52,24 @@ struct EnterCode: View {
                 .frame(height: 40)
                 .onChange(of: code) { _, newValue in
                     if newValue == otp.code {
+                        defaultStorage.user = User(phoneNumber: otp.phoneNumber, firstName: "", isLoggedIn: false)
                         router.navigate(to: OnBoardingRoutes.createProfile)
                     }
                 }
             resendCodeButton
                 .padding(.top, 69)
                 .padding(.horizontal, 24)
+        }
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                HStack {
+                    Image(.shevron)
+                }
+                .onTapGesture {
+                    dismiss()
+                }
+            }
         }
         .modifier(AppBackground())
         .onAppear(perform: {

@@ -8,16 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var defaultStorage: DefaultStorage
+    @Environment(Router.self) private var router
+    
     var body: some View {
-//        Walkthrough()
-//            .navigationDestination(for: OnBoardingRoutes.self) { route in
-//                route.view
-//            }
-        Home(selectedTab: .contacts)
+        switch defaultStorage.user?.isLoggedIn {
+        case .some(_):
+            Home(selectedTab: .contacts)
+                .navigationDestination(for: OnBoardingRoutes.self) { route in
+                    route.view
+                }
+        case .none:
+            Walkthrough()
+                .navigationDestination(for: OnBoardingRoutes.self) { route in
+                    route.view
+                }
+        }
     }
 }
 
 #Preview {
     ContentView()
-        .environment(SearchText())
+        .environment(Search())
+        .environment(Router())
+        .environmentObject(DefaultStorage())
 }

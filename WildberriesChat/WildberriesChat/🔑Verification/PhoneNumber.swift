@@ -1,5 +1,5 @@
 //
-//  ☎️PhoneNumber.swift
+//  PhoneNumber.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 16.07.2024.

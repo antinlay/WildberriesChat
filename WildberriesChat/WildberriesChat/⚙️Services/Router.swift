@@ -45,6 +45,7 @@ enum OnBoardingRoutes: Route {
     case verification
     case otp
     case createProfile
+    case home
     
     @ViewBuilder
     var view: some View {
@@ -57,6 +58,8 @@ enum OnBoardingRoutes: Route {
             EnterCode()
         case .createProfile:
             CreateProfile()
+        case .home:
+            Home(selectedTab: .contacts)
         }
     }
 }

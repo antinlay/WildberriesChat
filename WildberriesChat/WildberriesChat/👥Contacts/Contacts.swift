@@ -9,8 +9,9 @@ import SwiftUI
 import Contacts
 
 struct Contacts: View {
-    @Environment(SearchText.self) private var search
-    @State var contacts: [Contact] = Contact.contacts
+    @Environment(Search.self) private var search
+    @EnvironmentObject private var defaultStorage: DefaultStorage
+    @State private var contacts: [Contact] = []
     
     private var divider: some View {
         Divider()
@@ -32,37 +33,17 @@ struct Contacts: View {
                 }
             }
         }
-        .onAppear {
-            let status = CNContactStore.authorizationStatus(for: .contacts)
-            switch status {
-            case .authorized:
-                // Fetch and add contacts
-                let newContacts = DefaultStorage.shared.fetchContacts()
-                DefaultStorage.shared.addContactsToSystem(newContacts)
-                contacts = newContacts
-            case .notDetermined:
-                // Request access to contacts
-                CNContactStore().requestAccess(for: .contacts) { granted, error in
-                    if granted {
-                        // Fetch and add contacts
-                        let newContacts = DefaultStorage.shared.fetchContacts()
-                        DefaultStorage.shared.addContactsToSystem(newContacts)
-                        DispatchQueue.main.async {
-                            contacts = newContacts
-                        }
-                    } else {
-                        // Handle error
-                        print("Error: \(error?.localizedDescription ?? "Unknown error")")
-                    }
-                }
-            default:
-                // Handle other authorization statuses
-                break
+        .task {
+            do {
+                defaultStorage.contacts = try await defaultStorage.fetchContacts()
+                contacts = defaultStorage.contacts
+            } catch {
+                print("Error")
             }
         }
         .onChange(of: search.text) { _, newValue in
             withAnimation(.interactiveSpring) {
-                contacts = Contact.filteredContact(newValue)
+                contacts = defaultStorage.filteredContact(newValue)
             }
         }
     }
@@ -70,5 +51,5 @@ struct Contacts: View {
 
 #Preview {
     Contacts()
-        .environment(SearchText())
+        .environment(Search())
 }

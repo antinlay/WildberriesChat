@@ -22,15 +22,17 @@ struct Home: View {
                 More().tag(BottomBarRoutes.more)
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-            .toolbar{
-                ToolBar(selectedTab: selectedTab)
-            }
             Spacer()
             BottomBar(selectedTab: $selectedTab)
         }
         .ignoresSafeArea(edges: .bottom)
         .ignoresSafeArea(.keyboard, edges: .bottom)
         .modifier(AppBackground())
+        .navigationBarBackButtonHidden()
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar{
+            ToolBar(selectedTab: selectedTab)
+        }
     }
 }
 
@@ -38,6 +40,6 @@ struct Home: View {
     NavigationStack {
         Home(selectedTab: .contacts)
             .environment(Router())
-            .environment(SearchText())
+            .environment(Search())
     }
 }

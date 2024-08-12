@@ -1,5 +1,5 @@
 //
-//  ⚪️CodeTextField.swift
+//  CodeTextField.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 18.07.2024.

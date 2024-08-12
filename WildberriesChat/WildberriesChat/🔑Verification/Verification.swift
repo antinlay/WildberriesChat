@@ -1,5 +1,5 @@
 //
-//  🔐Verification.swift
+//  Verification.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 15.07.2024.
@@ -9,6 +9,7 @@ import SwiftUI
 import UISystem
 
 struct Verification: View {
+    @Environment(\.dismiss) private var dismiss
     @Environment(Router.self) var router
     @Environment(OneTimePassword.self) var otp
     
@@ -56,6 +57,17 @@ struct Verification: View {
             
             waiting
                 .opacity(isLoading ? 1 : .zero)
+        }
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                HStack {
+                    Image(.shevron)
+                }
+                .onTapGesture {
+                    dismiss()
+                }
+            }
         }
         .animation(.easeOut, value: isLoading)
         .modifier(AppBackground())
