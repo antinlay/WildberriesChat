@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ContactDetails: View {
-    @Environment(\.dismiss) var dissmis
-    var contact: Contact
+    @Environment(Router.self) var router
+    @EnvironmentObject private var defaultStorage: DefaultStorage
+    var user: User?
         
     private var socialButtons: some View {
         let socials: [ImageResource] = [.Social.twitter, .Social.instagram, .Social.linkedin, .Social.faceBook]
@@ -30,46 +31,27 @@ struct ContactDetails: View {
     }
     
     var body: some View {
-        let phoneNumber = contact.phoneNumber.getRussianPhoneMask()
-        
         VStack {
-            AvatarProfile(uiImage: contact.avatar)
-                .padding(.bottom, 20)
-            VStack {
-                Text(contact.name)
-                    .font(.headingSecond)
-                Text(phoneNumber)
-                    .font(.subheadingSecond)
-                    .fontWeight(.regular)
-                    .foregroundStyle(.appGray)
+            if let contact = user as? Contact {
+                AvatarProfile(uiImage: contact.avatar)
+                    .padding(.bottom, 20)
+                VStack {
+                    Text(user!.firstName)
+                        .font(.headingSecond)
+                    Text(user!.phoneNumber.getRussianPhoneMask())
+                        .font(.subheadingSecond)
+                        .fontWeight(.regular)
+                        .foregroundStyle(.appGray)
+                }
+                .padding(.bottom, 40)
+                socialButtons
             }
-            .padding(.bottom, 40)
-            socialButtons
         }
         .frame(maxHeight: .infinity, alignment: .top)
         .padding(.top, 46)
         
         .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                HStack {
-                    Image(.shevron)
-                }
-                .onTapGesture {
-                    dissmis()
-                }
-            }
-            
-            ToolbarItem(placement: .topBarLeading) {
-                Text("Profile")
-                    .font(.subheadingFirst)
-                    .padding(.leading, 10)
-            }
-            
-            ToolbarItem(placement: .topBarTrailing) {
-                Image(.ToolBar.editProfile)
-                    .font(.headingSecond)
-                    .padding(.trailing, 10)
-            }
+            ToolBar(selectedTab: router.selectedTab)
         }
         .navigationBarBackButtonHidden(true)
     }
@@ -77,6 +59,6 @@ struct ContactDetails: View {
 
 #Preview {
     NavigationStack {
-        ContactDetails(contact: Contact.contacts.last!)
+        ContactDetails(user: Contact.contacts.last!)
     }
 }

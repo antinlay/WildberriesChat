@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         switch defaultStorage.user?.isLoggedIn {
         case .some(_):
-            Home(selectedTab: .contacts)
+            Home()
                 .navigationDestination(for: OnBoardingRoutes.self) { route in
                     route.view
                 }

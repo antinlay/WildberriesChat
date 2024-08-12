@@ -52,7 +52,7 @@ struct EnterCode: View {
                 .frame(height: 40)
                 .onChange(of: code) { _, newValue in
                     if newValue == otp.code {
-                        defaultStorage.user = User(phoneNumber: otp.phoneNumber, firstName: "", isLoggedIn: false)
+                        defaultStorage.user = LocalUser(phoneNumber: otp.phoneNumber, firstName: "", isLoggedIn: false)
                         router.navigate(to: OnBoardingRoutes.createProfile)
                     }
                 }

@@ -10,6 +10,54 @@ import SwiftUI
 
 protocol Route: Hashable { }
 
+enum ChatsRoutes: Route, CaseIterable {
+    case messages
+    case newStory
+    case stories
+    
+    @ViewBuilder
+    var view: some View {
+        switch self {
+        case .messages:
+            Messages()
+        case .newStory:
+            NewStory()
+        case .stories:
+            Stories()
+        }
+    }
+}
+
+enum ContactsRoutes: Route, CaseIterable {
+    case newContact
+    case contactProfile
+    case editContactProfile
+    
+    @ViewBuilder
+    var view: some View {
+        switch self {
+        case .newContact:
+            AddNewContact()
+        case .contactProfile:
+            ContactDetails()
+        case .editContactProfile:
+            Stories()
+        }
+    }
+}
+
+enum MoreRoutes: Route, CaseIterable {
+    case profile
+    case account
+    case chats
+    case theme
+    case notification
+    case security
+    case storage
+    case help
+    case inviteFriend
+}
+
 enum BottomBarRoutes: Route, CaseIterable {
     case contacts
     case chats
@@ -59,7 +107,7 @@ enum OnBoardingRoutes: Route {
         case .createProfile:
             CreateProfile()
         case .home:
-            Home(selectedTab: .contacts)
+            Home()
         }
     }
 }
@@ -71,13 +119,6 @@ final class Router {
     
     func navigate(to route: any Route) {
         navigationPath.append(route)
-    }
-    
-    func navigateBack() {
-        navigationPath.removeLast()
-    }
-    
-    func navigateRoot() {
-        navigationPath.removeLast(navigationPath.count)
-    }
+        selectedTab = route
+    }    
 }

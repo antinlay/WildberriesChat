@@ -70,14 +70,8 @@ struct CreateProfile: View {
             
         }
         .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                HStack {
-                    Image(.shevron)
-                }
-                .onTapGesture {
-                    dismiss()
-                }
-            }
+            ToolBar(selectedTab: router.selectedTab)
+
         }
         .onChange(of: photoPickerItem) { _, newValue in
             Task {

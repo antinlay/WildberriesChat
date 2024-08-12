@@ -9,7 +9,8 @@ import SwiftUI
 import UISystem
 
 struct Home: View {
-    @State var selectedTab: BottomBarRoutes
+    @Environment(Router.self) var router
+    @State var selectedTab: BottomBarRoutes = .contacts
     
     var body: some View {
         VStack {
@@ -38,7 +39,7 @@ struct Home: View {
 
 #Preview {
     NavigationStack {
-        Home(selectedTab: .contacts)
+        Home()
             .environment(Router())
             .environment(Search())
     }

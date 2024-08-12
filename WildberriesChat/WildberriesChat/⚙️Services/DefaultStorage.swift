@@ -29,10 +29,10 @@ final class DefaultStorage: ObservableObject {
     private let userDefaults = UserDefaults.standard
     private let userKey = "user"
     
-    var user: User? {
+    var user: LocalUser? {
         get {
             if let data = userDefaults.data(forKey: userKey) {
-                return try? JSONDecoder().decode(User.self, from: data)
+                return try? JSONDecoder().decode(LocalUser.self, from: data)
             }
             return nil
         }
@@ -46,7 +46,9 @@ final class DefaultStorage: ObservableObject {
 
 extension DefaultStorage {
     func filteredContact(_ searchText: String) -> [Contact] {
-        searchText.isEmpty ? contacts : contacts.filter { $0.name.lowercased().contains(searchText.lowercased())}
+        searchText.isEmpty ? contacts : contacts.filter { contact in
+            contact.firstName.lowercased().contains(searchText.lowercased()) || contact.phoneNumber.contains(searchText)
+        }
     }
     
     private func checkAuthorization() async throws {
@@ -77,7 +79,7 @@ extension DefaultStorage {
                 let lastName = contact.familyName
                 let photo = contact.imageDataAvailable ? UIImage(data: contact.thumbnailImageData!) : nil
 
-                let contact = Contact(avatar: photo, name: firstName + " " + lastName, onlineStatus: "", activeStories: false, phoneNumber: phoneNumbers.first ?? "")
+                let contact = Contact(avatar: photo, firstName: firstName + " " + lastName, onlineStatus: "", activeStories: false, phoneNumber: phoneNumbers.first ?? "")
                 // Проверяем, существует ли уже контакт с таким же номером телефона
                 if !contacts.contains(where: { $0.phoneNumber == contact.phoneNumber }) {
                     contacts.append(contact)

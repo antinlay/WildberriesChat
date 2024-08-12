@@ -1,5 +1,5 @@
 //
-//  AddContact.swift
+//  AddNewContact.swift
 //  WildberriesChat
 //
 //  Created by Janiece Eleonour on 19.06.2024.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct AddContact: View {
+struct AddNewContact: View {
     @Environment(\.dismiss) var dissmis
     
     var body: some View {
         VStack {
-            Text("Add Contact")
+            Text("New Contact")
         }
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
@@ -29,5 +29,5 @@ struct AddContact: View {
 }
 
 #Preview {
-    AddContact()
+    AddNewContact()
 }

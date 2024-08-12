@@ -27,7 +27,7 @@ struct ContactContainer: View {
     }
     
     private var name: some View {
-        Text(contact.name)
+        Text(contact.firstName)
             .font(.bodyFirst)
             .foregroundStyle(.neutral)
             .frame(height: 24)

@@ -12,7 +12,7 @@ struct Avatar: View {
     var contact: Contact
         
     var body: some View {
-        let initials = getInitials(from: contact.name)
+        let initials = getInitials(from: contact.firstName)
 
         switch contact.avatar {
         case .some(let avatar):

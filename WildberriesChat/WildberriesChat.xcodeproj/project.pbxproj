@@ -31,7 +31,7 @@
 		5C1ED3DE2C354BAA00124160 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ED3DD2C354BAA00124160 /* Router.swift */; };
 		5C1ED3E02C357BE800124160 /* SearchText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ED3DF2C357BE800124160 /* SearchText.swift */; };
 		5C20BCE22C46BD3F00612E1E /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C20BCE12C46BD3F00612E1E /* PhoneNumber.swift */; };
-		5C20E7802C2244D4009D5BF9 /* AddContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C20E77F2C2244D4009D5BF9 /* AddContact.swift */; };
+		5C20E7802C2244D4009D5BF9 /* AddNewContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C20E77F2C2244D4009D5BF9 /* AddNewContact.swift */; };
 		5C515DDC2C11322500EFDB9C /* WildberriesChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DDB2C11322500EFDB9C /* WildberriesChatApp.swift */; };
 		5C515DDE2C11322500EFDB9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DDD2C11322500EFDB9C /* ContentView.swift */; };
 		5C515DE32C11322600EFDB9C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C515DE22C11322600EFDB9C /* Preview Assets.xcassets */; };
@@ -53,11 +53,14 @@
 		5C7B5B6C2C1B8D7A00B84923 /* ContactContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B6B2C1B8D7A00B84923 /* ContactContainer.swift */; };
 		5C8F59042C1A1B08004DA54D /* PrivacyAndTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F59032C1A1B08004DA54D /* PrivacyAndTerms.swift */; };
 		5C8F59062C1A1BEE004DA54D /* Illustration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F59052C1A1BEE004DA54D /* Illustration.swift */; };
-		5CDF5FE32C65FC4C00DDCDC4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF5FE22C65FC4C00DDCDC4 /* User.swift */; };
-		5CDF5FE52C65FE1600DDCDC4 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF5FE42C65FE1600DDCDC4 /* LocalStorage.swift */; };
+		5CDF5FE32C65FC4C00DDCDC4 /* LocalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF5FE22C65FC4C00DDCDC4 /* LocalUser.swift */; };
+		5CDF5FE52C65FE1600DDCDC4 /* DefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF5FE42C65FE1600DDCDC4 /* DefaultStorage.swift */; };
 		5CDF5FE72C662EA100DDCDC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CDF5FE62C662EA000DDCDC4 /* Assets.xcassets */; };
 		5CDF5FE82C662EA100DDCDC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CDF5FE62C662EA000DDCDC4 /* Assets.xcassets */; };
 		5CDF5FE92C662EA100DDCDC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CDF5FE62C662EA000DDCDC4 /* Assets.xcassets */; };
+		5CEE5A2A2C6A7BB200E6BC7F /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE5A292C6A7BB200E6BC7F /* Messages.swift */; };
+		5CEE5A2D2C6A7C5400E6BC7F /* NewStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE5A2C2C6A7C5400E6BC7F /* NewStory.swift */; };
+		5CEE5A2F2C6A7C6100E6BC7F /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE5A2E2C6A7C6100E6BC7F /* Stories.swift */; };
 		5CF5E72B2C45365C0091C93E /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5E72A2C45365C0091C93E /* Verification.swift */; };
 /* End PBXBuildFile section */
 
@@ -131,7 +134,7 @@
 		5C1ED3DD2C354BAA00124160 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		5C1ED3DF2C357BE800124160 /* SearchText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchText.swift; sourceTree = "<group>"; };
 		5C20BCE12C46BD3F00612E1E /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
-		5C20E77F2C2244D4009D5BF9 /* AddContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContact.swift; sourceTree = "<group>"; };
+		5C20E77F2C2244D4009D5BF9 /* AddNewContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewContact.swift; sourceTree = "<group>"; };
 		5C515DD82C11322500EFDB9C /* WildberriesChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WildberriesChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C515DDB2C11322500EFDB9C /* WildberriesChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildberriesChatApp.swift; sourceTree = "<group>"; };
 		5C515DDD2C11322500EFDB9C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -154,9 +157,12 @@
 		5C7B5B6B2C1B8D7A00B84923 /* ContactContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactContainer.swift; sourceTree = "<group>"; };
 		5C8F59032C1A1B08004DA54D /* PrivacyAndTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyAndTerms.swift; sourceTree = "<group>"; };
 		5C8F59052C1A1BEE004DA54D /* Illustration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Illustration.swift; sourceTree = "<group>"; };
-		5CDF5FE22C65FC4C00DDCDC4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		5CDF5FE42C65FE1600DDCDC4 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
+		5CDF5FE22C65FC4C00DDCDC4 /* LocalUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUser.swift; sourceTree = "<group>"; };
+		5CDF5FE42C65FE1600DDCDC4 /* DefaultStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStorage.swift; sourceTree = "<group>"; };
 		5CDF5FE62C662EA000DDCDC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5CEE5A292C6A7BB200E6BC7F /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		5CEE5A2C2C6A7C5400E6BC7F /* NewStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewStory.swift; sourceTree = "<group>"; };
+		5CEE5A2E2C6A7C6100E6BC7F /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 		5CF5E72A2C45365C0091C93E /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -264,7 +270,7 @@
 				5C0DC07A2C4A8CFB007073E9 /* OneTimePassword.swift */,
 				5C1ED3DD2C354BAA00124160 /* Router.swift */,
 				5C1ED3DF2C357BE800124160 /* SearchText.swift */,
-				5CDF5FE42C65FE1600DDCDC4 /* LocalStorage.swift */,
+				5CDF5FE42C65FE1600DDCDC4 /* DefaultStorage.swift */,
 			);
 			path = "⚙️Services";
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 				5C5CE4A12C216DD3009DCFF3 /* 💠More */,
 				5C5CE4902C1ECCB2009DCFF3 /* Models */,
 				5C0DC07C2C4BC429007073E9 /* 👤Profile */,
+				5CEE5A2B2C6A7BF300E6BC7F /* 🤳🏼Stories */,
 				5C20BCE02C46BBF700612E1E /* 🔑Verification */,
 				5C1230F92C665AA00080DEB7 /* 🔍SearchBar */,
 				5C1ED3DC2C354B7A00124160 /* ⚙️Services */,
@@ -349,7 +356,7 @@
 				5C7B5B672C1B2C3000B84923 /* Contacts.swift */,
 				5C5CE4912C1EDCB2009DCFF3 /* ContactDetails.swift */,
 				5C7B5B6B2C1B8D7A00B84923 /* ContactContainer.swift */,
-				5C20E77F2C2244D4009D5BF9 /* AddContact.swift */,
+				5C20E77F2C2244D4009D5BF9 /* AddNewContact.swift */,
 			);
 			path = "👥Contacts";
 			sourceTree = "<group>";
@@ -366,7 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				5C7B5B692C1B35FC00B84923 /* Contact.swift */,
-				5CDF5FE22C65FC4C00DDCDC4 /* User.swift */,
+				5CDF5FE22C65FC4C00DDCDC4 /* LocalUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -385,6 +392,7 @@
 			isa = PBXGroup;
 			children = (
 				5C5CE49F2C216CE2009DCFF3 /* Chats.swift */,
+				5CEE5A292C6A7BB200E6BC7F /* Messages.swift */,
 			);
 			path = "💬Chats";
 			sourceTree = "<group>";
@@ -406,6 +414,15 @@
 				5C515DEB2C14A58900EFDB9C /* UserAgreement.swift */,
 			);
 			path = "🚶🏼‍➡️Walkthrough";
+			sourceTree = "<group>";
+		};
+		5CEE5A2B2C6A7BF300E6BC7F /* 🤳🏼Stories */ = {
+			isa = PBXGroup;
+			children = (
+				5CEE5A2C2C6A7C5400E6BC7F /* NewStory.swift */,
+				5CEE5A2E2C6A7C6100E6BC7F /* Stories.swift */,
+			);
+			path = "🤳🏼Stories";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -570,7 +587,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C515DEC2C14A58900EFDB9C /* UserAgreement.swift in Sources */,
-				5CDF5FE52C65FE1600DDCDC4 /* LocalStorage.swift in Sources */,
+				5CEE5A2A2C6A7BB200E6BC7F /* Messages.swift in Sources */,
+				5CDF5FE52C65FE1600DDCDC4 /* DefaultStorage.swift in Sources */,
 				5C0DC0792C493ACF007073E9 /* CodeTextField.swift in Sources */,
 				5C0DC07E2C4BC52B007073E9 /* CreateProfile.swift in Sources */,
 				5C7B5B6A2C1B35FC00B84923 /* Contact.swift in Sources */,
@@ -579,20 +597,22 @@
 				5C0DC0772C492D98007073E9 /* EnterCode.swift in Sources */,
 				5C1ED3DE2C354BAA00124160 /* Router.swift in Sources */,
 				5C1ED3E02C357BE800124160 /* SearchText.swift in Sources */,
+				5CEE5A2D2C6A7C5400E6BC7F /* NewStory.swift in Sources */,
 				5C7B5B682C1B2C3000B84923 /* Contacts.swift in Sources */,
 				5C5CE4922C1EDCB2009DCFF3 /* ContactDetails.swift in Sources */,
 				5C5CE4A72C21CD89009DCFF3 /* ToolBar.swift in Sources */,
 				5C7B5B6C2C1B8D7A00B84923 /* ContactContainer.swift in Sources */,
-				5CDF5FE32C65FC4C00DDCDC4 /* User.swift in Sources */,
+				5CDF5FE32C65FC4C00DDCDC4 /* LocalUser.swift in Sources */,
 				5C5CE4A02C216CE2009DCFF3 /* Chats.swift in Sources */,
 				5C20BCE22C46BD3F00612E1E /* PhoneNumber.swift in Sources */,
+				5CEE5A2F2C6A7C6100E6BC7F /* Stories.swift in Sources */,
 				5C5CE49D2C2167B8009DCFF3 /* BottomBar.swift in Sources */,
 				5C5CE49B2C216313009DCFF3 /* BottomBarButton.swift in Sources */,
 				5C5CE4942C203BFC009DCFF3 /* AvatarProfile.swift in Sources */,
 				5C515DEA2C14959500EFDB9C /* Walkthrough.swift in Sources */,
 				5CF5E72B2C45365C0091C93E /* Verification.swift in Sources */,
 				5C5CE48B2C1DAA10009DCFF3 /* SearchBar.swift in Sources */,
-				5C20E7802C2244D4009D5BF9 /* AddContact.swift in Sources */,
+				5C20E7802C2244D4009D5BF9 /* AddNewContact.swift in Sources */,
 				5C515DDE2C11322500EFDB9C /* ContentView.swift in Sources */,
 				5C8F59042C1A1B08004DA54D /* PrivacyAndTerms.swift in Sources */,
 				5C8F59062C1A1BEE004DA54D /* Illustration.swift in Sources */,
