@@ -11,7 +11,7 @@ import UISystem
 struct Home: View {
     @Environment(Router.self) var router
     @State var selectedTab: BottomBarRoutes = .contacts
-    
+            
     var body: some View {
         VStack {
             SearchBar()
@@ -26,14 +26,29 @@ struct Home: View {
             Spacer()
             BottomBar(selectedTab: $selectedTab)
         }
+        .toolbar {
+            switch selectedTab {
+            case .contacts:
+                Group {
+                    addContactItem(destinationView: AddNewContact())
+                    titleItem("Contacts")
+                }
+            case .chats:
+                Group {
+                    newChatItem
+                    titleItem("Chats")
+                }
+            case .more:
+                Group {
+                    titleItem("More")
+                }
+            }
+        }
         .ignoresSafeArea(edges: .bottom)
         .ignoresSafeArea(.keyboard, edges: .bottom)
         .modifier(AppBackground())
         .navigationBarBackButtonHidden()
         .navigationBarTitleDisplayMode(.inline)
-        .toolbar{
-            ToolBar(selectedTab: selectedTab)
-        }
     }
 }
 

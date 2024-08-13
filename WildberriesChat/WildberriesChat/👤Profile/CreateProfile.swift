@@ -12,7 +12,6 @@ import UISystem
 
 struct CreateProfile: View {
     @Environment(Router.self) private var router
-    @Environment(\.dismiss) private var dismiss
     @EnvironmentObject private var defaultStorage: DefaultStorage
     
     @State private var avatar: Data?
@@ -31,7 +30,7 @@ struct CreateProfile: View {
             .modifier(InputTextField())
             .modifier(InputBackground())
     }
-
+    
     private var saveButton: some View {
         Button("Save") {
             defaultStorage.user?.firstName = "\(firstName) \(lastName)"
@@ -70,8 +69,8 @@ struct CreateProfile: View {
             
         }
         .toolbar {
-            ToolBar(selectedTab: router.selectedTab)
-
+            shevronItem
+            titleItem("Create Profile")
         }
         .onChange(of: photoPickerItem) { _, newValue in
             Task {
@@ -101,3 +100,4 @@ struct CreateProfile: View {
             .environmentObject(DefaultStorage())
     }
 }
+

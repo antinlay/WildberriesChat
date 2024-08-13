@@ -6,23 +6,18 @@
 //
 
 import SwiftUI
+import UISystem
 
 struct AddNewContact: View {
-    @Environment(\.dismiss) var dissmis
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         VStack {
             Text("New Contact")
         }
         .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                HStack {
-                    Image(.shevron)
-                }
-                .onTapGesture {
-                    dissmis()
-                }
-            }
+            shevronItem
+            titleItem("New Contact")
         }
         .navigationBarBackButtonHidden(true)
     }

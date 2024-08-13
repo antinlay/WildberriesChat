@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import UISystem
 
 struct ContactDetails: View {
+    @Environment(\.dismiss) private var dismiss
     @Environment(Router.self) var router
     @EnvironmentObject private var defaultStorage: DefaultStorage
     var user: User?
-        
+    
     private var socialButtons: some View {
         let socials: [ImageResource] = [.Social.twitter, .Social.instagram, .Social.linkedin, .Social.faceBook]
         
@@ -51,7 +53,11 @@ struct ContactDetails: View {
         .padding(.top, 46)
         
         .toolbar {
-            ToolBar(selectedTab: router.selectedTab)
+            Group {
+                shevronItem
+                titleItem("Profile")
+            }
+            editProfileItem
         }
         .navigationBarBackButtonHidden(true)
     }

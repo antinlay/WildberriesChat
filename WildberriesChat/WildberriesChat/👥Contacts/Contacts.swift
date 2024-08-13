@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Contacts
+import UISystem
 
 struct Contacts: View {
     @Environment(Search.self) private var search
