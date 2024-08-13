@@ -10,14 +10,24 @@ import UISystem
 
 struct Avatar: View {
     var contact: Contact
-        
+    
+    @StateObject private var imageLoader = ImageLoader()
+    
     var body: some View {
         let initials = getInitials(from: contact.firstName)
-
-        switch contact.avatar {
-        case .some(let avatar):
-            AvatarThumbnail(avatar: avatar)
-                .clipShape(.rect(cornerRadius: 16))
+        
+        switch contact.avatarURL {
+        case .some(let avatarURL):
+            if let avatar = imageLoader.image {
+                AvatarThumbnail(avatar: avatar)
+                    .clipShape(.rect(cornerRadius: 16))
+            } else {
+                ProgressView()
+                    .onAppear {
+                        print("avatarURL", avatarURL, #line, #function)
+                        imageLoader.load(from: avatarURL)
+                    }
+            }
         case .none:
             AvatarContactInitials(initials: initials)
         }
