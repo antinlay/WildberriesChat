@@ -16,11 +16,9 @@ public extension View {
         }
     }
     
-    var shevronItem: some ToolbarContent {
-        ToolbarItem(placement: .topBarLeading) {
-            HStack {
-                Image(ImageResource(name: "Shevron", bundle: .main))
-            }
+    var shevronItem: some View {
+        HStack {
+            Image(ImageResource(name: "Shevron", bundle: .main))
         }
     }
     
@@ -39,8 +37,8 @@ public extension View {
             } label: {
                 Image(ImageResource(name: "ToolBar/AddContact", bundle: .main))
             }
-
-                .padding(.trailing, 10)
+            
+            .padding(.trailing, 10)
         }
     }
     
@@ -58,10 +56,19 @@ public extension View {
                 } label: {
                     Image(ImageResource(name: "ToolBar/ReadAll", bundle: .main))
                 }
-
+                
             }
             .padding(.trailing, 10)
         }
     }
+}
 
+public extension View {
+    func toolbarBackButton(completion: @escaping () -> Void) -> some View {
+        return Button {
+            completion()
+        } label: {
+            shevronItem
+        }
+    }
 }

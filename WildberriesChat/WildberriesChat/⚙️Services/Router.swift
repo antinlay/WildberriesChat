@@ -39,7 +39,7 @@ enum ContactsRoutes: Route, CaseIterable {
         case .newContact:
             AddNewContact()
         case .contactProfile:
-            ContactDetails()
+            AddNewContact()
         case .editContactProfile:
             Stories()
         }

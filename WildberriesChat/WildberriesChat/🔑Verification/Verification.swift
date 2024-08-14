@@ -9,6 +9,7 @@ import SwiftUI
 import UISystem
 
 struct Verification: View {
+    @Environment(\.dismiss) private var dismiss
     @Environment(Router.self) var router
     @Environment(OneTimePassword.self) var otp
     
@@ -59,7 +60,11 @@ struct Verification: View {
         }
         .navigationBarBackButtonHidden()
         .toolbar {
-            shevronItem
+            ToolbarItem(placement: .topBarLeading) {
+                toolbarBackButton {
+                    dismiss()
+                }
+            }
         }
         .animation(.easeOut, value: isLoading)
         .modifier(AppBackground())

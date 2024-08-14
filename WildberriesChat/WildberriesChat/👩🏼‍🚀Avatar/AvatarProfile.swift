@@ -9,12 +9,24 @@ import SwiftUI
 import UISystem
 
 struct AvatarProfile: View {
-    var uiImage: UIImage?
+    var avatarURL: URL?
+
+    @StateObject private var imageLoader = ImageLoader()
 
     var body: some View {
-        switch uiImage {
-        case .some(let avatar):
-            AvatarCircle(avatar: avatar)
+        switch avatarURL {
+        case .some(let avatarURL):
+            if let avatar = imageLoader.image {
+                AvatarCircle(avatar: avatar)
+            } else {
+                AvatarPlaceholder()
+                    .overlay {
+                        ProgressView()
+                    }
+                    .onAppear {
+                        imageLoader.load(from: avatarURL)
+                    }
+            }
         case .none:
             AvatarPlaceholder()
         }
@@ -22,5 +34,5 @@ struct AvatarProfile: View {
 }
 
 #Preview {
-    AvatarProfile(uiImage: Contact.contacts.first!.avatar)
+    AvatarProfile(avatarURL: Contact.contacts.first!.avatarURL)
 }

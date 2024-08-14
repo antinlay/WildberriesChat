@@ -22,9 +22,11 @@ struct Avatar: View {
                 AvatarThumbnail(avatar: avatar)
                     .clipShape(.rect(cornerRadius: 16))
             } else {
-                ProgressView()
+                AvatarContactInitials(initials: initials)
+                    .overlay {
+                        ProgressView()
+                    }
                     .onAppear {
-                        print("avatarURL", avatarURL, #line, #function)
                         imageLoader.load(from: avatarURL)
                     }
             }

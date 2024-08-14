@@ -22,7 +22,7 @@ struct Contacts: View {
         ScrollView(.vertical) {
             LazyVStack(spacing: 0) {
                 ForEach(contacts, id: \.id) { contact in
-                    NavigationLink(destination: ContactDetails(user: contact)) {
+                    NavigationLink(destination: ContactDetails(contact: contact)) {
                         ContactContainer(contact: contact)
                             .padding(.top)
                             .padding(.bottom, 12)
@@ -35,7 +35,7 @@ struct Contacts: View {
         }
         .task {
             do {
-                defaultStorage.contacts = try await defaultStorage.fetchContacts()
+                try await defaultStorage.fetchContacts()
                 contacts = defaultStorage.contacts
             } catch {
                 print("Error")

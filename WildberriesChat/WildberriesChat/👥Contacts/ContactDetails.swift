@@ -11,20 +11,19 @@ import UISystem
 struct ContactDetails: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(Router.self) var router
-    @EnvironmentObject private var defaultStorage: DefaultStorage
-    var user: User?
+    
+    var contact: Contact
     
     private var socialButtons: some View {
-        let socials: [ImageResource] = [.Social.twitter, .Social.instagram, .Social.linkedin, .Social.faceBook]
-        
-        return HStack(spacing: 12) {
-            ForEach(socials.indices, id: \.self) { index in
-                Capsule()
-                    .stroke(.accent, lineWidth: 1.67)
-                    .overlay(Image(socials[index]))
-                    .onTapGesture {
-                        //
-                    }
+        HStack(spacing: 12) {
+            ForEach(contact.socials, id: \.0) { social in
+                if let socialURL = social.1 {
+                    Link(destination: socialURL, label: {
+                        Capsule()
+                            .stroke(.accent, lineWidth: 1.67)
+                            .overlay(Image(ImageResource(name: social.0, bundle: .main)))
+                    })
+                }
             }
         }
         .frame(maxWidth: .infinity)
@@ -34,29 +33,29 @@ struct ContactDetails: View {
     
     var body: some View {
         VStack {
-            if let contact = user as? Contact {
-                AvatarProfile(uiImage: contact.avatar)
-                    .padding(.bottom, 20)
-                VStack {
-                    Text(user!.firstName)
-                        .font(.headingSecond)
-                    Text(user!.phoneNumber.getRussianPhoneMask())
-                        .font(.subheadingSecond)
-                        .fontWeight(.regular)
-                        .foregroundStyle(.appGray)
-                }
-                .padding(.bottom, 40)
-                socialButtons
+            AvatarProfile(avatarURL: contact.avatarURL)
+                .padding(.bottom, 20)
+            VStack {
+                Text(contact.firstName)
+                    .font(.headingSecond)
+                Text(contact.phoneNumber.getRussianPhoneMask())
+                    .font(.subheadingSecond)
+                    .fontWeight(.regular)
+                    .foregroundStyle(.appGray)
             }
+            .padding(.bottom, 40)
+            socialButtons
         }
         .frame(maxHeight: .infinity, alignment: .top)
         .padding(.top, 46)
         
         .toolbar {
-            Group {
-                shevronItem
-                titleItem("Profile")
+            ToolbarItem(placement: .topBarLeading) {
+                toolbarBackButton {
+                    dismiss()
+                }
             }
+            titleItem("Profile")
             editProfileItem
         }
         .navigationBarBackButtonHidden(true)
@@ -65,6 +64,6 @@ struct ContactDetails: View {
 
 #Preview {
     NavigationStack {
-        ContactDetails(user: Contact.contacts.last!)
+        ContactDetails(contact: Contact.contacts.last!)
     }
 }

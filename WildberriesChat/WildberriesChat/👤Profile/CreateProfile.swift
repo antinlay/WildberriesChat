@@ -11,6 +11,7 @@ import UISystem
 
 
 struct CreateProfile: View {
+    @Environment(\.dismiss) private var dismiss
     @Environment(Router.self) private var router
     @EnvironmentObject private var defaultStorage: DefaultStorage
     
@@ -69,7 +70,11 @@ struct CreateProfile: View {
             
         }
         .toolbar {
-            shevronItem
+            ToolbarItem(placement: .topBarLeading) {
+                toolbarBackButton {
+                    dismiss()
+                }
+            }
             titleItem("Create Profile")
         }
         .onChange(of: photoPickerItem) { _, newValue in

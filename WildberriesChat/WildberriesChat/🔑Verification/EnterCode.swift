@@ -9,6 +9,7 @@ import SwiftUI
 import UISystem
 
 struct EnterCode: View {
+    @Environment(\.dismiss) private var dismiss
     @Environment(OneTimePassword.self) private var otp
     @Environment(Router.self) private var router
     @EnvironmentObject private var defaultStorage: DefaultStorage
@@ -61,7 +62,11 @@ struct EnterCode: View {
         }
         .navigationBarBackButtonHidden()
         .toolbar {
-            shevronItem
+            ToolbarItem(placement: .topBarLeading) {
+                toolbarBackButton {
+                    dismiss()
+                }
+            }
         }
         .modifier(AppBackground())
         .onAppear(perform: {

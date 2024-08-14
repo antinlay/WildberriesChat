@@ -16,7 +16,11 @@ struct AddNewContact: View {
             Text("New Contact")
         }
         .toolbar {
-            shevronItem
+            ToolbarItem(placement: .topBarLeading) {
+                toolbarBackButton {
+                    dismiss()
+                }
+            }
             titleItem("New Contact")
         }
         .navigationBarBackButtonHidden(true)

@@ -23,8 +23,10 @@ struct Home: View {
                 More().tag(BottomBarRoutes.more)
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-            Spacer()
-            BottomBar(selectedTab: $selectedTab)
+            .padding(.bottom, 80)
+            .overlay(alignment: .bottom) {
+                BottomBar(selectedTab: $selectedTab)
+            }
         }
         .toolbar {
             switch selectedTab {
@@ -46,7 +48,7 @@ struct Home: View {
         }
         .ignoresSafeArea(edges: .bottom)
         .ignoresSafeArea(.keyboard, edges: .bottom)
-        .modifier(AppBackground())
+        .background(.appBackground)
         .navigationBarBackButtonHidden()
         .navigationBarTitleDisplayMode(.inline)
     }
@@ -55,6 +57,7 @@ struct Home: View {
 #Preview {
     NavigationStack {
         Home()
+            .environmentObject(DefaultStorage())
             .environment(Router())
             .environment(Search())
     }

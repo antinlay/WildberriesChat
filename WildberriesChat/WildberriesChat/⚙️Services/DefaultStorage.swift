@@ -11,7 +11,7 @@ import Contacts
 enum ContactError: Error, LocalizedError {
     case accessDenied
     case unhandledCase
-
+    
     var errorDescription: String? {
         switch self {
         case .accessDenied:
@@ -22,10 +22,11 @@ enum ContactError: Error, LocalizedError {
     }
 }
 
+@MainActor
 final class DefaultStorage: ObservableObject {
     @Published var contacts = Contact.contacts
-
-    private let store = CNContactStore()    
+    
+    private let store = CNContactStore()
     private let userDefaults = UserDefaults.standard
     private let userKey = "user"
     
@@ -42,9 +43,7 @@ final class DefaultStorage: ObservableObject {
             }
         }
     }
-}
-
-extension DefaultStorage {
+    
     func filteredContact(_ searchText: String) -> [Contact] {
         searchText.isEmpty ? contacts : contacts.filter { contact in
             contact.firstName.lowercased().contains(searchText.lowercased()) || contact.phoneNumber.contains(searchText)
@@ -52,33 +51,32 @@ extension DefaultStorage {
     }
     
     private func checkAuthorization() async throws {
-            switch CNContactStore.authorizationStatus(for: .contacts) {
-            case .authorized:
-                // All ok
-                return
-            case .restricted, .denied:
-                throw ContactError.accessDenied
-            case .notDetermined:
-                // Request authorization
-                try await store.requestAccess(for: .contacts)
-            @unknown default:
-                throw ContactError.unhandledCase
-            }
+        switch CNContactStore.authorizationStatus(for: .contacts) {
+        case .authorized:
+            // All ok
+            return
+        case .restricted, .denied:
+            throw ContactError.accessDenied
+        case .notDetermined:
+            // Request authorization
+            try await store.requestAccess(for: .contacts)
+        @unknown default:
+            throw ContactError.unhandledCase
         }
-
-    func fetchContacts() async throws -> [Contact] {
+    }
+    
+    func fetchContacts() async throws {
         try await checkAuthorization()
-        var contacts = Contact.contacts
         let keys = [CNContactPhoneNumbersKey, CNContactGivenNameKey, CNContactFamilyNameKey, CNContactImageDataAvailableKey, CNContactThumbnailImageDataKey]
         let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
-
+        
         do {
             try store.enumerateContacts(with: request) { (contact, stop) in
                 let phoneNumbers = contact.phoneNumbers.compactMap { $0.value.stringValue }
                 let firstName = contact.givenName
                 let lastName = contact.familyName
                 let photo = contact.imageDataAvailable ? UIImage(data: contact.thumbnailImageData!) : nil
-
+                
                 let contact = Contact(avatar: photo, firstName: firstName + " " + lastName, onlineStatus: "", activeStories: false, phoneNumber: phoneNumbers.first ?? "")
                 // Проверяем, существует ли уже контакт с таким же номером телефона
                 if !contacts.contains(where: { $0.phoneNumber == contact.phoneNumber }) {
@@ -87,7 +85,5 @@ extension DefaultStorage {
         } catch {
             print("Error fetching contacts: \(error)")
         }
-        
-        return contacts
     }
 }
