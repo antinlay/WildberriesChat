@@ -7,7 +7,12 @@
 
 import SwiftUI
 
-struct ChatMessage: Codable {
-    let content: String
+struct Message {
+    var timestamp: Date
+    var content: String
+}
+
+struct ChatMessage {
+    let content: Message
     let chatId: String
 }

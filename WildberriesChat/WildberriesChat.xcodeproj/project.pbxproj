@@ -273,7 +273,6 @@
 			children = (
 				5C0DC07A2C4A8CFB007073E9 /* OneTimePassword.swift */,
 				5C1ED3DD2C354BAA00124160 /* Router.swift */,
-				5CD861F22C6CDA7A002127DA /* Chat.swift */,
 				5C1ED3DF2C357BE800124160 /* SearchText.swift */,
 				5CDF5FE42C65FE1600DDCDC4 /* DefaultStorage.swift */,
 				5CD861D42C6BA37C002127DA /* ImageLoader.swift */,
@@ -379,6 +378,7 @@
 		5C5CE4902C1ECCB2009DCFF3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5CD861F22C6CDA7A002127DA /* Chat.swift */,
 				5C7B5B692C1B35FC00B84923 /* Contact.swift */,
 				5CDF5FE22C65FC4C00DDCDC4 /* LocalUser.swift */,
 			);
