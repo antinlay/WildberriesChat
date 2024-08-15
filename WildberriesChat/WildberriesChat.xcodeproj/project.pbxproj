@@ -47,6 +47,8 @@
 		5C5CE4A02C216CE2009DCFF3 /* Chats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE49F2C216CE2009DCFF3 /* Chats.swift */; };
 		5C5CE4A32C216DE7009DCFF3 /* More.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4A22C216DE7009DCFF3 /* More.swift */; };
 		5C5CE4A92C21E15C009DCFF3 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4A82C21E15C009DCFF3 /* Home.swift */; };
+		5C6CD6E42C6E42DE00A00570 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 5C6CD6E32C6E42DE00A00570 /* OpenAPIRuntime */; };
+		5C6CD6E72C6E42ED00A00570 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 5C6CD6E62C6E42ED00A00570 /* OpenAPIURLSession */; };
 		5C7B5B682C1B2C3000B84923 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B672C1B2C3000B84923 /* Contacts.swift */; };
 		5C7B5B6A2C1B35FC00B84923 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B692C1B35FC00B84923 /* Contact.swift */; };
 		5C7B5B6C2C1B8D7A00B84923 /* ContactContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B6B2C1B8D7A00B84923 /* ContactContainer.swift */; };
@@ -55,6 +57,8 @@
 		5CD861D52C6BA37C002127DA /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD861D42C6BA37C002127DA /* ImageLoader.swift */; };
 		5CD861F32C6CDA7A002127DA /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD861F22C6CDA7A002127DA /* Chat.swift */; };
 		5CD861F52C6D1AC4002127DA /* Messager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD861F42C6D1AC4002127DA /* Messager.swift */; };
+		5CD862052C6E38A8002127DA /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 5CD862042C6E38A8002127DA /* openapi.yaml */; };
+		5CD862072C6E38D2002127DA /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 5CD862062C6E38D2002127DA /* openapi-generator-config.yaml */; };
 		5CDA735F2C6ACCC1004CF0F6 /* EditContactProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDA735E2C6ACCC1004CF0F6 /* EditContactProfile.swift */; };
 		5CDF5FE32C65FC4C00DDCDC4 /* LocalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF5FE22C65FC4C00DDCDC4 /* LocalUser.swift */; };
 		5CDF5FE52C65FE1600DDCDC4 /* DefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF5FE42C65FE1600DDCDC4 /* DefaultStorage.swift */; };
@@ -162,6 +166,8 @@
 		5CD861D42C6BA37C002127DA /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		5CD861F22C6CDA7A002127DA /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		5CD861F42C6D1AC4002127DA /* Messager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messager.swift; sourceTree = "<group>"; };
+		5CD862042C6E38A8002127DA /* openapi.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
+		5CD862062C6E38D2002127DA /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 		5CDA735E2C6ACCC1004CF0F6 /* EditContactProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactProfile.swift; sourceTree = "<group>"; };
 		5CDF5FE22C65FC4C00DDCDC4 /* LocalUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUser.swift; sourceTree = "<group>"; };
 		5CDF5FE42C65FE1600DDCDC4 /* DefaultStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStorage.swift; sourceTree = "<group>"; };
@@ -193,6 +199,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C6CD6E42C6E42DE00A00570 /* OpenAPIRuntime in Frameworks */,
+				5C6CD6E72C6E42ED00A00570 /* OpenAPIURLSession in Frameworks */,
 				5C1D4B8F2C652082008E007B /* UISystem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,6 +343,7 @@
 				5C8F59072C1A430E004DA54D /* 🚶🏼‍➡️Walkthrough */,
 				5C515DDB2C11322500EFDB9C /* WildberriesChatApp.swift */,
 				5C515DDD2C11322500EFDB9C /* ContentView.swift */,
+				5CD862032C6E3851002127DA /* GeneratorAPI */,
 				5C5CE48F2C1ECC59009DCFF3 /* Extensions */,
 				5C515DE12C11322600EFDB9C /* Preview Content */,
 			);
@@ -433,6 +442,15 @@
 			path = Messages;
 			sourceTree = "<group>";
 		};
+		5CD862032C6E3851002127DA /* GeneratorAPI */ = {
+			isa = PBXGroup;
+			children = (
+				5CD862042C6E38A8002127DA /* openapi.yaml */,
+				5CD862062C6E38D2002127DA /* openapi-generator-config.yaml */,
+			);
+			path = GeneratorAPI;
+			sourceTree = "<group>";
+		};
 		5CEE5A2B2C6A7BF300E6BC7F /* 🤳🏼Stories */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,12 +510,15 @@
 			buildRules = (
 			);
 			dependencies = (
+				5C6CD6DB2C6E411800A00570 /* PBXTargetDependency */,
 				5C1ED3AD2C33284A00124160 /* PBXTargetDependency */,
 				5C1ED3D62C35473B00124160 /* PBXTargetDependency */,
 			);
 			name = WildberriesChat;
 			packageProductDependencies = (
 				5C1D4B8E2C652082008E007B /* UISystem */,
+				5C6CD6E32C6E42DE00A00570 /* OpenAPIRuntime */,
+				5C6CD6E62C6E42ED00A00570 /* OpenAPIURLSession */,
 			);
 			productName = WildberriesChat;
 			productReference = 5C515DD82C11322500EFDB9C /* WildberriesChat.app */;
@@ -533,6 +554,11 @@
 				Base,
 			);
 			mainGroup = 5C515DCF2C11322500EFDB9C;
+			packageReferences = (
+				5C6CD6E12C6E42D400A00570 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */,
+				5C6CD6E22C6E42DE00A00570 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */,
+				5C6CD6E52C6E42ED00A00570 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */,
+			);
 			productRefGroup = 5C515DD92C11322500EFDB9C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -567,7 +593,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CDF5FE72C662EA100DDCDC4 /* Assets.xcassets in Resources */,
+				5CD862072C6E38D2002127DA /* openapi-generator-config.yaml in Resources */,
 				5C515DE32C11322600EFDB9C /* Preview Assets.xcassets in Resources */,
+				5CD862052C6E38A8002127DA /* openapi.yaml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,6 +683,10 @@
 			isa = PBXTargetDependency;
 			target = 5C1ED3C02C35473900124160 /* WildberriesChatWidgetExtension */;
 			targetProxy = 5C1ED3D52C35473B00124160 /* PBXContainerItemProxy */;
+		};
+		5C6CD6DB2C6E411800A00570 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 5C6CD6DA2C6E411800A00570 /* OpenAPIGenerator */;
 		};
 /* End PBXTargetDependency section */
 
@@ -997,10 +1029,60 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		5C6CD6D92C6E410100A00570 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-generator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.1;
+			};
+		};
+		5C6CD6E12C6E42D400A00570 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-generator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+		5C6CD6E22C6E42DE00A00570 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-runtime";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+		5C6CD6E52C6E42ED00A00570 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-urlsession";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		5C1D4B8E2C652082008E007B /* UISystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UISystem;
+		};
+		5C6CD6DA2C6E411800A00570 /* OpenAPIGenerator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C6CD6D92C6E410100A00570 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */;
+			productName = "plugin:OpenAPIGenerator";
+		};
+		5C6CD6E32C6E42DE00A00570 /* OpenAPIRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C6CD6E22C6E42DE00A00570 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */;
+			productName = OpenAPIRuntime;
+		};
+		5C6CD6E62C6E42ED00A00570 /* OpenAPIURLSession */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C6CD6E52C6E42ED00A00570 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */;
+			productName = OpenAPIURLSession;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

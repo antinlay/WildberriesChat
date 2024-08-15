@@ -8,10 +8,10 @@
 import Foundation
 
 actor Messenger {
-    private var clients: [Client] = []
+    private var clients: [ClientMessanger] = []
     private var messages: [Message] = []
     private var results: [Result<Message, Error>] = []
-    func addClient(_ client: Client) {
+    func addClientMessanger(_ client: ClientMessanger) {
         clients.append(client)
     }
     func sendMessage(_ message: Message) {
@@ -25,7 +25,7 @@ actor Messenger {
             }
         }
     }
-    func getClientStats() async -> [(name: String, completedTasks: Int, averageTime: TimeInterval)] {
+    func getClientMessangerStats() async -> [(name: String, completedTasks: Int, averageTime: TimeInterval)] {
         var stats: [(name: String, completedTasks: Int, averageTime: TimeInterval)] = []
         for client in clients {
             let count = await client.completedTasksCount
@@ -65,7 +65,7 @@ actor Messenger {
     }
 }
 // MARK: Реализация клиента
-class Client {
+class ClientMessanger {
     let name: String
     private let messenger: Messenger
     private var busy = false
@@ -88,7 +88,7 @@ class Client {
         self.messenger = messenger
     }
     func connect() async throws {
-        await messenger.addClient(self)
+        await messenger.addClientMessanger(self)
     }
     func disconnect() async {
         
@@ -113,9 +113,9 @@ class Client {
 
 func runMessenger(messagesContent: [Content]) async throws {
     let messenger = Messenger()
-    let client1 = Client(name: "Client1", messenger: messenger)
-    let client2 = Client(name: "Client2", messenger: messenger)
-    let client3 = Client(name: "Client3", messenger: messenger)
+    let client1 = ClientMessanger(name: "ClientMessanger1", messenger: messenger)
+    let client2 = ClientMessanger(name: "ClientMessanger2", messenger: messenger)
+    let client3 = ClientMessanger(name: "ClientMessanger3", messenger: messenger)
     try await client1.connect()
     try await client2.connect()
     try await client3.connect()
@@ -125,7 +125,7 @@ func runMessenger(messagesContent: [Content]) async throws {
     await messenger.startProcessing()
     // Ждем завершения всех сообщений
     try await Task.sleep(nanoseconds: 15_000_000_000)
-    let stats = await messenger.getClientStats()
+    let stats = await messenger.getClientMessangerStats()
     for stat in stats {
         
     }
@@ -134,24 +134,24 @@ func runMessenger(messagesContent: [Content]) async throws {
     await client3.disconnect()
 }
 
-func main() {
-    let contents: [Content] = [
-        Content(text: "This is the first message", link: [URL(string: "https://example.com/1")], image: nil),
-        Content(text: "This is the second message", link: [URL(string: "https://example.com/2")], image: nil),
-        Content(text: "This is the third message", link: [], image: nil),
-        Content(text: "This is the fourth message", link: [URL(string:"https://example.com/4")], image: nil),
-        Content(text: "This is the fifth message", link: [URL(string: "https://example.com/5")], image: nil),
-        Content(text: "This is the sixth message", link: []),
-        Content(text: "This is the seventh message", link: [URL(string: "https://example.com/8")], image: nil),
-        Content(text: "This is the eighth message", link: [URL(string: "https://example.com/9"), URL(string:"https://example.com/10")], image: nil),
-        Content(text: "This is the ninth message", link: []),
-        Content(text: "This is the tenth message", link: [URL(string:"https://example.com/11")], image: nil)
-    ]
-    Task {
-        do {
-            try await runMessenger(messagesContent: contents)
-        } catch {
-            print(error)
-        }
-    }
-}
+//func main() {
+//    let contents: [Content] = [
+//        Content(text: "This is the first message", link: [URL(string: "https://example.com/1")], image: nil),
+//        Content(text: "This is the second message", link: [URL(string: "https://example.com/2")], image: nil),
+//        Content(text: "This is the third message", link: [], image: nil),
+//        Content(text: "This is the fourth message", link: [URL(string:"https://example.com/4")], image: nil),
+//        Content(text: "This is the fifth message", link: [URL(string: "https://example.com/5")], image: nil),
+//        Content(text: "This is the sixth message", link: []),
+//        Content(text: "This is the seventh message", link: [URL(string: "https://example.com/8")], image: nil),
+//        Content(text: "This is the eighth message", link: [URL(string: "https://example.com/9"), URL(string:"https://example.com/10")], image: nil),
+//        Content(text: "This is the ninth message", link: []),
+//        Content(text: "This is the tenth message", link: [URL(string:"https://example.com/11")], image: nil)
+//    ]
+//    Task {
+//        do {
+//            try await runMessenger(messagesContent: contents)
+//        } catch {
+//            print(error)
+//        }
+//    }
+//}

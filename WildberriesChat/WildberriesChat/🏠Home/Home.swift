@@ -10,7 +10,7 @@ import UISystem
 
 struct Home: View {
     @Environment(Router.self) var router
-    @State var selectedTab: BottomBarRoutes = .contacts
+    @State var selectedTab: BottomBarRoutes = .more
             
     var body: some View {
         VStack {
