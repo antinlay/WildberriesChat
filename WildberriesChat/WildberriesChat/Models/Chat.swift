@@ -9,29 +9,28 @@ import SwiftUI
 
 protocol MessageContent {
     var text: String? { get set }
-    var link: URL? { get set }
-    var image: Data? { get set }
+    var link: [URL?]? { get set }
+    var image: [Data?]? { get set }
 }
 
-struct Message<C: MessageContent> {
+struct Message: Codable {
     var id = UUID()
     var timestamp: Date
     var sender: String
     var recipient: String
-    var content: C
+    var content: Content
 }
 protocol ChatContent {
-    associatedtype C: MessageContent
-    var content: [Message<C>] { get set }
+    var content: [Message] { get set }
 }
 
-struct ChatMessage<C: MessageContent>: ChatContent {
+struct ChatMessage: ChatContent {
     let id = UUID()
-    var content: [Message<C>]
+    var content: [Message]
 }
 
-struct Content: MessageContent {
+struct Content: MessageContent, Codable {
     var text: String?
-    var link: URL?
-    var image: Data?
+    var link: [URL?]?
+    var image: [Data?]?
 }
