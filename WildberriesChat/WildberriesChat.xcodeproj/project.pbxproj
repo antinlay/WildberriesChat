@@ -7,35 +7,301 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C0DC0772C492D98007073E9 /* EnterCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0DC0762C492D98007073E9 /* EnterCode.swift */; };
+		5C0DC0792C493ACF007073E9 /* CodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0DC0782C493ACF007073E9 /* CodeTextField.swift */; };
+		5C0DC07B2C4A8CFB007073E9 /* OneTimePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0DC07A2C4A8CFB007073E9 /* OneTimePassword.swift */; };
+		5C0DC07E2C4BC52B007073E9 /* CreateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0DC07D2C4BC52B007073E9 /* CreateProfile.swift */; };
+		5C1D4B8F2C652082008E007B /* UISystem in Frameworks */ = {isa = PBXBuildFile; productRef = 5C1D4B8E2C652082008E007B /* UISystem */; };
+		5C1ED3A82C33284A00124160 /* WildberriesChatIntentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ED3A72C33284A00124160 /* WildberriesChatIntentsExtension.swift */; };
+		5C1ED3AA2C33284A00124160 /* WildberriesChatIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ED3A92C33284A00124160 /* WildberriesChatIntents.swift */; };
+		5C1ED3AE2C33284A00124160 /* WildberriesChatIntents.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 5C1ED3A52C33284A00124160 /* WildberriesChatIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5C1ED3B62C3540F300124160 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ED3B52C3540F300124160 /* Feature.swift */; };
+		5C1ED3B82C3541B500124160 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ED3B72C3541B500124160 /* Platform.swift */; };
+		5C1ED3BA2C3542C600124160 /* FeatureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ED3B92C3542C600124160 /* FeatureManager.swift */; };
+		5C1ED3BC2C3543EE00124160 /* AppShortCuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ED3BB2C3543EE00124160 /* AppShortCuts.swift */; };
+		5C1ED3C42C35473900124160 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1ED3C32C35473900124160 /* WidgetKit.framework */; };
+		5C1ED3C62C35473900124160 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1ED3C52C35473900124160 /* SwiftUI.framework */; };
+		5C1ED3C92C35473900124160 /* WildberriesChatWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ED3C82C35473900124160 /* WildberriesChatWidgetLiveActivity.swift */; };
+		5C1ED3CB2C35473900124160 /* WildberriesChatWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ED3CA2C35473900124160 /* WildberriesChatWidgetBundle.swift */; };
+		5C1ED3CD2C35473900124160 /* WildberriesChatWidgetControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ED3CC2C35473900124160 /* WildberriesChatWidgetControl.swift */; };
+		5C1ED3CF2C35473900124160 /* WildberriesChatWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ED3CE2C35473900124160 /* WildberriesChatWidget.swift */; };
+		5C1ED3D12C35473900124160 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ED3D02C35473900124160 /* AppIntent.swift */; };
+		5C1ED3D32C35473B00124160 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C1ED3D22C35473B00124160 /* Assets.xcassets */; };
+		5C1ED3D82C35473B00124160 /* WildberriesChatWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5C1ED3C12C35473900124160 /* WildberriesChatWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5C1ED3DE2C354BAA00124160 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ED3DD2C354BAA00124160 /* Router.swift */; };
+		5C1ED3E02C357BE800124160 /* SearchText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ED3DF2C357BE800124160 /* SearchText.swift */; };
+		5C20BCE22C46BD3F00612E1E /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C20BCE12C46BD3F00612E1E /* PhoneNumber.swift */; };
+		5C20E7802C2244D4009D5BF9 /* AddNewContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C20E77F2C2244D4009D5BF9 /* AddNewContact.swift */; };
 		5C515DDC2C11322500EFDB9C /* WildberriesChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DDB2C11322500EFDB9C /* WildberriesChatApp.swift */; };
 		5C515DDE2C11322500EFDB9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DDD2C11322500EFDB9C /* ContentView.swift */; };
-		5C515DE02C11322600EFDB9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C515DDF2C11322600EFDB9C /* Assets.xcassets */; };
 		5C515DE32C11322600EFDB9C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C515DE22C11322600EFDB9C /* Preview Assets.xcassets */; };
+		5C515DEA2C14959500EFDB9C /* Walkthrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DE92C14959500EFDB9C /* Walkthrough.swift */; };
+		5C515DEC2C14A58900EFDB9C /* UserAgreement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C515DEB2C14A58900EFDB9C /* UserAgreement.swift */; };
+		5C5CE4832C1CBC56009DCFF3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4822C1CBC56009DCFF3 /* Extensions.swift */; };
+		5C5CE4892C1D8069009DCFF3 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4882C1D8069009DCFF3 /* Avatar.swift */; };
+		5C5CE48B2C1DAA10009DCFF3 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE48A2C1DAA10009DCFF3 /* SearchBar.swift */; };
+		5C5CE4922C1EDCB2009DCFF3 /* ContactDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4912C1EDCB2009DCFF3 /* ContactDetails.swift */; };
+		5C5CE4942C203BFC009DCFF3 /* AvatarProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4932C203BFC009DCFF3 /* AvatarProfile.swift */; };
+		5C5CE49B2C216313009DCFF3 /* BottomBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE49A2C216313009DCFF3 /* BottomBarButton.swift */; };
+		5C5CE49D2C2167B8009DCFF3 /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE49C2C2167B8009DCFF3 /* BottomBar.swift */; };
+		5C5CE4A02C216CE2009DCFF3 /* Chats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE49F2C216CE2009DCFF3 /* Chats.swift */; };
+		5C5CE4A32C216DE7009DCFF3 /* More.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4A22C216DE7009DCFF3 /* More.swift */; };
+		5C5CE4A92C21E15C009DCFF3 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4A82C21E15C009DCFF3 /* Home.swift */; };
+		5C7B5B682C1B2C3000B84923 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B672C1B2C3000B84923 /* Contacts.swift */; };
+		5C7B5B6A2C1B35FC00B84923 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B692C1B35FC00B84923 /* Contact.swift */; };
+		5C7B5B6C2C1B8D7A00B84923 /* ContactContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B6B2C1B8D7A00B84923 /* ContactContainer.swift */; };
+		5C8F59042C1A1B08004DA54D /* PrivacyAndTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F59032C1A1B08004DA54D /* PrivacyAndTerms.swift */; };
+		5C8F59062C1A1BEE004DA54D /* Illustration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F59052C1A1BEE004DA54D /* Illustration.swift */; };
+		5CD861D52C6BA37C002127DA /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD861D42C6BA37C002127DA /* ImageLoader.swift */; };
+		5CD861F32C6CDA7A002127DA /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD861F22C6CDA7A002127DA /* Chat.swift */; };
+		5CD861F52C6D1AC4002127DA /* Messager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD861F42C6D1AC4002127DA /* Messager.swift */; };
+		5CDA735F2C6ACCC1004CF0F6 /* EditContactProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDA735E2C6ACCC1004CF0F6 /* EditContactProfile.swift */; };
+		5CDF5FE32C65FC4C00DDCDC4 /* LocalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF5FE22C65FC4C00DDCDC4 /* LocalUser.swift */; };
+		5CDF5FE52C65FE1600DDCDC4 /* DefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDF5FE42C65FE1600DDCDC4 /* DefaultStorage.swift */; };
+		5CDF5FE72C662EA100DDCDC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CDF5FE62C662EA000DDCDC4 /* Assets.xcassets */; };
+		5CDF5FE82C662EA100DDCDC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CDF5FE62C662EA000DDCDC4 /* Assets.xcassets */; };
+		5CDF5FE92C662EA100DDCDC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CDF5FE62C662EA000DDCDC4 /* Assets.xcassets */; };
+		5CEE5A2A2C6A7BB200E6BC7F /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE5A292C6A7BB200E6BC7F /* Messages.swift */; };
+		5CEE5A2D2C6A7C5400E6BC7F /* NewStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE5A2C2C6A7C5400E6BC7F /* NewStory.swift */; };
+		5CEE5A2F2C6A7C6100E6BC7F /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEE5A2E2C6A7C6100E6BC7F /* Stories.swift */; };
+		5CF5E72B2C45365C0091C93E /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5E72A2C45365C0091C93E /* Verification.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5C1ED3AC2C33284A00124160 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C515DD02C11322500EFDB9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C1ED3A42C33284A00124160;
+			remoteInfo = WildberriesChatIntents;
+		};
+		5C1ED3D52C35473B00124160 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C515DD02C11322500EFDB9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C1ED3C02C35473900124160;
+			remoteInfo = WildberriesChatWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5C1ED3B22C33284A00124160 /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				5C1ED3AE2C33284A00124160 /* WildberriesChatIntents.appex in Embed ExtensionKit Extensions */,
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C1ED3D72C35473B00124160 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5C1ED3D82C35473B00124160 /* WildberriesChatWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5C0DC0762C492D98007073E9 /* EnterCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterCode.swift; sourceTree = "<group>"; };
+		5C0DC0782C493ACF007073E9 /* CodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextField.swift; sourceTree = "<group>"; };
+		5C0DC07A2C4A8CFB007073E9 /* OneTimePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTimePassword.swift; sourceTree = "<group>"; };
+		5C0DC07D2C4BC52B007073E9 /* CreateProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfile.swift; sourceTree = "<group>"; };
+		5C1D4B8A2C63BE12008E007B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5C1D4B8D2C652058008E007B /* UISystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UISystem; sourceTree = "<group>"; };
+		5C1ED3A52C33284A00124160 /* WildberriesChatIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = WildberriesChatIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1ED3A72C33284A00124160 /* WildberriesChatIntentsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildberriesChatIntentsExtension.swift; sourceTree = "<group>"; };
+		5C1ED3A92C33284A00124160 /* WildberriesChatIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildberriesChatIntents.swift; sourceTree = "<group>"; };
+		5C1ED3AB2C33284A00124160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C1ED3B52C3540F300124160 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		5C1ED3B72C3541B500124160 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		5C1ED3B92C3542C600124160 /* FeatureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureManager.swift; sourceTree = "<group>"; };
+		5C1ED3BB2C3543EE00124160 /* AppShortCuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppShortCuts.swift; sourceTree = "<group>"; };
+		5C1ED3C12C35473900124160 /* WildberriesChatWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WildberriesChatWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1ED3C32C35473900124160 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		5C1ED3C52C35473900124160 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		5C1ED3C82C35473900124160 /* WildberriesChatWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildberriesChatWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		5C1ED3CA2C35473900124160 /* WildberriesChatWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildberriesChatWidgetBundle.swift; sourceTree = "<group>"; };
+		5C1ED3CC2C35473900124160 /* WildberriesChatWidgetControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildberriesChatWidgetControl.swift; sourceTree = "<group>"; };
+		5C1ED3CE2C35473900124160 /* WildberriesChatWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildberriesChatWidget.swift; sourceTree = "<group>"; };
+		5C1ED3D02C35473900124160 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		5C1ED3D22C35473B00124160 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5C1ED3D42C35473B00124160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C1ED3DD2C354BAA00124160 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		5C1ED3DF2C357BE800124160 /* SearchText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchText.swift; sourceTree = "<group>"; };
+		5C20BCE12C46BD3F00612E1E /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
+		5C20E77F2C2244D4009D5BF9 /* AddNewContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewContact.swift; sourceTree = "<group>"; };
 		5C515DD82C11322500EFDB9C /* WildberriesChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WildberriesChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C515DDB2C11322500EFDB9C /* WildberriesChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildberriesChatApp.swift; sourceTree = "<group>"; };
 		5C515DDD2C11322500EFDB9C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		5C515DDF2C11322600EFDB9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C515DE22C11322600EFDB9C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5C515DE92C14959500EFDB9C /* Walkthrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walkthrough.swift; sourceTree = "<group>"; };
+		5C515DEB2C14A58900EFDB9C /* UserAgreement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAgreement.swift; sourceTree = "<group>"; };
+		5C5CE4822C1CBC56009DCFF3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5C5CE4882C1D8069009DCFF3 /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
+		5C5CE48A2C1DAA10009DCFF3 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		5C5CE4912C1EDCB2009DCFF3 /* ContactDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetails.swift; sourceTree = "<group>"; };
+		5C5CE4932C203BFC009DCFF3 /* AvatarProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarProfile.swift; sourceTree = "<group>"; };
+		5C5CE49A2C216313009DCFF3 /* BottomBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarButton.swift; sourceTree = "<group>"; };
+		5C5CE49C2C2167B8009DCFF3 /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
+		5C5CE49F2C216CE2009DCFF3 /* Chats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chats.swift; sourceTree = "<group>"; };
+		5C5CE4A22C216DE7009DCFF3 /* More.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = More.swift; sourceTree = "<group>"; };
+		5C5CE4A82C21E15C009DCFF3 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		5C7B5B672C1B2C3000B84923 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		5C7B5B692C1B35FC00B84923 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		5C7B5B6B2C1B8D7A00B84923 /* ContactContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactContainer.swift; sourceTree = "<group>"; };
+		5C8F59032C1A1B08004DA54D /* PrivacyAndTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyAndTerms.swift; sourceTree = "<group>"; };
+		5C8F59052C1A1BEE004DA54D /* Illustration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Illustration.swift; sourceTree = "<group>"; };
+		5CD861D42C6BA37C002127DA /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		5CD861F22C6CDA7A002127DA /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		5CD861F42C6D1AC4002127DA /* Messager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messager.swift; sourceTree = "<group>"; };
+		5CDA735E2C6ACCC1004CF0F6 /* EditContactProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactProfile.swift; sourceTree = "<group>"; };
+		5CDF5FE22C65FC4C00DDCDC4 /* LocalUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUser.swift; sourceTree = "<group>"; };
+		5CDF5FE42C65FE1600DDCDC4 /* DefaultStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStorage.swift; sourceTree = "<group>"; };
+		5CDF5FE62C662EA000DDCDC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5CEE5A292C6A7BB200E6BC7F /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		5CEE5A2C2C6A7C5400E6BC7F /* NewStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewStory.swift; sourceTree = "<group>"; };
+		5CEE5A2E2C6A7C6100E6BC7F /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
+		5CF5E72A2C45365C0091C93E /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5C515DD52C11322500EFDB9C /* Frameworks */ = {
+		5C1ED3A22C33284A00124160 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5C1ED3BE2C35473900124160 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C1ED3C62C35473900124160 /* SwiftUI.framework in Frameworks */,
+				5C1ED3C42C35473900124160 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C515DD52C11322500EFDB9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C1D4B8F2C652082008E007B /* UISystem in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C00F5E82C635B750076DF6E /* 📦Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5C1D4B8D2C652058008E007B /* UISystem */,
+			);
+			path = "📦Modules";
+			sourceTree = "<group>";
+		};
+		5C0DC07C2C4BC429007073E9 /* 👤Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5C0DC07D2C4BC52B007073E9 /* CreateProfile.swift */,
+			);
+			path = "👤Profile";
+			sourceTree = "<group>";
+		};
+		5C1230F92C665AA00080DEB7 /* 🔍SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				5C5CE48A2C1DAA10009DCFF3 /* SearchBar.swift */,
+			);
+			path = "🔍SearchBar";
+			sourceTree = "<group>";
+		};
+		5C1D4BA32C654018008E007B /* BottomBar */ = {
+			isa = PBXGroup;
+			children = (
+				5C5CE49C2C2167B8009DCFF3 /* BottomBar.swift */,
+				5C5CE49A2C216313009DCFF3 /* BottomBarButton.swift */,
+			);
+			path = BottomBar;
+			sourceTree = "<group>";
+		};
+		5C1ED3A62C33284A00124160 /* WildberriesChatIntents */ = {
+			isa = PBXGroup;
+			children = (
+				5C1ED3BB2C3543EE00124160 /* AppShortCuts.swift */,
+				5C1ED3B52C3540F300124160 /* Feature.swift */,
+				5C1ED3B92C3542C600124160 /* FeatureManager.swift */,
+				5C1ED3B72C3541B500124160 /* Platform.swift */,
+				5C1ED3A72C33284A00124160 /* WildberriesChatIntentsExtension.swift */,
+				5C1ED3A92C33284A00124160 /* WildberriesChatIntents.swift */,
+				5C1ED3AB2C33284A00124160 /* Info.plist */,
+			);
+			path = WildberriesChatIntents;
+			sourceTree = "<group>";
+		};
+		5C1ED3C22C35473900124160 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C1ED3C32C35473900124160 /* WidgetKit.framework */,
+				5C1ED3C52C35473900124160 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C1ED3C72C35473900124160 /* WildberriesChatWidget */ = {
+			isa = PBXGroup;
+			children = (
+				5C1ED3C82C35473900124160 /* WildberriesChatWidgetLiveActivity.swift */,
+				5C1ED3CA2C35473900124160 /* WildberriesChatWidgetBundle.swift */,
+				5C1ED3CC2C35473900124160 /* WildberriesChatWidgetControl.swift */,
+				5C1ED3CE2C35473900124160 /* WildberriesChatWidget.swift */,
+				5C1ED3D02C35473900124160 /* AppIntent.swift */,
+				5C1ED3D22C35473B00124160 /* Assets.xcassets */,
+				5C1ED3D42C35473B00124160 /* Info.plist */,
+			);
+			path = WildberriesChatWidget;
+			sourceTree = "<group>";
+		};
+		5C1ED3DC2C354B7A00124160 /* ⚙️Services */ = {
+			isa = PBXGroup;
+			children = (
+				5C0DC07A2C4A8CFB007073E9 /* OneTimePassword.swift */,
+				5C1ED3DD2C354BAA00124160 /* Router.swift */,
+				5C1ED3DF2C357BE800124160 /* SearchText.swift */,
+				5CD861F42C6D1AC4002127DA /* Messager.swift */,
+				5CDF5FE42C65FE1600DDCDC4 /* DefaultStorage.swift */,
+				5CD861D42C6BA37C002127DA /* ImageLoader.swift */,
+			);
+			path = "⚙️Services";
+			sourceTree = "<group>";
+		};
+		5C20BCE02C46BBF700612E1E /* 🔑Verification */ = {
+			isa = PBXGroup;
+			children = (
+				5CF5E72A2C45365C0091C93E /* Verification.swift */,
+				5C0DC0762C492D98007073E9 /* EnterCode.swift */,
+				5C0DC0782C493ACF007073E9 /* CodeTextField.swift */,
+				5C20BCE12C46BD3F00612E1E /* PhoneNumber.swift */,
+			);
+			path = "🔑Verification";
+			sourceTree = "<group>";
+		};
 		5C515DCF2C11322500EFDB9C = {
 			isa = PBXGroup;
 			children = (
 				5C515DDA2C11322500EFDB9C /* WildberriesChat */,
+				5CDF5FE62C662EA000DDCDC4 /* Assets.xcassets */,
+				5C1ED3A62C33284A00124160 /* WildberriesChatIntents */,
+				5C1ED3C72C35473900124160 /* WildberriesChatWidget */,
+				5C1ED3C22C35473900124160 /* Frameworks */,
 				5C515DD92C11322500EFDB9C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +310,8 @@
 			isa = PBXGroup;
 			children = (
 				5C515DD82C11322500EFDB9C /* WildberriesChat.app */,
+				5C1ED3A52C33284A00124160 /* WildberriesChatIntents.appex */,
+				5C1ED3C12C35473900124160 /* WildberriesChatWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,9 +319,23 @@
 		5C515DDA2C11322500EFDB9C /* WildberriesChat */ = {
 			isa = PBXGroup;
 			children = (
+				5C1D4B8A2C63BE12008E007B /* Info.plist */,
+				5C00F5E82C635B750076DF6E /* 📦Modules */,
+				5C5CE48D2C1ECB76009DCFF3 /* 👩🏼‍🚀Avatar */,
+				5C5CE49E2C216CCC009DCFF3 /* 💬Chats */,
+				5C5CE48E2C1ECC10009DCFF3 /* 👥Contacts */,
+				5C5CE4992C2162F5009DCFF3 /* 🏠Home */,
+				5C5CE4A12C216DD3009DCFF3 /* 💠More */,
+				5C5CE4902C1ECCB2009DCFF3 /* Models */,
+				5C0DC07C2C4BC429007073E9 /* 👤Profile */,
+				5CEE5A2B2C6A7BF300E6BC7F /* 🤳🏼Stories */,
+				5C20BCE02C46BBF700612E1E /* 🔑Verification */,
+				5C1230F92C665AA00080DEB7 /* 🔍SearchBar */,
+				5C1ED3DC2C354B7A00124160 /* ⚙️Services */,
+				5C8F59072C1A430E004DA54D /* 🚶🏼‍➡️Walkthrough */,
 				5C515DDB2C11322500EFDB9C /* WildberriesChatApp.swift */,
 				5C515DDD2C11322500EFDB9C /* ContentView.swift */,
-				5C515DDF2C11322600EFDB9C /* Assets.xcassets */,
+				5C5CE48F2C1ECC59009DCFF3 /* Extensions */,
 				5C515DE12C11322600EFDB9C /* Preview Content */,
 			);
 			path = WildberriesChat;
@@ -67,9 +349,136 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		5C5CE48D2C1ECB76009DCFF3 /* 👩🏼‍🚀Avatar */ = {
+			isa = PBXGroup;
+			children = (
+				5C5CE4882C1D8069009DCFF3 /* Avatar.swift */,
+				5C5CE4932C203BFC009DCFF3 /* AvatarProfile.swift */,
+			);
+			path = "👩🏼‍🚀Avatar";
+			sourceTree = "<group>";
+		};
+		5C5CE48E2C1ECC10009DCFF3 /* 👥Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				5C7B5B672C1B2C3000B84923 /* Contacts.swift */,
+				5C5CE4912C1EDCB2009DCFF3 /* ContactDetails.swift */,
+				5C7B5B6B2C1B8D7A00B84923 /* ContactContainer.swift */,
+				5C20E77F2C2244D4009D5BF9 /* AddNewContact.swift */,
+				5CDA735E2C6ACCC1004CF0F6 /* EditContactProfile.swift */,
+			);
+			path = "👥Contacts";
+			sourceTree = "<group>";
+		};
+		5C5CE48F2C1ECC59009DCFF3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5C5CE4822C1CBC56009DCFF3 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5C5CE4902C1ECCB2009DCFF3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5CD861F22C6CDA7A002127DA /* Chat.swift */,
+				5C7B5B692C1B35FC00B84923 /* Contact.swift */,
+				5CDF5FE22C65FC4C00DDCDC4 /* LocalUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5C5CE4992C2162F5009DCFF3 /* 🏠Home */ = {
+			isa = PBXGroup;
+			children = (
+				5C5CE4A82C21E15C009DCFF3 /* Home.swift */,
+				5C1D4BA32C654018008E007B /* BottomBar */,
+			);
+			path = "🏠Home";
+			sourceTree = "<group>";
+		};
+		5C5CE49E2C216CCC009DCFF3 /* 💬Chats */ = {
+			isa = PBXGroup;
+			children = (
+				5C5CE49F2C216CE2009DCFF3 /* Chats.swift */,
+				5CD861F12C6CDA4A002127DA /* Messages */,
+			);
+			path = "💬Chats";
+			sourceTree = "<group>";
+		};
+		5C5CE4A12C216DD3009DCFF3 /* 💠More */ = {
+			isa = PBXGroup;
+			children = (
+				5C5CE4A22C216DE7009DCFF3 /* More.swift */,
+			);
+			path = "💠More";
+			sourceTree = "<group>";
+		};
+		5C8F59072C1A430E004DA54D /* 🚶🏼‍➡️Walkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				5C515DE92C14959500EFDB9C /* Walkthrough.swift */,
+				5C8F59052C1A1BEE004DA54D /* Illustration.swift */,
+				5C8F59032C1A1B08004DA54D /* PrivacyAndTerms.swift */,
+				5C515DEB2C14A58900EFDB9C /* UserAgreement.swift */,
+			);
+			path = "🚶🏼‍➡️Walkthrough";
+			sourceTree = "<group>";
+		};
+		5CD861F12C6CDA4A002127DA /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				5CEE5A292C6A7BB200E6BC7F /* Messages.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		5CEE5A2B2C6A7BF300E6BC7F /* 🤳🏼Stories */ = {
+			isa = PBXGroup;
+			children = (
+				5CEE5A2C2C6A7C5400E6BC7F /* NewStory.swift */,
+				5CEE5A2E2C6A7C6100E6BC7F /* Stories.swift */,
+			);
+			path = "🤳🏼Stories";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5C1ED3A42C33284A00124160 /* WildberriesChatIntents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C1ED3AF2C33284A00124160 /* Build configuration list for PBXNativeTarget "WildberriesChatIntents" */;
+			buildPhases = (
+				5C1ED3A12C33284A00124160 /* Sources */,
+				5C1ED3A22C33284A00124160 /* Frameworks */,
+				5C1ED3A32C33284A00124160 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WildberriesChatIntents;
+			productName = WildberriesChatIntents;
+			productReference = 5C1ED3A52C33284A00124160 /* WildberriesChatIntents.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
+		};
+		5C1ED3C02C35473900124160 /* WildberriesChatWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C1ED3D92C35473B00124160 /* Build configuration list for PBXNativeTarget "WildberriesChatWidgetExtension" */;
+			buildPhases = (
+				5C1ED3BD2C35473900124160 /* Sources */,
+				5C1ED3BE2C35473900124160 /* Frameworks */,
+				5C1ED3BF2C35473900124160 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WildberriesChatWidgetExtension;
+			productName = WildberriesChatWidgetExtension;
+			productReference = 5C1ED3C12C35473900124160 /* WildberriesChatWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		5C515DD72C11322500EFDB9C /* WildberriesChat */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C515DE62C11322600EFDB9C /* Build configuration list for PBXNativeTarget "WildberriesChat" */;
@@ -77,12 +486,19 @@
 				5C515DD42C11322500EFDB9C /* Sources */,
 				5C515DD52C11322500EFDB9C /* Frameworks */,
 				5C515DD62C11322500EFDB9C /* Resources */,
+				5C1ED3B22C33284A00124160 /* Embed ExtensionKit Extensions */,
+				5C1ED3D72C35473B00124160 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5C1ED3AD2C33284A00124160 /* PBXTargetDependency */,
+				5C1ED3D62C35473B00124160 /* PBXTargetDependency */,
 			);
 			name = WildberriesChat;
+			packageProductDependencies = (
+				5C1D4B8E2C652082008E007B /* UISystem */,
+			);
 			productName = WildberriesChat;
 			productReference = 5C515DD82C11322500EFDB9C /* WildberriesChat.app */;
 			productType = "com.apple.product-type.application";
@@ -94,9 +510,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
+					5C1ED3A42C33284A00124160 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					5C1ED3C02C35473900124160 = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					5C515DD72C11322500EFDB9C = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -116,35 +538,239 @@
 			projectRoot = "";
 			targets = (
 				5C515DD72C11322500EFDB9C /* WildberriesChat */,
+				5C1ED3A42C33284A00124160 /* WildberriesChatIntents */,
+				5C1ED3C02C35473900124160 /* WildberriesChatWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5C1ED3A32C33284A00124160 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CDF5FE82C662EA100DDCDC4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C1ED3BF2C35473900124160 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CDF5FE92C662EA100DDCDC4 /* Assets.xcassets in Resources */,
+				5C1ED3D32C35473B00124160 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C515DD62C11322500EFDB9C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CDF5FE72C662EA100DDCDC4 /* Assets.xcassets in Resources */,
 				5C515DE32C11322600EFDB9C /* Preview Assets.xcassets in Resources */,
-				5C515DE02C11322600EFDB9C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5C1ED3A12C33284A00124160 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C1ED3B62C3540F300124160 /* Feature.swift in Sources */,
+				5C1ED3AA2C33284A00124160 /* WildberriesChatIntents.swift in Sources */,
+				5C1ED3BA2C3542C600124160 /* FeatureManager.swift in Sources */,
+				5C1ED3B82C3541B500124160 /* Platform.swift in Sources */,
+				5C1ED3A82C33284A00124160 /* WildberriesChatIntentsExtension.swift in Sources */,
+				5C1ED3BC2C3543EE00124160 /* AppShortCuts.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C1ED3BD2C35473900124160 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C1ED3CD2C35473900124160 /* WildberriesChatWidgetControl.swift in Sources */,
+				5C1ED3CB2C35473900124160 /* WildberriesChatWidgetBundle.swift in Sources */,
+				5C1ED3D12C35473900124160 /* AppIntent.swift in Sources */,
+				5C1ED3CF2C35473900124160 /* WildberriesChatWidget.swift in Sources */,
+				5C1ED3C92C35473900124160 /* WildberriesChatWidgetLiveActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C515DD42C11322500EFDB9C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C515DEC2C14A58900EFDB9C /* UserAgreement.swift in Sources */,
+				5CEE5A2A2C6A7BB200E6BC7F /* Messages.swift in Sources */,
+				5CDA735F2C6ACCC1004CF0F6 /* EditContactProfile.swift in Sources */,
+				5CDF5FE52C65FE1600DDCDC4 /* DefaultStorage.swift in Sources */,
+				5C0DC0792C493ACF007073E9 /* CodeTextField.swift in Sources */,
+				5CD861F32C6CDA7A002127DA /* Chat.swift in Sources */,
+				5C0DC07E2C4BC52B007073E9 /* CreateProfile.swift in Sources */,
+				5C7B5B6A2C1B35FC00B84923 /* Contact.swift in Sources */,
+				5CD861D52C6BA37C002127DA /* ImageLoader.swift in Sources */,
+				5C0DC07B2C4A8CFB007073E9 /* OneTimePassword.swift in Sources */,
+				5CD861F52C6D1AC4002127DA /* Messager.swift in Sources */,
+				5C5CE4A32C216DE7009DCFF3 /* More.swift in Sources */,
+				5C0DC0772C492D98007073E9 /* EnterCode.swift in Sources */,
+				5C1ED3DE2C354BAA00124160 /* Router.swift in Sources */,
+				5C1ED3E02C357BE800124160 /* SearchText.swift in Sources */,
+				5CEE5A2D2C6A7C5400E6BC7F /* NewStory.swift in Sources */,
+				5C7B5B682C1B2C3000B84923 /* Contacts.swift in Sources */,
+				5C5CE4922C1EDCB2009DCFF3 /* ContactDetails.swift in Sources */,
+				5C7B5B6C2C1B8D7A00B84923 /* ContactContainer.swift in Sources */,
+				5CDF5FE32C65FC4C00DDCDC4 /* LocalUser.swift in Sources */,
+				5C5CE4A02C216CE2009DCFF3 /* Chats.swift in Sources */,
+				5C20BCE22C46BD3F00612E1E /* PhoneNumber.swift in Sources */,
+				5CEE5A2F2C6A7C6100E6BC7F /* Stories.swift in Sources */,
+				5C5CE49D2C2167B8009DCFF3 /* BottomBar.swift in Sources */,
+				5C5CE49B2C216313009DCFF3 /* BottomBarButton.swift in Sources */,
+				5C5CE4942C203BFC009DCFF3 /* AvatarProfile.swift in Sources */,
+				5C515DEA2C14959500EFDB9C /* Walkthrough.swift in Sources */,
+				5CF5E72B2C45365C0091C93E /* Verification.swift in Sources */,
+				5C5CE48B2C1DAA10009DCFF3 /* SearchBar.swift in Sources */,
+				5C20E7802C2244D4009D5BF9 /* AddNewContact.swift in Sources */,
 				5C515DDE2C11322500EFDB9C /* ContentView.swift in Sources */,
+				5C8F59042C1A1B08004DA54D /* PrivacyAndTerms.swift in Sources */,
+				5C8F59062C1A1BEE004DA54D /* Illustration.swift in Sources */,
+				5C5CE4A92C21E15C009DCFF3 /* Home.swift in Sources */,
 				5C515DDC2C11322500EFDB9C /* WildberriesChatApp.swift in Sources */,
+				5C5CE4892C1D8069009DCFF3 /* Avatar.swift in Sources */,
+				5C5CE4832C1CBC56009DCFF3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5C1ED3AD2C33284A00124160 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C1ED3A42C33284A00124160 /* WildberriesChatIntents */;
+			targetProxy = 5C1ED3AC2C33284A00124160 /* PBXContainerItemProxy */;
+		};
+		5C1ED3D62C35473B00124160 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C1ED3C02C35473900124160 /* WildberriesChatWidgetExtension */;
+			targetProxy = 5C1ED3D52C35473B00124160 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		5C1ED3B02C33284A00124160 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N9NN3CSS37;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WildberriesChatIntents/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WildberriesChatIntents;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = janiecee.WildberriesChat.WildberriesChatIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C1ED3B12C33284A00124160 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N9NN3CSS37;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WildberriesChatIntents/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WildberriesChatIntents;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = janiecee.WildberriesChat.WildberriesChatIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5C1ED3DA2C35473B00124160 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N9NN3CSS37;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WildberriesChatWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WildberriesChatWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = janiecee.WildberriesChat.WildberriesChatWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C1ED3DB2C35473B00124160 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N9NN3CSS37;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WildberriesChatWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WildberriesChatWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = janiecee.WildberriesChat.WildberriesChatWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		5C515DE42C11322600EFDB9C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -197,7 +823,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +880,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -269,17 +895,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WildberriesChat/Preview Content\"";
 				DEVELOPMENT_TEAM = N9NN3CSS37;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WildberriesChat/Info.plist;
+				INFOPLIST_KEY_NSContactsUsageDescription = "For quick access to your contacts";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,6 +916,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = janiecee.WildberriesChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,17 +928,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WildberriesChat/Preview Content\"";
 				DEVELOPMENT_TEAM = N9NN3CSS37;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WildberriesChat/Info.plist;
+				INFOPLIST_KEY_NSContactsUsageDescription = "For quick access to your contacts";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +949,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = janiecee.WildberriesChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -325,6 +959,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5C1ED3AF2C33284A00124160 /* Build configuration list for PBXNativeTarget "WildberriesChatIntents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C1ED3B02C33284A00124160 /* Debug */,
+				5C1ED3B12C33284A00124160 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C1ED3D92C35473B00124160 /* Build configuration list for PBXNativeTarget "WildberriesChatWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C1ED3DA2C35473B00124160 /* Debug */,
+				5C1ED3DB2C35473B00124160 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5C515DD32C11322500EFDB9C /* Build configuration list for PBXProject "WildberriesChat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -344,6 +996,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5C1D4B8E2C652082008E007B /* UISystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UISystem;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5C515DD02C11322500EFDB9C /* Project object */;
 }
