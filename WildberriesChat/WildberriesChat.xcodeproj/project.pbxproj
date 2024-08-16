@@ -49,11 +49,17 @@
 		5C5CE4A92C21E15C009DCFF3 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4A82C21E15C009DCFF3 /* Home.swift */; };
 		5C6CD6E42C6E42DE00A00570 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 5C6CD6E32C6E42DE00A00570 /* OpenAPIRuntime */; };
 		5C6CD6E72C6E42ED00A00570 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 5C6CD6E62C6E42ED00A00570 /* OpenAPIURLSession */; };
+		5C6CD6EC2C6E688D00A00570 /* ExyteChat in Frameworks */ = {isa = PBXBuildFile; productRef = 5C6CD6EB2C6E688D00A00570 /* ExyteChat */; };
+		5C6CD70E2C6F99FC00A00570 /* UserSwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6CD70D2C6F99FC00A00570 /* UserSwiftData.swift */; };
+		5C6CD7122C6F9AD700A00570 /* MessageSwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6CD7112C6F9AD700A00570 /* MessageSwiftData.swift */; };
+		5C6CD7142C6F9DB400A00570 /* AttachmentSwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6CD7132C6F9DB400A00570 /* AttachmentSwiftData.swift */; };
+		5C6CD7172C6F9E8500A00570 /* ChatSwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6CD7162C6F9E8500A00570 /* ChatSwiftData.swift */; };
 		5C7B5B682C1B2C3000B84923 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B672C1B2C3000B84923 /* Contacts.swift */; };
 		5C7B5B6A2C1B35FC00B84923 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B692C1B35FC00B84923 /* Contact.swift */; };
 		5C7B5B6C2C1B8D7A00B84923 /* ContactContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B5B6B2C1B8D7A00B84923 /* ContactContainer.swift */; };
 		5C8F59042C1A1B08004DA54D /* PrivacyAndTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F59032C1A1B08004DA54D /* PrivacyAndTerms.swift */; };
 		5C8F59062C1A1BEE004DA54D /* Illustration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F59052C1A1BEE004DA54D /* Illustration.swift */; };
+		5CC496EE2C6FA2F000778887 /* ContactSwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC496ED2C6FA2F000778887 /* ContactSwiftData.swift */; };
 		5CD861D52C6BA37C002127DA /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD861D42C6BA37C002127DA /* ImageLoader.swift */; };
 		5CD861F32C6CDA7A002127DA /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD861F22C6CDA7A002127DA /* Chat.swift */; };
 		5CD861F52C6D1AC4002127DA /* Messager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD861F42C6D1AC4002127DA /* Messager.swift */; };
@@ -158,11 +164,16 @@
 		5C5CE49F2C216CE2009DCFF3 /* Chats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chats.swift; sourceTree = "<group>"; };
 		5C5CE4A22C216DE7009DCFF3 /* More.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = More.swift; sourceTree = "<group>"; };
 		5C5CE4A82C21E15C009DCFF3 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		5C6CD70D2C6F99FC00A00570 /* UserSwiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSwiftData.swift; sourceTree = "<group>"; };
+		5C6CD7112C6F9AD700A00570 /* MessageSwiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSwiftData.swift; sourceTree = "<group>"; };
+		5C6CD7132C6F9DB400A00570 /* AttachmentSwiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentSwiftData.swift; sourceTree = "<group>"; };
+		5C6CD7162C6F9E8500A00570 /* ChatSwiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSwiftData.swift; sourceTree = "<group>"; };
 		5C7B5B672C1B2C3000B84923 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		5C7B5B692C1B35FC00B84923 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		5C7B5B6B2C1B8D7A00B84923 /* ContactContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactContainer.swift; sourceTree = "<group>"; };
 		5C8F59032C1A1B08004DA54D /* PrivacyAndTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyAndTerms.swift; sourceTree = "<group>"; };
 		5C8F59052C1A1BEE004DA54D /* Illustration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Illustration.swift; sourceTree = "<group>"; };
+		5CC496ED2C6FA2F000778887 /* ContactSwiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSwiftData.swift; sourceTree = "<group>"; };
 		5CD861D42C6BA37C002127DA /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		5CD861F22C6CDA7A002127DA /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		5CD861F42C6D1AC4002127DA /* Messager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messager.swift; sourceTree = "<group>"; };
@@ -199,6 +210,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C6CD6EC2C6E688D00A00570 /* ExyteChat in Frameworks */,
 				5C6CD6E42C6E42DE00A00570 /* OpenAPIRuntime in Frameworks */,
 				5C6CD6E72C6E42ED00A00570 /* OpenAPIURLSession in Frameworks */,
 				5C1D4B8F2C652082008E007B /* UISystem in Frameworks */,
@@ -391,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				5CD861F22C6CDA7A002127DA /* Chat.swift */,
+				5C6CD70C2C6F99D400A00570 /* SwiftData */,
 				5C7B5B692C1B35FC00B84923 /* Contact.swift */,
 				5CDF5FE22C65FC4C00DDCDC4 /* LocalUser.swift */,
 			);
@@ -421,6 +434,18 @@
 				5C5CE4A22C216DE7009DCFF3 /* More.swift */,
 			);
 			path = "💠More";
+			sourceTree = "<group>";
+		};
+		5C6CD70C2C6F99D400A00570 /* SwiftData */ = {
+			isa = PBXGroup;
+			children = (
+				5C6CD70D2C6F99FC00A00570 /* UserSwiftData.swift */,
+				5C6CD7112C6F9AD700A00570 /* MessageSwiftData.swift */,
+				5C6CD7132C6F9DB400A00570 /* AttachmentSwiftData.swift */,
+				5C6CD7162C6F9E8500A00570 /* ChatSwiftData.swift */,
+				5CC496ED2C6FA2F000778887 /* ContactSwiftData.swift */,
+			);
+			path = SwiftData;
 			sourceTree = "<group>";
 		};
 		5C8F59072C1A430E004DA54D /* 🚶🏼‍➡️Walkthrough */ = {
@@ -519,6 +544,7 @@
 				5C1D4B8E2C652082008E007B /* UISystem */,
 				5C6CD6E32C6E42DE00A00570 /* OpenAPIRuntime */,
 				5C6CD6E62C6E42ED00A00570 /* OpenAPIURLSession */,
+				5C6CD6EB2C6E688D00A00570 /* ExyteChat */,
 			);
 			productName = WildberriesChat;
 			productReference = 5C515DD82C11322500EFDB9C /* WildberriesChat.app */;
@@ -558,6 +584,7 @@
 				5C6CD6E12C6E42D400A00570 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */,
 				5C6CD6E22C6E42DE00A00570 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */,
 				5C6CD6E52C6E42ED00A00570 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */,
+				5C6CD6EA2C6E688D00A00570 /* XCRemoteSwiftPackageReference "Chat" */,
 			);
 			productRefGroup = 5C515DD92C11322500EFDB9C /* Products */;
 			projectDirPath = "";
@@ -635,11 +662,14 @@
 				5CEE5A2A2C6A7BB200E6BC7F /* Messages.swift in Sources */,
 				5CDA735F2C6ACCC1004CF0F6 /* EditContactProfile.swift in Sources */,
 				5CDF5FE52C65FE1600DDCDC4 /* DefaultStorage.swift in Sources */,
+				5C6CD7142C6F9DB400A00570 /* AttachmentSwiftData.swift in Sources */,
 				5C0DC0792C493ACF007073E9 /* CodeTextField.swift in Sources */,
 				5CD861F32C6CDA7A002127DA /* Chat.swift in Sources */,
 				5C0DC07E2C4BC52B007073E9 /* CreateProfile.swift in Sources */,
 				5C7B5B6A2C1B35FC00B84923 /* Contact.swift in Sources */,
+				5C6CD7172C6F9E8500A00570 /* ChatSwiftData.swift in Sources */,
 				5CD861D52C6BA37C002127DA /* ImageLoader.swift in Sources */,
+				5C6CD7122C6F9AD700A00570 /* MessageSwiftData.swift in Sources */,
 				5C0DC07B2C4A8CFB007073E9 /* OneTimePassword.swift in Sources */,
 				5CD861F52C6D1AC4002127DA /* Messager.swift in Sources */,
 				5C5CE4A32C216DE7009DCFF3 /* More.swift in Sources */,
@@ -655,6 +685,7 @@
 				5C20BCE22C46BD3F00612E1E /* PhoneNumber.swift in Sources */,
 				5CEE5A2F2C6A7C6100E6BC7F /* Stories.swift in Sources */,
 				5C5CE49D2C2167B8009DCFF3 /* BottomBar.swift in Sources */,
+				5C6CD70E2C6F99FC00A00570 /* UserSwiftData.swift in Sources */,
 				5C5CE49B2C216313009DCFF3 /* BottomBarButton.swift in Sources */,
 				5C5CE4942C203BFC009DCFF3 /* AvatarProfile.swift in Sources */,
 				5C515DEA2C14959500EFDB9C /* Walkthrough.swift in Sources */,
@@ -665,6 +696,7 @@
 				5C8F59042C1A1B08004DA54D /* PrivacyAndTerms.swift in Sources */,
 				5C8F59062C1A1BEE004DA54D /* Illustration.swift in Sources */,
 				5C5CE4A92C21E15C009DCFF3 /* Home.swift in Sources */,
+				5CC496EE2C6FA2F000778887 /* ContactSwiftData.swift in Sources */,
 				5C515DDC2C11322500EFDB9C /* WildberriesChatApp.swift in Sources */,
 				5C5CE4892C1D8069009DCFF3 /* Avatar.swift in Sources */,
 				5C5CE4832C1CBC56009DCFF3 /* Extensions.swift in Sources */,
@@ -1062,6 +1094,14 @@
 				minimumVersion = 1.0.2;
 			};
 		};
+		5C6CD6EA2C6E688D00A00570 /* XCRemoteSwiftPackageReference "Chat" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/Chat.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1083,6 +1123,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5C6CD6E52C6E42ED00A00570 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */;
 			productName = OpenAPIURLSession;
+		};
+		5C6CD6EB2C6E688D00A00570 /* ExyteChat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C6CD6EA2C6E688D00A00570 /* XCRemoteSwiftPackageReference "Chat" */;
+			productName = ExyteChat;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

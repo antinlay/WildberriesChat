@@ -15,16 +15,17 @@ struct More: View {
         transport: URLSessionTransport()
     )
     @State private var isError: Bool = false
+    @State private var statusCodeText: Int = 0
     @State private var articles: [Components.Schemas.Article] = []
     
     var body: some View {
         VStack {
-            List {
-                switch isError {
-                case true:
-                    Text("SOME ERROR")
-                        .font(.title)
-                case false:
+            switch isError {
+            case true:
+                Text("\(statusCodeText)")
+                    .font(.title)
+            case false:
+                List {
                     ForEach(articles, id: \.url) { article in
                         NewsCell(title: article.title, desc: article.description)
                     }
@@ -38,14 +39,21 @@ struct More: View {
     
     func loadArticles() async {
         do {
-            let query: Operations.everythingGet.Input.Query = .init(q: "iPhone 17",
-                              from: "2024-07-15",
-                              sortBy: "publishedAt",
-                              language: "en",
-                              apiKey: "d05ddcc9be8945b1aa45b380c8869028")
+            let query: Operations.everythingGet.Input.Query = .init(q: "Apple",
+                                                                    from: "2024-07-15",
+                                                                    sortBy: "popularity",
+                                                                    language: "en",
+                                                                    apiKey: "d05ddcc9be8945b1aa45b380c8869028")
             let input: Operations.everythingGet.Input = .init(query: query)
             let response = try await client.everythingGet(input)
-            articles = try response.ok.body.json.articles ?? []
+            switch response {
+            case .ok(let response):
+                if let jsonArticles = try response.body.json.articles {
+                    articles = jsonArticles
+                }
+            case .default(statusCode: let statusCode, _):
+                statusCodeText = statusCode
+            }
         } catch {
             isError = true
         }

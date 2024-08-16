@@ -7,15 +7,17 @@
 
 import Foundation
 
-protocol User {
-    var phoneNumber: String { get set }
-    var firstName: String { get set }
-}
+//protocol User {
+//    var phoneNumber: String { get set }
+//    var firstName: String { get set }
+//}
 
-struct LocalUser: User, Codable {
+struct LocalUser: Codable {
     var phoneNumber: String
     var firstName: String
     var lastName: String?
     var photo: Data?
     var isLoggedIn: Bool
+    var activeStory: Bool = false
+    var chatsId: [String] = ["0", "1", "2"]
 }

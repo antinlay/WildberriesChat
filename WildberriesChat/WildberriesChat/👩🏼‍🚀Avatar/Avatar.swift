@@ -10,7 +10,6 @@ import UISystem
 
 struct Avatar: View {
     var contact: Contact
-    
     @StateObject private var imageLoader = ImageLoader()
     
     var body: some View {

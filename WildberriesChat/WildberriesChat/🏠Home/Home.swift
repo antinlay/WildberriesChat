@@ -14,9 +14,6 @@ struct Home: View {
             
     var body: some View {
         VStack {
-            SearchBar()
-                .padding(.horizontal, 24)
-                .padding(.vertical)
             TabView(selection: $selectedTab) {
                 Contacts().tag(BottomBarRoutes.contacts)
                 Chats().tag(BottomBarRoutes.chats)

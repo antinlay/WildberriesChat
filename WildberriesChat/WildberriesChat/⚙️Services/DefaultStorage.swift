@@ -77,7 +77,7 @@ final class DefaultStorage: ObservableObject {
                 let lastName = contact.familyName
                 let photo = contact.imageDataAvailable ? UIImage(data: contact.thumbnailImageData!) : nil
                 
-                let contact = Contact(avatar: photo, firstName: firstName + " " + lastName, onlineStatus: "", activeStories: false, phoneNumber: phoneNumbers.first ?? "")
+                let contact = Contact(firstName: firstName + " " + lastName, onlineStatus: "", activeStories: false, phoneNumber: phoneNumbers.first ?? "")
                 // Проверяем, существует ли уже контакт с таким же номером телефона
                 if !contacts.contains(where: { $0.phoneNumber == contact.phoneNumber }) {
                     contacts.append(contact)

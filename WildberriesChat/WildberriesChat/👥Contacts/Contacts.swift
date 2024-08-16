@@ -20,6 +20,9 @@ struct Contacts: View {
     
     var body: some View {
         ScrollView(.vertical) {
+            SearchBar()
+                .padding(.horizontal, 24)
+                .padding(.vertical)
             LazyVStack(spacing: 0) {
                 ForEach(contacts, id: \.id) { contact in
                     NavigationLink(destination: ContactDetails(contact: contact)) {
@@ -51,5 +54,7 @@ struct Contacts: View {
 
 #Preview {
     Contacts()
+        .environmentObject(DefaultStorage())
+        .environment(Router())
         .environment(Search())
 }
