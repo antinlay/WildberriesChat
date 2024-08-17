@@ -6,15 +6,31 @@
 //
 
 import SwiftUI
+import ExyteChat
 
 struct Contact: Identifiable {
     var id = UUID()
     var avatarURL: URL?
+    var image: Data?
     var firstName: String
     var onlineStatus: String
     var activeStories: Bool
     var phoneNumber: String
     var socials: [(String, URL?)] = [("Social/Instagram", nil), ("Social/Twitter", nil), ("Social/LinkedIn", nil), ("Social/Facebook", nil)]
+}
+
+extension [Contact] {
+    func filteredContact(_ searchText: String) -> [Contact] {
+        searchText.isEmpty ? self : self.filter { contact in
+            contact.firstName.lowercased().contains(searchText.lowercased()) || contact.phoneNumber.contains(searchText)
+        }
+    }
+}
+
+extension Contact {
+    func toUser() -> User {
+        User(id: self.id.uuidString, name: self.firstName, avatarURL: self.avatarURL, isCurrentUser: false)
+    }
 }
 
 extension Contact {

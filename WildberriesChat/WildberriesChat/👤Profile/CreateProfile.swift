@@ -11,7 +11,6 @@ import UISystem
 
 
 struct CreateProfile: View {
-    @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
     @Environment(Router.self) private var router
     @EnvironmentObject private var defaultStorage: DefaultStorage
@@ -39,7 +38,6 @@ struct CreateProfile: View {
             defaultStorage.user?.isLoggedIn = true
             defaultStorage.user?.photo = avatar
             router.navigate(to: OnBoardingRoutes.home)
-            context.insert(UserSwiftData(id: "0", name: "\(firstName) \(lastName)", avatarURL: nil, isCurrentUser: true))
         }
         .buttonStyle(ActionButton(isDisabled: firstName.isEmpty))
     }

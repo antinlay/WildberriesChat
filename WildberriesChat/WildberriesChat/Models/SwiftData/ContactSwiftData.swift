@@ -10,16 +10,16 @@ import SwiftData
 
 @Model class ContactSwiftData {
     var id = UUID()
-    var avatarURL: URL?
+    var image: Data?
     var name: String
     var onlineStatus: String
     var activeStories: Bool
     var phoneNumber: String
-    var socials: [(String, URL?)] = [("Social/Instagram", nil), ("Social/Twitter", nil), ("Social/LinkedIn", nil), ("Social/Facebook", nil)]
+    var socials: [URL?] = []
     
-    init(id: UUID = UUID(), avatarURL: URL? = nil, name: String, onlineStatus: String, activeStories: Bool, phoneNumber: String, socials: [(String, URL?)]) {
+    init(id: UUID = UUID(), image: Data? = nil, name: String, onlineStatus: String, activeStories: Bool, phoneNumber: String, socials: [URL?]) {
         self.id = id
-        self.avatarURL = avatarURL
+        self.image = image
         self.name = name
         self.onlineStatus = onlineStatus
         self.activeStories = activeStories

@@ -8,23 +8,8 @@
 import SwiftUI
 import Contacts
 
-enum ContactError: Error, LocalizedError {
-    case accessDenied
-    case unhandledCase
-    
-    var errorDescription: String? {
-        switch self {
-        case .accessDenied:
-            return "Access to contacts is denied"
-        case .unhandledCase:
-            return "Authorization status case not handled"
-        }
-    }
-}
-
-@MainActor
 final class DefaultStorage: ObservableObject {
-    @Published var contacts = Contact.contacts
+    @Published var contacts: [Contact] = []
     
     private let store = CNContactStore()
     private let userDefaults = UserDefaults.standard
@@ -43,47 +28,49 @@ final class DefaultStorage: ObservableObject {
             }
         }
     }
-    
-    func filteredContact(_ searchText: String) -> [Contact] {
-        searchText.isEmpty ? contacts : contacts.filter { contact in
-            contact.firstName.lowercased().contains(searchText.lowercased()) || contact.phoneNumber.contains(searchText)
-        }
-    }
-    
+
     private func checkAuthorization() async throws {
         switch CNContactStore.authorizationStatus(for: .contacts) {
         case .authorized:
             // All ok
             return
         case .restricted, .denied:
-            throw ContactError.accessDenied
+            print("Access to contacts is denied")
         case .notDetermined:
             // Request authorization
             try await store.requestAccess(for: .contacts)
         @unknown default:
-            throw ContactError.unhandledCase
+            print("Authorization status case not handled")
         }
     }
     
     func fetchContacts() async throws {
         try await checkAuthorization()
-        let keys = [CNContactPhoneNumbersKey, CNContactGivenNameKey, CNContactFamilyNameKey, CNContactImageDataAvailableKey, CNContactThumbnailImageDataKey]
-        let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
-        
-        do {
-            try store.enumerateContacts(with: request) { (contact, stop) in
-                let phoneNumbers = contact.phoneNumbers.compactMap { $0.value.stringValue }
-                let firstName = contact.givenName
-                let lastName = contact.familyName
-                let photo = contact.imageDataAvailable ? UIImage(data: contact.thumbnailImageData!) : nil
-                
-                let contact = Contact(firstName: firstName + " " + lastName, onlineStatus: "", activeStories: false, phoneNumber: phoneNumbers.first ?? "")
-                // Проверяем, существует ли уже контакт с таким же номером телефона
-                if !contacts.contains(where: { $0.phoneNumber == contact.phoneNumber }) {
-                    contacts.append(contact)
-                }            }
-        } catch {
-            print("Error fetching contacts: \(error)")
+        contacts = try await withCheckedThrowingContinuation { continuation in
+            let keysToFetch = [CNContactPhoneNumbersKey, CNContactGivenNameKey, CNContactImageDataKey]
+            let request = CNContactFetchRequest(keysToFetch: keysToFetch as [CNKeyDescriptor])
+            var newContacts: [Contact] = Contact.contacts
+            do {
+                // Enumerate through the contacts and convert them to custom Contact objects.
+                try store.enumerateContacts(with: request) { contact, _ in
+                    newContacts.append(contact.toContact())
+                }
+                // Resume the continuation with the retrieved contacts on success.
+                return continuation.resume(with: .success(newContacts))
+            } catch {
+                // Resume the continuation with an error if an exception occurs.
+                return continuation.resume(throwing: error)
+            }
         }
+    }
+}
+
+extension CNContact {
+    func toContact() -> Contact {
+        Contact(image: self.imageData, 
+                firstName: self.givenName, 
+                onlineStatus: "",
+                activeStories: false,
+                phoneNumber: self.phoneNumbers.first?.value.stringValue ?? "")
     }
 }
