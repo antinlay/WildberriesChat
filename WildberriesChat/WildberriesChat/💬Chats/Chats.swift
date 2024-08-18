@@ -67,12 +67,7 @@ struct Chats: View {
                 .padding(.horizontal, 24)
             ForEach(chatViewModel.chats.indices, id: \.self) { index in
                 NavigationLink {
-                    ChatView(messages: chatViewModel.chats[index].messages) { draft in
-                        Task {
-                            let newMessage = await chatViewModel.send(draft: draft, contact: chatViewModel.chats[index].contact, chatId: chatViewModel.chats[index].id)
-                            chatViewModel.chats[index].addNewMessage(newMessage: newMessage)
-                        }
-                    }
+                    Messages()
                 } label: {
                     ChatContainer(contact: chatViewModel.chats[index].contact, messageText: chatViewModel.chats[index].messages.last!.text, dateStatusText: "Today", unreadMessageCount: chatViewModel.chats[index].messages.last!.status != .read ? 1 : 0)
                         .padding(.horizontal, 24)

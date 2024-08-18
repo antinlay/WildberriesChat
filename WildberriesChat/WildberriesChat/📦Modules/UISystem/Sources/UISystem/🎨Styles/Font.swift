@@ -31,4 +31,8 @@ extension Font {
     
     public static var metadataSecond = Font
         .system(size: 10)
+    
+    public static var metadataThird = Font
+        .system(size: 10, weight: .semibold)
+
 }
