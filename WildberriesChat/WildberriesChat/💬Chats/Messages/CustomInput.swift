@@ -42,16 +42,6 @@ struct CustomInput: View {
         }
         .frame(height: 56)
         .background(.appBackground)
-        //
-        //        replyContent
-        //        Rectangle()
-        //            .fill(.appBackground)
-        //            .frame(maxHeight: 83)
-        //            .modifier(BorderShadow())
-        //            .overlay {
-        //                customInputButtons
-        //                    .padding(.horizontal, 12)
-        //            }
     }
 }
 

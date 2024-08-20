@@ -26,6 +26,7 @@ public extension View {
         ToolbarItem(placement: .topBarLeading) {
             Text(title)
                 .font(.subheadingFirst)
+                .foregroundColor(Color("NeutralColor", bundle: .main))
                 .padding(.leading, 10)
         }
     }
@@ -36,6 +37,7 @@ public extension View {
                 destinationView
             } label: {
                 Image(ImageResource(name: "ToolBar/AddContact", bundle: .main))
+                    .foregroundColor(Color("NeutralColor", bundle: .main))
             }
             
             .padding(.trailing, 10)

@@ -26,19 +26,15 @@ struct Home: View {
             }
         }
         .toolbar {
-            switch selectedTab {
-            case .contacts:
-                Group {
+            Group {
+                switch selectedTab {
+                case .contacts:
                     addContactItem(destinationView: AddNewContact())
                     titleItem("Contacts")
-                }
-            case .chats:
-                Group {
+                case .chats:
                     newChatItem
                     titleItem("Chats")
-                }
-            case .more:
-                Group {
+                case .more:
                     titleItem("More")
                 }
             }

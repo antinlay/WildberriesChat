@@ -1,119 +1,141 @@
 openapi: 3.0.3
 info:
-  title: NewsAPI
-  description: NewsAPI.org
+  title: FusionBrain API
+  description: API для генерации изображений из текста на платформе FusionBrain
   version: 1.0.0
 servers:
-- url: https://newsapi.org/v2
+- url: https://api-key.fusionbrain.ai/key/api/v1
 tags:
-  - name: articles
-    description: News articles
+  - name: text2image
+    description: Генерация изображений из текста
 paths:
-  /everything/:
+  /models:
     get:
       tags:
-        - articles
-      summary: News List
-      operationId: everythingGet
-      parameters:
-      - name: q
-        in: query
-        description: Theme of news
-        required: true
-        schema:
-          type: string
-      - name: from
-        in: query
-        description: date
-        required: true
-        schema:
-          type: string
-      - name: sortBy
-        in: query
-        description: Sort
-        required: true
-        schema:
-          type: string
-      - name: language
-        in: query
-        description: Language in two letters
-        required: true
-        schema:
-          type: string
-      - name: apiKey
-        in: query
-        description: API key
-        required: true
-        schema:
-          type: string
-      - name: page
-        in: query
-        description: number of page
-        schema:
-          type: integer
+        - text2image
+      summary: Получение списка моделей
+      operationId: modelsGet
       responses:
         200:
-          description: success
+          description: Успешный ответ
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ArticleList'
+                $ref: '#/components/schemas/ModelList'
         default:
-          description: enexpected error
+          $ref: '#/components/responses/ErrorResponse'
+  /text2image/run:
+    post:
+      tags:
+      - text2image
+      summary: Генерация изображения из текста
+      operationId: text2imageRun
+      requestBody:
+        description: Generate image from text
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                params:
+                  type: string
+                  format: binary
+                model_id:
+                  type: string
+      security:
+        - ApiKeyAuth: []
+      responses:
+        200:
+          description: Успешный ответ
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorModel'
+                $ref: '#/components/schemas/GenerateResponse'
+        default:
+          $ref: '#/components/responses/ErrorResponse'
+  /text2image/status/{uuid}:
+    get:
+      tags:
+        - text2image
+      summary: Получение статуса генерации
+      operationId: getGenerationStatus
+      parameters:
+      - name: uuid
+        in: path
+        description: UUID запроса на генерацию
+        required: true
+        schema:
+          type: string
+      security:
+        - ApiKeyAuth: []
+      responses:
+        200:
+          description: Успешный ответ
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenerationStatus'
+        default:
+          $ref: '#/components/responses/ErrorResponse'
 components:
   schemas:
-    ErrorModel:
+    ModelList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Model'
+    Model:
       type: object
-      required:
-      - message
-      - code
       properties:
-        message:
-          type: string
-        code:
+        id:
           type: integer
-          minimum: 100
-          maximum: 600
-    ArticleList:
+        name:
+          type: string
+        version:
+          type: number
+        type:
+          type: string
+    GenerateResponse:
       type: object
       properties:
         status:
           type: string
-        totalResults:
-          type: integer
-        articles:
+        uuid:
+          type: string
+    GenerationStatus:
+      type: object
+      properties:
+        uuid:
+          type: string
+        status:
+          type: string
+        images:
           type: array
           items:
-            $ref: '#/components/schemas/Article'
-    Article:
-      type: object
-      properties:
-        source:
-          $ref: '#/components/schemas/Source'
-        author:
-          type: string
-        title:
-          type: string
-        description:
-          type: string
-        url:
-          type: string
-        urlToImage:
-          type: string
-        publishedAt:
-          type: string
-        content:
-          type: string
-      required:
-      - title
-    Source:
-      type: object
-      properties:
-        id:
-          type: string
-        name:
-          type: string
+            type: string
+        censored:
+          type: boolean
+        generationTime:
+          type: integer
+  responses:
+    ErrorResponse:
+      description: Ошибка
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: integer
+              error:
+                type: string
+              message:
+                type: string
+              path:
+                type: string
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-Key
+      description: API key for authorization

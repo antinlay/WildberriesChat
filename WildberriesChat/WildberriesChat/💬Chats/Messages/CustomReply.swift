@@ -37,7 +37,7 @@ struct CustomReply: View {
 extension CustomReply {
     private var lineView: some View {
         Rectangle()
-            .foregroundColor(.replyAccent)
+            .foregroundColor(isCurrentUser ? .appBackground : .replyAccent)
             .frame(width: 4)
     }
     

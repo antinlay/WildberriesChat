@@ -7,59 +7,34 @@
 
 import SwiftUI
 import UISystem
-//import OpenAPIURLSession
 
 struct More: View {
-//    let client = Client(
-//        serverURL: URL(string: "https://newsapi.org/v2")!,
-//        transport: URLSessionTransport()
-//    )
     @State private var isError: Bool = false
     @State private var statusCodeText: Int = 0
-    @State private var articles: [Components.Schemas.Article] = []
+    @State private var modelId = ""
+    private var kandinsky = KandinskyImageGeneration()
     
     var body: some View {
-        Text("More")
-            .font(.headingFirst)
-//        VStack {
-//            switch isError {
-//            case true:
-//                Text("\(statusCodeText)")
-//                    .font(.title)
-//            case false:
-//                List {
-//                    ForEach(articles, id: \.url) { article in
-//                        NewsCell(title: article.title, desc: article.description)
-//                    }
-//                }
-//            }
-//        }
-//        .task {
-//            await loadArticles()
-//        }
+        VStack {
+            Button {
+                Task {
+                    modelId = await kandinsky.uuid
+                }
+            } label: {
+                Text("UPDATE")
+            }
+            
+            Text("More \(modelId)")
+                .font(.headingFirst)
+                .onAppear {
+                    
+                    Task {
+                        await kandinsky.getQuery(promt: "Статуя свободы", style: .anime)
+                        modelId = await kandinsky.uuid
+                    }
+                }
+        }
     }
-    
-//    func loadArticles() async {
-//        do {
-//            let query: Operations.everythingGet.Input.Query = .init(q: "Apple",
-//                                                                    from: "2024-07-15",
-//                                                                    sortBy: "popularity",
-//                                                                    language: "en",
-//                                                                    apiKey: "d05ddcc9be8945b1aa45b380c8869028")
-//            let input: Operations.everythingGet.Input = .init(query: query)
-//            let response = try await client.everythingGet(input)
-//            switch response {
-//            case .ok(let response):
-//                if let jsonArticles = try response.body.json.articles {
-//                    articles = jsonArticles
-//                }
-//            case .default(statusCode: let statusCode, _):
-//                statusCodeText = statusCode
-//            }
-//        } catch {
-//            isError = true
-//        }
-//    }
     
     struct NewsCell: View {
         var title: String
@@ -79,6 +54,56 @@ struct More: View {
             }
         }
     }
+}
+
+enum KandinskyImageSize: CaseIterable {
+    case square
+    case twoByThree
+    case threeByTwo
+    case nineBySixteen
+    case sixteenByNine
+
+    var width: Int {
+        switch self {
+        case .square:
+            return 1024
+        case .twoByThree:
+            return 683
+        case .threeByTwo:
+            return 1024
+        case .nineBySixteen:
+            return 576
+        case .sixteenByNine:
+            return 1024
+        }
+    }
+
+    var height: Int {
+        switch self {
+        case .square:
+            return 1024
+        case .twoByThree:
+            return 1024
+        case .threeByTwo:
+            return 683
+        case .nineBySixteen:
+            return 1024
+        case .sixteenByNine:
+            return 576
+        }
+    }
+
+    var aspectRatio: CGFloat {
+        return CGFloat(width) / CGFloat(height)
+    }
+}
+
+
+enum KandinskyStyle: String, Codable {
+    case kandinsky = "KANDINSKY"
+    case uhd = "UHD"
+    case anime = "ANIME"
+    case `default` = "DEFAULT"
 }
 
 #Preview {
