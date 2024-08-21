@@ -18,7 +18,7 @@ struct CustomAttachment: View {
             switch phase {
             case .empty:
                 ProgressView()
-                    .frame(width: 150, height: 262)
+                    .frame(width: imageSize.width, height: imageSize.height)
             case .success(let image):
                 image
                     .resizable()

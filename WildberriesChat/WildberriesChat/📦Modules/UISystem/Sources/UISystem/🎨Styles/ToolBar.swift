@@ -8,6 +8,22 @@
 import SwiftUI
 
 public extension View {
+    var burgerItem: some View {
+//        Image(ImageResource(name: "Chat/Burger", bundle: .main))
+        Image(systemName: "wand.and.stars")
+            .font(.headingSecond)
+            .padding(.trailing, 10)
+    }
+    
+    var searchItem: some ToolbarContent {
+        ToolbarItem(placement: .topBarTrailing) {
+            Image(ImageResource(name: "SearchBar/SearchIcon", bundle: .main))
+                .font(.headingSecond)
+                .padding(.trailing, 10)
+        }
+    }
+    
+    
     var editProfileItem: some ToolbarContent {
         ToolbarItem(placement: .topBarTrailing) {
             Image(ImageResource(name: "ToolBar/EditProfile", bundle: .main))
@@ -71,6 +87,14 @@ public extension View {
             completion()
         } label: {
             shevronItem
+        }
+    }
+    
+    func toolbarBurgerButton(completion: @escaping () -> Void) -> some View {
+        return Button {
+            completion()
+        } label: {
+            burgerItem
         }
     }
 }

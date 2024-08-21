@@ -11,27 +11,30 @@ import UISystem
 struct More: View {
     @State private var isError: Bool = false
     @State private var statusCodeText: Int = 0
-    @State private var modelId = ""
+    @State private var query = ""
+    @State private var response = ""
     private var kandinsky = KandinskyImageGeneration()
     
     var body: some View {
         VStack {
             Button {
                 Task {
-                    modelId = await kandinsky.uuid
+//                    if !query.isEmpty {
+//                        await kandinsky.generateQuery(parameters: KandinskyParameters(generateParams: .init(query: query)))
+//                        response = await kandinsky.uuid
+//                    }
                 }
             } label: {
-                Text("UPDATE")
+                Text("GENERATE")
             }
-            
-            Text("More \(modelId)")
-                .font(.headingFirst)
+            TextField("Prompt", text: $query)
+                .padding()
+            Text("More \(response)")
                 .onAppear {
                     
-                    Task {
-                        await kandinsky.getQuery(promt: "Статуя свободы", style: .anime)
-                        modelId = await kandinsky.uuid
-                    }
+//                    Task {
+//                        query = await kandinsky.uuid
+//                    }
                 }
         }
     }
@@ -54,56 +57,6 @@ struct More: View {
             }
         }
     }
-}
-
-enum KandinskyImageSize: CaseIterable {
-    case square
-    case twoByThree
-    case threeByTwo
-    case nineBySixteen
-    case sixteenByNine
-
-    var width: Int {
-        switch self {
-        case .square:
-            return 1024
-        case .twoByThree:
-            return 683
-        case .threeByTwo:
-            return 1024
-        case .nineBySixteen:
-            return 576
-        case .sixteenByNine:
-            return 1024
-        }
-    }
-
-    var height: Int {
-        switch self {
-        case .square:
-            return 1024
-        case .twoByThree:
-            return 1024
-        case .threeByTwo:
-            return 683
-        case .nineBySixteen:
-            return 1024
-        case .sixteenByNine:
-            return 576
-        }
-    }
-
-    var aspectRatio: CGFloat {
-        return CGFloat(width) / CGFloat(height)
-    }
-}
-
-
-enum KandinskyStyle: String, Codable {
-    case kandinsky = "KANDINSKY"
-    case uhd = "UHD"
-    case anime = "ANIME"
-    case `default` = "DEFAULT"
 }
 
 #Preview {

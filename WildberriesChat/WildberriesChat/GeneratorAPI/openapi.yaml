@@ -39,14 +39,13 @@ paths:
               type: object
               properties:
                 params:
-                  type: string
-                  format: binary
+                  type: object
                 model_id:
                   type: string
       security:
         - ApiKeyAuth: []
       responses:
-        200:
+        201:
           description: Успешный ответ
           content:
             application/json:
@@ -98,7 +97,7 @@ components:
     GenerateResponse:
       type: object
       properties:
-        status:
+        'status':
           type: string
         uuid:
           type: string

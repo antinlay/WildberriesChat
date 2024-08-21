@@ -46,8 +46,7 @@ struct CustomInput: View {
 }
 
 extension CustomInput {
-    @ViewBuilder
-    private var replyContent: some View {
+    @ViewBuilder private var replyContent: some View {
         if let reply = attachments.replyMessage {
             CustomReply(reply: reply, lineLimit: 1, isCurrentUser: false)
                 .padding(.horizontal, 8)
@@ -55,12 +54,17 @@ extension CustomInput {
         }
     }
     
-    private var mediaButton: some View {
-        Button {
-            inputViewActionClosure(.photo)
-        } label: {
-            Image(.ToolBar.addContact)
-                .foregroundColor(.storyBorder)
+    @ViewBuilder private var mediaButton: some View {
+        switch inputViewStyle {
+        case .message:
+            Button {
+                inputViewActionClosure(.photo)
+            } label: {
+                Image(.ToolBar.addContact)
+                    .foregroundColor(.storyBorder)
+            }
+        case .signature:
+            EmptyView()
         }
     }
     
@@ -72,9 +76,16 @@ extension CustomInput {
     
     private var actionButton: some View {
         Button {
-            inputViewActionClosure(.send)
+            inputViewActionClosure(inputViewState == .empty ? .recordAudioTap : .send)
         } label: {
-            Image(.Chat.sendButton)
+            Group {
+                switch inputViewState {
+                case .empty, .isRecordingTap:
+                    Image(systemName: "mic.fill")
+                default:
+                    Image(.Chat.sendButton)
+                }
+            }
         }
     }
 }

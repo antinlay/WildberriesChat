@@ -82,7 +82,7 @@ struct CustomMessage: View {
             
             imagesView
             
-//            recordingView
+            recordingView
             
             textView
             
@@ -132,7 +132,7 @@ extension CustomMessage {
         if !message.attachments.isEmpty {
             ForEach(message.attachments, id: \.id) { attachment in
                 CustomAttachment(attachment: attachment,
-                                    imageSize: CGSize(width: 150, height: 262),
+                                    imageSize: CGSize(width: 262, height: 150),
                                     cornerRadius: 4
                 )
             }
@@ -140,19 +140,16 @@ extension CustomMessage {
     }
     
     
-//    @ViewBuilder
-//    private var recordingView: some View {
-//        if let recording = message.recording {
-//            RecordWaveView(
-//                recording: recording,
-//                colorButton: message.user.isCurrentUser ? Color.white : Color.theme.active,
-//                colorWaveform: message.user.isCurrentUser ? Color.white : Color.theme.active
-//            )
-//            .padding(Constants.recordingPadding)
-//            .background(replyBackgroundColor)
-//            .clipShape(RoundedRectangle(cornerRadius: 4))
-//        }
-//    }
+    @ViewBuilder
+    private var recordingView: some View {
+        if message.recording != nil {
+            CustomRecord()
+            .padding()
+            .background(.accent)
+            .clipShape(RoundedRectangle(cornerRadius: 4))
+        }
+    }
+    
     
     private var createdAtView: some View {
         Text("\(message.time) · \(messageStatusText)")
@@ -161,49 +158,12 @@ extension CustomMessage {
     }
 }
 
-extension Message {
-    var time: String {
-        DateFormatter.timeFormatter.string(from: createdAt)
-    }
-}
-
-extension DateFormatter {
-    static let timeFormatter = {
-        let formatter = DateFormatter()
-
-        formatter.dateStyle = .none
-        formatter.timeStyle = .short
-
-        return formatter
-    }()
-
-    static let relativeDateFormatter = {
-        let relativeDateFormatter = DateFormatter()
-        relativeDateFormatter.timeStyle = .none
-        relativeDateFormatter.dateStyle = .full
-        relativeDateFormatter.locale = Locale(identifier: "en_US")
-        relativeDateFormatter.doesRelativeDateFormatting = true
-
-        return relativeDateFormatter
-    }()
-
-    static func timeString(_ seconds: Int) -> String {
-        let hour = Int(seconds) / 3600
-        let minute = Int(seconds) / 60 % 60
-        let second = Int(seconds) % 60
-
-        if hour > 0 {
-            return String(format: "%02i:%02i:%02i", hour, minute, second)
-        }
-        return String(format: "%02i:%02i", minute, second)
-    }
-}
 
 #Preview {
-    CustomMessage(message: Message.message2, positionInGroup: .single)
+    CustomMessage(message: Message.message4, positionInGroup: .single)
 }
 
 #Preview("Dark") {
-    CustomMessage(message: Message.message2, positionInGroup: .single)
+    CustomMessage(message: Message.message4, positionInGroup: .single)
         .preferredColorScheme(.dark)
 }

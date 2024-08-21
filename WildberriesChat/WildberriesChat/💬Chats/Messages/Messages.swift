@@ -10,8 +10,11 @@ import SwiftUI
 import UISystem
 
 struct Messages: View {
+    @Environment(\.dismiss) private var dismiss
     var index: Int = 0
     @State var chatViewModel = ChatViewModel()
+    @State var isAiGeneratorPresented = false
+
     let chatTheme = ChatTheme(colors: .init(mainBackground: .neutralReverse))
     
     private func sendMessage(draft: DraftMessage) {
@@ -59,18 +62,54 @@ struct Messages: View {
     }
     
     var body: some View {
+// menu action
         ChatView(messages: chatViewModel.chats[index].messages, chatType: .conversation, replyMode: .quote, didSendMessage: sendMessage, messageBuilder: messageViewBuilder, inputViewBuilder: inputViewBuilder, messageMenuAction: messageMenuAction)
-            .chatNavigation(title: chatViewModel.chats[index].contact.firstName, status: chatViewModel.chats[index].contact.onlineStatus, cover: chatViewModel.chats[index].contact.avatarURL)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    toolbarBackButton {
+                        dismiss()
+                    }
+                }
+                titleItem(chatViewModel.chats[index].contact.firstName)
+                searchItem
+                ToolbarItem(placement: .topBarTrailing) {
+                    toolbarBurgerButton {
+                        isAiGeneratorPresented = true
+                    }
+                }
+            }
+            .sheet(isPresented: $isAiGeneratorPresented, content: {
+                NavigationStack {
+                    AiGenerator()
+                        .presentationBackground(.thinMaterial)
+                }
+            })
+            .navigationBarBackButtonHidden(true)
             .chatTheme(chatTheme)
+        
+    }
+}
+
+class ImageSaver: NSObject {
+    func writeToPhotoAlbum(image: UIImage) {
+        UIImageWriteToSavedPhotosAlbum(image, self, #selector(saveCompleted), nil)
+    }
+
+    @objc func saveCompleted(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        print("Save finished!")
     }
 }
 
 
 #Preview {
-    Messages()
+    NavigationStack {
+        Messages()
+    }
 }
 
 #Preview("Dark") {
-    Messages()
-        .preferredColorScheme(.dark)
+    NavigationStack {
+        Messages()
+            .preferredColorScheme(.dark)
+    }
 }

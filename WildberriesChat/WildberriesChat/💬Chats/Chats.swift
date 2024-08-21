@@ -9,7 +9,6 @@ import ExyteChat
 import SwiftUI
 import UISystem
 
-
 @Observable final class ChatViewModel {
     var chats: [Chat] = [Chat.chat0, Chat.chat1, Chat.chat2]
 

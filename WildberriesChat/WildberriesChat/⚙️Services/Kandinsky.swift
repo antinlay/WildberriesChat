@@ -5,7 +5,7 @@
 //  Created by Janiece Eleonour on 20.08.2024.
 //
 
-import Foundation
+import SwiftUI
 import OpenAPIURLSession
 import OpenAPIRuntime
 
@@ -21,15 +21,14 @@ actor KandinskyImageGeneration {
     init() {
         self.config = URLSessionConfiguration.default
         config.httpAdditionalHeaders = [
-            "X-Key": "Key FD2DAE1D7AAF62CA0117466807A09C98",
-            "X-Secret": "Secret CE27DB724B078C37CE3408E41793FEAE"
+            "X-Key": "Key 5D420063BF3EC14C8CD08C213F6C6D20",
+            "X-Secret": "Secret 914C52A27C4430A58793933D6D9AD6EA"
         ]
         
         self.transport = URLSessionTransport()
         transport.configuration.session = URLSession(configuration: config)
         
         self.client = Client(serverURL: try! Servers.server1(), transport: transport)
-        
         Task {
             await getModelId()
         }
@@ -52,134 +51,83 @@ actor KandinskyImageGeneration {
             print("Error: \(error)")
         }
     }
-        
-//    func generateQuery(promt: String, style: KandinskyStyle, numImages: Int = 1, imageSize: KandinskyImageSize = .square, negativePromt: String = "") async {
-//        let parameters = Parameters(
-//            type: "GENERATE",
-//            style: style.rawValue,
-//            width: imageSize.width,
-//            height: imageSize.height,
-//            numImages: numImages,
-//            negativePromptUnclip: "яркие цвета, кислотность, высокая контрастность, \(negativePromt)",
-//            generateParams: GenerateParams(query: promt)
-//        )
-//        
-//        do {
-//            let jsonData = try JSONEncoder().encode(parameters)
-//            let body = OpenAPIRuntime.HTTPBody(jsonData)
-//            do {
-//                let output = try! await client.text2imageRun(body: .multipartForm(.init(arrayLiteral: .params([.init(payload: .init(body: body))]))))
-//                switch output {
-//                case .ok(let ok):
-//                    if let jsonUuid = try ok.body.json.uuid {
-//                        uuid = jsonUuid
-//                    } else {
-//                        print("No UUID found")
-//                    }
-//                case .default(statusCode: let statusCode, let error):
-//                    print("\(statusCode) \(error.body)")
-//                }
-//            } catch {
-//                print("Error: \(error)")
-//            }
-//            // Use the body in your request
-//        } catch {
-//            // Handle error
-//            print("Error: \(error)")
-//        }
-//
-//    }
     
-    func getQuery(promt: String, style: KandinskyStyle, numImages: Int = 1, imageSize: KandinskyImageSize = .square, negativePromt: String = "") {
-        let url = URL(string: "https://api-key.fusionbrain.ai/key/api/v1/text2image/run")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-
-        request.setValue("Key FD2DAE1D7AAF62CA0117466807A09C98", forHTTPHeaderField: "X-Key")
-        request.setValue("Secret CE27DB724B078C37CE3408E41793FEAE", forHTTPHeaderField: "X-Secret")
-
-        let parameters: [String: Any] = [
+    func generateMultiplatformBody(parameters: KandinskyParameters) -> MultipartBody<Operations.text2imageRun.Input.Body.multipartFormPayload> {
+        let paramsDictionary: [String: Any] = [
             "type": "GENERATE",
-            "style": style.rawValue,
-            "width": imageSize.width,
-            "height": imageSize.height,
-            "numImages": numImages,
-            "negativePromptUnclip": "яркие цвета, кислотность, высокая контрастность, \(negativePromt)",
+            "style": parameters.style.rawValue,
+            "width": parameters.imageSize.width,
+            "height": parameters.imageSize.height,
+            "numImages": parameters.numImages,
+            "negativePromptUnclip": parameters.negativePrompt,
             "generateParams": [
-                "query": promt
+                "query": parameters.prompt
             ]
         ]
         
-        let boundary = UUID().uuidString
-        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-
-        var data = Data()
-
         do {
-            let jsonData = try JSONSerialization.data(withJSONObject: parameters)
-            data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
-            data.append("Content-Disposition: form-data; name=\"params\"; filename=\"params.json\"\r\n".data(using: .utf8)!)
-            data.append("Content-Type: application/json\r\n\r\n".data(using: .utf8)!)
-            data.append(jsonData)
-            data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
-            data.append("Content-Disposition: form-data; name=\"model_id\"\r\n\r\n".data(using: .utf8)!)
-            data.append("4\r\n".data(using: .utf8)!)
-            data.append("\r\n--\(boundary)--\r\n".data(using: .utf8)!)
+            let params: Operations.text2imageRun.Input.Body.multipartFormPayload = .params(.init(
+                payload: .init(
+                    body: try .init(
+                        unvalidatedValue: paramsDictionary))))
+            let model_id: Operations.text2imageRun.Input.Body.multipartFormPayload = .model_id(.init(
+                payload: .init(
+                    body: HTTPBody(
+                        stringLiteral: String(modelId)))))
+            let multipartBody: MultipartBody = [params, model_id]
+            return multipartBody
+        } catch {
+            print("Error: \(error)")
+            return MultipartBody()
+        }
+    }
+    
+    func generateQuery(parameters: KandinskyParameters) async -> [UIImage] {
+        do {
+            let output = try await client.text2imageRun(body: .multipartForm(generateMultiplatformBody(parameters: parameters)))
+            switch output {
+            case .default(statusCode: let statusCode, let error):
+                print("\(statusCode) \(error.body)")
+            case .created(let ok):
+                print(ok)
+                if let jsonUuid = try ok.body.json.uuid {
+                    uuid = jsonUuid
+                } else {
+                    print("No UUID found")
+                }
+            }
         } catch {
             print("Error: \(error)")
         }
-
-        let task = URLSession.shared.uploadTask(with: request, from: data) { data, response, error in
-            if let error = error {
-                print("Error: \(error)")
-            } else if let data = data {
-                do {
-                   let serverResponse = try JSONDecoder().decode(ServerResponse.self, from: data)
-                } catch {
-                    print("Error: \(error)")
-                }
+        var status = "INITIAL"
+        while status != "DONE" {
+            if let getStatus = await getStatus() {
+                status = getStatus
             }
         }
-
-        task.resume()
+        return images.compactMap { $0.imageFromBase64 }
     }
     
-    func getStatus() async {
+    func getStatus() async -> String? {
         do {
             let output = try await client.getGenerationStatus(path: .init(uuid: uuid))
             switch output {
             case .ok(let ok):
-                if let jsonImages = try ok.body.json.images {
+                if let jsonImages = try ok.body.json.images, let status = try ok.body.json.status {
                     images = jsonImages
+                    return status
                 } else {
                     print("No images found")
+                    try await Task.sleep(nanoseconds: 30_000_000_000)
+                    return "INITIAL"
                 }
             case .default(statusCode: let statusCode, let error):
                 print("\(statusCode) \(error.body)")
+                return "\(statusCode) \(error.body)"
             }
         } catch {
             print("Error: \(error)")
+            return "ERROR"
         }
     }
-    
-}
-
-
-struct GenerateParams: Codable {
-    let query: String
-}
-
-struct Parameters: Codable {
-    let type: String
-    let style: String
-    let width: Int
-    let height: Int
-    let numImages: Int
-    let negativePromptUnclip: String
-    let generateParams: GenerateParams
-}
-
-struct ServerResponse: Codable {
-    let status: String
-    let uuid: String
 }

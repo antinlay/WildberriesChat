@@ -47,6 +47,8 @@
 		5C5CE4A02C216CE2009DCFF3 /* Chats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE49F2C216CE2009DCFF3 /* Chats.swift */; };
 		5C5CE4A32C216DE7009DCFF3 /* More.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4A22C216DE7009DCFF3 /* More.swift */; };
 		5C5CE4A92C21E15C009DCFF3 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5CE4A82C21E15C009DCFF3 /* Home.swift */; };
+		5C63B2E72C75EF9600C3BB54 /* AiGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63B2E42C75EF9600C3BB54 /* AiGenerator.swift */; };
+		5C63B2EE2C76196800C3BB54 /* KandinskyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C63B2ED2C76196800C3BB54 /* KandinskyModel.swift */; };
 		5C6CD6E42C6E42DE00A00570 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 5C6CD6E32C6E42DE00A00570 /* OpenAPIRuntime */; };
 		5C6CD6E72C6E42ED00A00570 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 5C6CD6E62C6E42ED00A00570 /* OpenAPIURLSession */; };
 		5C6CD6EC2C6E688D00A00570 /* ExyteChat in Frameworks */ = {isa = PBXBuildFile; productRef = 5C6CD6EB2C6E688D00A00570 /* ExyteChat */; };
@@ -172,6 +174,8 @@
 		5C5CE49F2C216CE2009DCFF3 /* Chats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chats.swift; sourceTree = "<group>"; };
 		5C5CE4A22C216DE7009DCFF3 /* More.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = More.swift; sourceTree = "<group>"; };
 		5C5CE4A82C21E15C009DCFF3 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		5C63B2E42C75EF9600C3BB54 /* AiGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AiGenerator.swift; sourceTree = "<group>"; };
+		5C63B2ED2C76196800C3BB54 /* KandinskyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KandinskyModel.swift; sourceTree = "<group>"; };
 		5C6CD70D2C6F99FC00A00570 /* UserSwiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSwiftData.swift; sourceTree = "<group>"; };
 		5C6CD7112C6F9AD700A00570 /* MessageSwiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSwiftData.swift; sourceTree = "<group>"; };
 		5C6CD7132C6F9DB400A00570 /* AttachmentSwiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentSwiftData.swift; sourceTree = "<group>"; };
@@ -373,6 +377,7 @@
 				5C8F59072C1A430E004DA54D /* 🚶🏼‍➡️Walkthrough */,
 				5C515DDB2C11322500EFDB9C /* WildberriesChatApp.swift */,
 				5C515DDD2C11322500EFDB9C /* ContentView.swift */,
+				5C63B2E32C75EF4700C3BB54 /* 🌄AiGenerator */,
 				5CD862032C6E3851002127DA /* GeneratorAPI */,
 				5C5CE48F2C1ECC59009DCFF3 /* Extensions */,
 				5C515DE12C11322600EFDB9C /* Preview Content */,
@@ -423,6 +428,7 @@
 				5CD861F22C6CDA7A002127DA /* Chat.swift */,
 				5C6CD70C2C6F99D400A00570 /* SwiftData */,
 				5C7B5B692C1B35FC00B84923 /* Contact.swift */,
+				5C63B2ED2C76196800C3BB54 /* KandinskyModel.swift */,
 				5CDF5FE22C65FC4C00DDCDC4 /* LocalUser.swift */,
 			);
 			path = Models;
@@ -453,6 +459,14 @@
 				5C5CE4A22C216DE7009DCFF3 /* More.swift */,
 			);
 			path = "💠More";
+			sourceTree = "<group>";
+		};
+		5C63B2E32C75EF4700C3BB54 /* 🌄AiGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				5C63B2E42C75EF9600C3BB54 /* AiGenerator.swift */,
+			);
+			path = "🌄AiGenerator";
 			sourceTree = "<group>";
 		};
 		5C6CD70C2C6F99D400A00570 /* SwiftData */ = {
@@ -692,6 +706,7 @@
 				5C0DC0792C493ACF007073E9 /* CodeTextField.swift in Sources */,
 				5CC497012C735D6C00778887 /* CustomRecord.swift in Sources */,
 				5CD861F32C6CDA7A002127DA /* Chat.swift in Sources */,
+				5C63B2EE2C76196800C3BB54 /* KandinskyModel.swift in Sources */,
 				5C0DC07E2C4BC52B007073E9 /* CreateProfile.swift in Sources */,
 				5C7B5B6A2C1B35FC00B84923 /* Contact.swift in Sources */,
 				5C6CD7172C6F9E8500A00570 /* ChatSwiftData.swift in Sources */,
@@ -731,6 +746,7 @@
 				5C515DDC2C11322500EFDB9C /* WildberriesChatApp.swift in Sources */,
 				5C5CE4892C1D8069009DCFF3 /* Avatar.swift in Sources */,
 				5CC496F12C70FCB700778887 /* ChatContainer.swift in Sources */,
+				5C63B2E72C75EF9600C3BB54 /* AiGenerator.swift in Sources */,
 				5C5CE4832C1CBC56009DCFF3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -773,8 +789,9 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = janiecee.WildberriesChat.WildberriesChatIntents;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WildberriesChat.WildberriesChatIntents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -800,8 +817,9 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = janiecee.WildberriesChat.WildberriesChatIntents;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WildberriesChat.WildberriesChatIntents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -829,8 +847,9 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = janiecee.WildberriesChat.WildberriesChatWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WildberriesChat.WildberriesChatWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -858,8 +877,9 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = janiecee.WildberriesChat.WildberriesChatWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WildberriesChat.WildberriesChatWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -999,7 +1019,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WildberriesChat/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "For attachment photo from camera";
 				INFOPLIST_KEY_NSContactsUsageDescription = "For quick access to your contacts";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "For recording audio message";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "For attachment photo from library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -1010,7 +1033,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = janiecee.WildberriesChat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WildberriesChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1032,7 +1055,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WildberriesChat/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "For attachment photo from camera";
 				INFOPLIST_KEY_NSContactsUsageDescription = "For quick access to your contacts";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "For recording audio message";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "For attachment photo from library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -1043,7 +1069,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = janiecee.WildberriesChat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WildberriesChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
