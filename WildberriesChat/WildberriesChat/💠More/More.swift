@@ -9,53 +9,93 @@ import SwiftUI
 import UISystem
 
 struct More: View {
-    @State private var isError: Bool = false
-    @State private var statusCodeText: Int = 0
-    @State private var query = ""
-    @State private var response = ""
-    private var kandinsky = KandinskyImageGeneration()
-    
+    @EnvironmentObject private var defaultStorage: DefaultStorage
+
     var body: some View {
-        VStack {
-            Button {
-                Task {
-//                    if !query.isEmpty {
-//                        await kandinsky.generateQuery(parameters: KandinskyParameters(generateParams: .init(query: query)))
-//                        response = await kandinsky.uuid
-//                    }
+        
+        VStack(alignment: .leading) {
+            HStack {
+                Image(systemName: "person.circle")
+                    .resizable()
+                    .frame(width: 50, height: 50)
+                    .foregroundColor(.gray)
+                
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(defaultStorage.user?.firstName ?? "Иван Иванов")
+                        .font(.headline)
+                        .foregroundColor(.primary)
+                    Text(defaultStorage.user?.phoneNumber.getRussianPhoneMask() ?? "+7 999 999-99-99")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
                 }
-            } label: {
-                Text("GENERATE")
+                
+                Spacer()
+                
+                Image(systemName: "chevron.right")
+                    .foregroundColor(.secondary)
             }
-            TextField("Prompt", text: $query)
-                .padding()
-            Text("More \(response)")
-                .onAppear {
-                    
-//                    Task {
-//                        query = await kandinsky.uuid
-//                    }
+            .padding()
+            
+            
+            List {
+                NavigationLink(destination: (AccountView())) {
+                    SettingsRow(icon: "person", title: "Аккаунт")
                 }
+                
+                NavigationLink(destination: Chats()) {
+                    SettingsRow(icon: "bubble.left.and.bubble.right", title: "Чаты")
+                }
+                
+                NavigationLink(destination: Chats()) {
+                    SettingsRow(icon: "sun.max", title: "Тема")
+                }
+                
+                NavigationLink(destination: Chats()) {
+                    SettingsRow(icon: "bell", title: "Уведомления")
+                }
+                
+                NavigationLink(destination: Chats()) {
+                    SettingsRow(icon: "shield", title: "Безопасность")
+                }
+                
+                NavigationLink(destination: Chats()) {
+                    SettingsRow(icon: "folder", title: "Память и ресурсы")
+                }
+                
+                Section {
+                    NavigationLink(destination: Chats()) {
+                        SettingsRow(icon: "questionmark.circle", title: "Помощь")
+                    }
+                    
+                    NavigationLink(destination: Chats()) {
+                        SettingsRow(icon: "envelope", title: "Пригласи друга")
+                    }
+                }
+            }
+            .listStyle(InsetGroupedListStyle())
         }
     }
     
-    struct NewsCell: View {
+    struct SettingsRow: View {
+        var icon: String
         var title: String
-        var desc: String?
         
         var body: some View {
-            ZStack {
-                Rectangle()
-                    .cornerRadius(12)
-                    .foregroundColor(.gray.opacity(0.2))
-                VStack {
-                    Text(title).font(.headline)
-                    Spacer().frame(height: 12)
-                    Text(desc ?? "NOT DESCRIPTION").font(.caption)
-                }
-                .padding()
+            HStack {
+                Image(systemName: icon)
+                    .foregroundColor(.primary)
+                Text(title)
+                    .foregroundColor(.primary)
+                Spacer()
             }
+            .padding(.vertical, 8)
         }
+    }
+}
+
+struct AccountView: View {
+    var body: some View {
+        Text("Аккаунт")
     }
 }
 

@@ -13,6 +13,8 @@ struct WildberriesChatApp: App {
     @State private var router = Router()
     @State private var otp = OneTimePassword()
     @State private var search = Search()
+    @State private var kandinsky = KandinskyImageGeneration()
+    @State private var chatViewModel = ChatViewModel()
     
     var body: some Scene {
         WindowGroup {
@@ -23,6 +25,8 @@ struct WildberriesChatApp: App {
             .environment(router)
             .environment(otp)
             .environment(search)
+            .environment(kandinsky)
+            .environmentObject(chatViewModel)
         }
     }
 }

@@ -13,6 +13,12 @@ struct Chat {
     let id: String
     let contact: Contact
     var messages: [Message]
+
+    func addMessage(_ message: Message) -> Chat {
+        var newChat = self
+        newChat.messages.append(message)
+        return newChat
+    }
 }
 
 extension Chat {
@@ -35,19 +41,19 @@ extension Recording {
 }
 
 extension Message {
-    static var message0 = Message(id: "0", user: User.user, status: .sent, text: "Купил годзиллу")
+    static var message0 = Message(id: "0", user: User.user, status: .read, text: "Купил годзиллу")
     static var message1 = Message(id: "1", user: User.user0, status: .read, text: "Смотри че генерится :)", attachments: [Attachment.message1])
     static var message2 = Message(id: "2", user: User.user0, status: .read, text: "Кайфы, как тебе?", replyMessage: message0.toReplyMessage())
     static var message3 = Message(id: "3", user: User.user, status: .read, text: "Годзилла топчик, позже запишу голосом")
         
     static var message4 = Message(id: "4", user: User.user, status: .read, recording: Recording.message4)
-    static var message5 = Message(id: "5", user: User.user0, text: "че каво")
+    static var message5 = Message(id: "5", user: User.user0, status: .sent, text: "че каво")
 }
 
 extension Chat {
     static var chat0 = Chat(id: "0", contact: Contact.contacts[safe: 0]!, messages: [Message.message0, Message.message1, Message.message2, Message.message3, Message.message4, Message.message5])
-    static var chat1 = Chat(id: "1", contact: Contact.contacts[safe: 4]!, messages: [Message(id: "6", user: User.user4, text: "Как дела?")])
-    static var chat2 = Chat(id: "2", contact: Contact.contacts[safe: 1]!, messages: [Message(id: "7", user: User.user, status: .read, text: "Петя - Годзилла"), Message(id: "8", user: User.user1, text: "Пон, прин")])
+    static var chat1 = Chat(id: "1", contact: Contact.contacts[safe: 4]!, messages: [Message(id: "6", user: User.user4, status: .sent, text: "Как дела?")])
+    static var chat2 = Chat(id: "2", contact: Contact.contacts[safe: 1]!, messages: [Message(id: "7", user: User.user, status: .read, text: "Петя - Годзилла"), Message(id: "8", user: User.user1, status: .read, text: "Пон, прин")])
 }
 
 extension User {

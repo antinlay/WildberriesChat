@@ -9,19 +9,35 @@ import ExyteChat
 import SwiftUI
 import UISystem
 
-@Observable final class ChatViewModel {
-    var chats: [Chat] = [Chat.chat0, Chat.chat1, Chat.chat2]
+final class ChatViewModel: ObservableObject {
+    @Published var chats: [Chat] = [Chat.chat0, Chat.chat1, Chat.chat2]
 
     func send(draft: DraftMessage, contact: Contact, chatId: String) async -> Message {
-        await Message.makeMessage(id: UUID().uuidString, user: User.user, draft: draft)
+        print("before ", chats[0].messages.last!)
+
+        let newMessage = await Message.makeMessage(id: UUID().uuidString, user: User.user, status: .sent, draft: draft)
+        return newMessage
+    }
+    
+    func filteredChats(_ searchQuery: String) -> [Chat] {
+        chats.filter { chat in
+            let contactMatch = chat.contact.firstName.lowercased().contains(searchQuery)
+            let messageMatch = chat.messages.compactMap { $0.text.contains(searchQuery) }.first
+            return contactMatch || messageMatch ?? false
+        }
     }
 }
 
 struct Chats: View {
-    @State var contacts: [Contact] = Contact.contacts
-    @State var chatViewModel = ChatViewModel()
+    @Environment(Search.self) private var search
+    @EnvironmentObject private var chatViewModel: ChatViewModel
+    @EnvironmentObject private var defaultStorage: DefaultStorage
+
+    @State private var contacts: [Contact] = Contact.contacts
+    @State private var chats: [Chat] = [Chat.chat0, Chat.chat1, Chat.chat2]
     
     private var yourStory: some View {
+        
         VStack {
             ZStack {
                 RoundedRectangle(cornerRadius: 18)
@@ -59,17 +75,24 @@ struct Chats: View {
         }
     }
     
-    private var chatContainers: some View {
+    @ViewBuilder private var chatContainers: some View {
+        @Bindable var searchQuery = search
+
         ScrollView {
             SearchBar()
                 .padding(.vertical)
                 .padding(.horizontal, 24)
-            ForEach(chatViewModel.chats.indices, id: \.self) { index in
+            ForEach($chats, id: \.id) { chat in
                 NavigationLink {
-                    Messages()
+                    Messages(chat: chat)
                 } label: {
-                    ChatContainer(contact: chatViewModel.chats[index].contact, messageText: chatViewModel.chats[index].messages.last!.text, dateStatusText: "Today", unreadMessageCount: chatViewModel.chats[index].messages.last!.status != .read ? 1 : 0)
+                    ChatContainer(chat: chat)
                         .padding(.horizontal, 24)
+                }
+            }
+            .onChange(of: search.text) { _, newValue in
+                withAnimation(.interactiveSpring) {
+                    chats = chatViewModel.filteredChats(searchQuery.text)
                 }
             }
         }

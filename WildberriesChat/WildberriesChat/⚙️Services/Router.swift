@@ -19,7 +19,7 @@ enum ChatsRoutes: Route, CaseIterable {
     var view: some View {
         switch self {
         case .messages:
-            Messages()
+            Messages(chat: .constant(.chat0))
         case .newStory:
             NewStory()
         case .stories:

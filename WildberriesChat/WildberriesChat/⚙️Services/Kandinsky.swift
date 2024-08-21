@@ -9,7 +9,7 @@ import SwiftUI
 import OpenAPIURLSession
 import OpenAPIRuntime
 
-actor KandinskyImageGeneration {
+actor KandinskyImageGeneration: Observable {
     let config: URLSessionConfiguration
     
     var transport: URLSessionTransport
@@ -110,6 +110,7 @@ actor KandinskyImageGeneration {
     
     func getStatus() async -> String? {
         do {
+            try await Task.sleep(nanoseconds: 10_000_000_000)
             let output = try await client.getGenerationStatus(path: .init(uuid: uuid))
             switch output {
             case .ok(let ok):
@@ -118,7 +119,6 @@ actor KandinskyImageGeneration {
                     return status
                 } else {
                     print("No images found")
-                    try await Task.sleep(nanoseconds: 30_000_000_000)
                     return "INITIAL"
                 }
             case .default(statusCode: let statusCode, let error):

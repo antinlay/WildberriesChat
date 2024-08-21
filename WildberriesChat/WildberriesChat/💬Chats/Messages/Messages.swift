@@ -10,17 +10,22 @@ import SwiftUI
 import UISystem
 
 struct Messages: View {
+    @Binding var chat: Chat
+    
     @Environment(\.dismiss) private var dismiss
-    var index: Int = 0
-    @State var chatViewModel = ChatViewModel()
-    @State var isAiGeneratorPresented = false
-
+    
+    @EnvironmentObject private var chatViewModel: ChatViewModel
+    @State private var isAiGeneratorPresented = false
+    
     let chatTheme = ChatTheme(colors: .init(mainBackground: .neutralReverse))
     
     private func sendMessage(draft: DraftMessage) {
         Task {
-            let newMessage = await chatViewModel.send(draft: draft, contact: chatViewModel.chats[index].contact, chatId: chatViewModel.chats[index].id)
-            chatViewModel.chats[index].addNewMessage(newMessage: newMessage)
+            let newMessage = await chatViewModel.send(draft: draft,
+                                                      contact: chat.contact,
+                                                      chatId: chat.id)
+            chat.addNewMessage(newMessage: newMessage)
+            print("after", chatViewModel.chats[0].messages.last!)
         }
     }
     
@@ -62,30 +67,36 @@ struct Messages: View {
     }
     
     var body: some View {
-// menu action
-        ChatView(messages: chatViewModel.chats[index].messages, chatType: .conversation, replyMode: .quote, didSendMessage: sendMessage, messageBuilder: messageViewBuilder, inputViewBuilder: inputViewBuilder, messageMenuAction: messageMenuAction)
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    toolbarBackButton {
-                        dismiss()
-                    }
-                }
-                titleItem(chatViewModel.chats[index].contact.firstName)
-                searchItem
-                ToolbarItem(placement: .topBarTrailing) {
-                    toolbarBurgerButton {
-                        isAiGeneratorPresented = true
-                    }
+        let messages = chat.messages
+        
+        ChatView(messages: messages,
+                 chatType: .conversation, replyMode: .quote,
+                 didSendMessage: sendMessage,
+                 messageBuilder: messageViewBuilder,
+                 inputViewBuilder: inputViewBuilder,
+                 messageMenuAction: messageMenuAction)
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                toolbarBackButton {
+                    dismiss()
                 }
             }
-            .sheet(isPresented: $isAiGeneratorPresented, content: {
-                NavigationStack {
-                    AiGenerator()
-                        .presentationBackground(.thinMaterial)
+            titleItem(chat.contact.firstName)
+            searchItem
+            ToolbarItem(placement: .topBarTrailing) {
+                toolbarBurgerButton {
+                    isAiGeneratorPresented = true
                 }
-            })
-            .navigationBarBackButtonHidden(true)
-            .chatTheme(chatTheme)
+            }
+        }
+        .sheet(isPresented: $isAiGeneratorPresented, content: {
+            NavigationStack {
+                AiGenerator()
+                    .presentationBackground(.thinMaterial)
+            }
+        })
+        .navigationBarBackButtonHidden(true)
+        .chatTheme(chatTheme)
         
     }
 }
@@ -94,7 +105,7 @@ class ImageSaver: NSObject {
     func writeToPhotoAlbum(image: UIImage) {
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(saveCompleted), nil)
     }
-
+    
     @objc func saveCompleted(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         print("Save finished!")
     }
@@ -103,13 +114,13 @@ class ImageSaver: NSObject {
 
 #Preview {
     NavigationStack {
-        Messages()
+        Messages(chat: .constant(.chat0))
     }
 }
 
 #Preview("Dark") {
     NavigationStack {
-        Messages()
+        Messages(chat: .constant(.chat0))
             .preferredColorScheme(.dark)
     }
 }

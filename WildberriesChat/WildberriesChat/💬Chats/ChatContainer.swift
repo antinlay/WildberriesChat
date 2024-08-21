@@ -7,14 +7,14 @@
 
 import SwiftUI
 import UISystem
+import ExyteChat
 
 struct ChatContainer: View {
-    var contact: Contact
-    var messageText: String
-    var dateStatusText: String
-    var unreadMessageCount: Int
-    
-    private var avatar: some View {
+    @Binding var chat: Chat
+
+    @ViewBuilder private var avatar: some View {
+        let contact = chat.contact
+        
         RoundedRectangle(cornerRadius: 18)
             .fill(.clear)
             .frame(width: 56, height: 56)
@@ -29,28 +29,37 @@ struct ChatContainer: View {
             }
     }
     
-    private var name: some View {
+    @ViewBuilder private var name: some View {
+        let contact = chat.contact
+        
         Text(contact.firstName)
             .font(.bodyFirst)
             .foregroundStyle(.neutral)
             .frame(height: 24)
     }
     
-    private var dateStatus: some View {
-        Text(dateStatusText)
+    @ViewBuilder private var dateStatus: some View {
+        let messages = chat.messages
+        
+        Text("Today")
             .font(.metadataSecond)
             .foregroundStyle(.appGray)
             .frame(height: 20)
     }
-
-    private var message: some View {
-        Text(messageText)
+    
+    @ViewBuilder private var message: some View {
+        let message = chat.messages.last
+        
+        Text(message?.text ?? "Send your first message...")
             .font(.metadataFirst)
             .foregroundStyle(.appGray)
             .frame(height: 20)
     }
     
-    private var messageCount: some View {
+    @ViewBuilder private var messageCount: some View {
+        let messages = chat.messages
+        let unreadMessageCount = messages.filter { $0.status != .read }.count
+        
         ZStack {
             Circle().frame(width: 21, height: 20)
                 .foregroundColor(.tagCircle)
@@ -59,6 +68,7 @@ struct ChatContainer: View {
                 .fontWeight(.semibold)
                 .foregroundStyle(.tagNumber)
         }
+        .opacity(unreadMessageCount < 1 ? .zero : 1 )
     }
     
     var body: some View {
@@ -74,7 +84,6 @@ struct ChatContainer: View {
                     message
                     Spacer()
                     messageCount
-                        .opacity(unreadMessageCount < 1 ? .zero : 1 )
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
@@ -85,5 +94,5 @@ struct ChatContainer: View {
 }
 
 #Preview {
-    ChatContainer(contact: Contact.contacts.first!, messageText: "че каво", dateStatusText: "Сегодня", unreadMessageCount: 1)
+    ChatContainer(chat: .constant(.chat0))
 }
