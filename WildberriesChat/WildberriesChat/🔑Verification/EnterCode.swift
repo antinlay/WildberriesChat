@@ -20,19 +20,19 @@ struct EnterCode: View {
     @State private var timeRemaining = 12
     
     private var actionText: some View {
-        Text("Введите код")
+        Text("Enter code")
             .font(.headingSecond)
     }
     
     private var interpretationText: some View {
-        Text("Отправили код \(otp.code) на номер\n  \(otp.phoneNumber.getRussianPhoneMask())")
+        Text("Code sent \(otp.code) for phone number\n  \(otp.phoneNumber.getRussianPhoneMask())")
             .font(.bodySecond)
             .multilineTextAlignment(.center)
             .lineSpacing(8)
     }
     
     private var resendCodeButton: some View {
-        Button("Запросить код повторно" + (timeRemaining == 0 ? "" : " (\(timeRemaining))")) {
+        Button("Request repeate" + (timeRemaining == 0 ? "" : " (\(timeRemaining))")) {
             timeRemaining = 12
             buttonDisabled = true
             otp±

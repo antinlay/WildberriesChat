@@ -12,12 +12,12 @@ struct PrivacyAndTerms: View {
     @State private var isTermsPresented = false
     
     var body: some View {
-        Text("Нажимая кнопку продолжить я соглашаюсь с ")
+        Text("By clicking the continue button, I agree with ")
             .font(.metadataSecond)
             .foregroundStyle(.appGray)
             .padding(2)
         HStack(spacing: 0) {
-            Text("Политикой Конфиденциальности")
+            Text("Privacy Policy")
                 .font(.metadataSecond)
                 .foregroundStyle(.accent)
                 .onTapGesture {
@@ -27,10 +27,10 @@ struct PrivacyAndTerms: View {
                     UserAgreement()
                         .presentationBackground(.thinMaterial)
                 })
-            Text(" и ")
+            Text(" and ")
                 .font(.metadataSecond)
                 .foregroundStyle(.appGray)
-            Text("Условиями Использования")
+            Text("Terms of Use")
                 .font(.metadataSecond)
                 .foregroundColor(.accent)
                 .onTapGesture {

@@ -118,7 +118,7 @@ actor KandinskyImageGeneration: Observable {
                     images = jsonImages
                     return status
                 } else {
-                    print("No images found")
+//                    print("No images found")
                     return "INITIAL"
                 }
             case .default(statusCode: let statusCode, let error):

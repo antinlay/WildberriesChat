@@ -13,12 +13,12 @@ struct PhoneNumber: View {
     @Binding var countryCode: String
     
     private var actionText: some View {
-        Text("Введите номер телефона")
+        Text("Enter phone number")
             .font(.headingSecond)
     }
     
     private var interpretationText: some View {
-        Text("Мы вышлем код подтверждения\n на указанный номер")
+        Text("We send code\n to current number")
             .font(.bodySecond)
             .multilineTextAlignment(.center)
             .lineSpacing(8)

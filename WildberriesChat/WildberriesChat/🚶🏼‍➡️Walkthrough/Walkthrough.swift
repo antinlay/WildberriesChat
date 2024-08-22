@@ -18,7 +18,7 @@ struct Walkthrough: View {
                 .ignoresSafeArea()
             VStack {
                 PrivacyAndTerms()
-                Button("Начать общаться") {
+                Button("Start chatting") {
                     router.navigate(to: OnBoardingRoutes.verification)
                 }
                 .buttonStyle(ActionButton(isDisabled: false))

@@ -39,7 +39,7 @@ struct ChatContainer: View {
     }
     
     @ViewBuilder private var dateStatus: some View {
-        let messages = chat.messages
+//        let messages = chat.messages
         
         Text("Today")
             .font(.metadataSecond)

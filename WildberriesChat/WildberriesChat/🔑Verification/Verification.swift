@@ -29,7 +29,7 @@ struct Verification: View {
     }
     
     private var continueButton: some View {
-        Button("Продолжить") {
+        Button("Continue") {
             isLoading = true
             otp.phoneNumber = "\(countryCode)\(phoneNumber)"
             sendSMS()

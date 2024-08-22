@@ -21,11 +21,11 @@ struct WildberriesChatApp: App {
             NavigationStack(path: $router.navigationPath) {
                 ContentView()
             }
-            .environmentObject(defaultStorage)
             .environment(router)
             .environment(otp)
             .environment(search)
             .environment(kandinsky)
+            .environmentObject(defaultStorage)
             .environmentObject(chatViewModel)
         }
     }

@@ -16,7 +16,7 @@ struct Illustration: View {
     }
     
     private var slogan: some View {
-        Text("Общайтесь с друзьями\n и близкими легко")
+        Text("Communicate with friends\n and family easily")
             .font(.headingSecond)
             .foregroundStyle(.neutral)
             .multilineTextAlignment(.center)

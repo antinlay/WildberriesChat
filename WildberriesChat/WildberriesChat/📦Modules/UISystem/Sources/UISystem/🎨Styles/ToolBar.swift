@@ -11,7 +11,8 @@ public extension View {
     var burgerItem: some View {
 //        Image(ImageResource(name: "Chat/Burger", bundle: .main))
         Image(systemName: "wand.and.stars")
-            .font(.headingSecond)
+            .resizable()
+//            .font(.headingSecond)
             .padding(.trailing, 10)
     }
     

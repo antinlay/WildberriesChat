@@ -68,6 +68,7 @@
 		5C7C58722C776482005D48B6 /* StorageSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C58712C776482005D48B6 /* StorageSetting.swift */; };
 		5C7C58742C776491005D48B6 /* HelpSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C58732C776491005D48B6 /* HelpSetting.swift */; };
 		5C7C58762C77649B005D48B6 /* InviteFriendSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7C58752C77649B005D48B6 /* InviteFriendSetting.swift */; };
+		5C7C587A2C77ADDC005D48B6 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5C7C58792C77ADDC005D48B6 /* Localizable.xcstrings */; };
 		5C8F59042C1A1B08004DA54D /* PrivacyAndTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F59032C1A1B08004DA54D /* PrivacyAndTerms.swift */; };
 		5C8F59062C1A1BEE004DA54D /* Illustration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8F59052C1A1BEE004DA54D /* Illustration.swift */; };
 		5CC496EE2C6FA2F000778887 /* ContactSwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC496ED2C6FA2F000778887 /* ContactSwiftData.swift */; };
@@ -201,6 +202,7 @@
 		5C7C58712C776482005D48B6 /* StorageSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageSetting.swift; sourceTree = "<group>"; };
 		5C7C58732C776491005D48B6 /* HelpSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpSetting.swift; sourceTree = "<group>"; };
 		5C7C58752C77649B005D48B6 /* InviteFriendSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendSetting.swift; sourceTree = "<group>"; };
+		5C7C58792C77ADDC005D48B6 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		5C8F59032C1A1B08004DA54D /* PrivacyAndTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyAndTerms.swift; sourceTree = "<group>"; };
 		5C8F59052C1A1BEE004DA54D /* Illustration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Illustration.swift; sourceTree = "<group>"; };
 		5CC496ED2C6FA2F000778887 /* ContactSwiftData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSwiftData.swift; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				5C1D4B8A2C63BE12008E007B /* Info.plist */,
+				5C7C58792C77ADDC005D48B6 /* Localizable.xcstrings */,
 				5C00F5E82C635B750076DF6E /* 📦Modules */,
 				5C5CE48D2C1ECB76009DCFF3 /* 👩🏼‍🚀Avatar */,
 				5C5CE49E2C216CCC009DCFF3 /* 💬Chats */,
@@ -651,6 +654,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 5C515DCF2C11322500EFDB9C;
 			packageReferences = (
@@ -693,6 +697,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CDF5FE72C662EA100DDCDC4 /* Assets.xcassets in Resources */,
+				5C7C587A2C77ADDC005D48B6 /* Localizable.xcstrings in Resources */,
 				5CD862072C6E38D2002127DA /* openapi-generator-config.yaml in Resources */,
 				5C515DE32C11322600EFDB9C /* Preview Assets.xcassets in Resources */,
 				5CD862052C6E38A8002127DA /* openapi.yaml in Resources */,
@@ -826,7 +831,7 @@
 				INFOPLIST_FILE = WildberriesChatIntents/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WildberriesChatIntents;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -854,7 +859,7 @@
 				INFOPLIST_FILE = WildberriesChatIntents/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WildberriesChatIntents;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

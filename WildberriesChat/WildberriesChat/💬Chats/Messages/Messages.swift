@@ -123,4 +123,5 @@ class ImageSaver: NSObject {
         Messages(chat: .constant(.chat0))
             .preferredColorScheme(.dark)
     }
+    .environmentObject(ChatViewModel())
 }

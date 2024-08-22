@@ -136,8 +136,8 @@ enum OnBoardingRoutes: Route {
     }
 }
 
-@Observable
-final class Router {
+@MainActor
+@Observable final class Router {
     var navigationPath = NavigationPath()
     var selectedTab: any Route = OnBoardingRoutes.walkthrough
     
