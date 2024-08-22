@@ -83,7 +83,7 @@ public extension View {
 
 public extension View {
     func toolbarBackButton(completion: @escaping () -> Void) -> some View {
-        return Button {
+        Button {
             completion()
         } label: {
             shevronItem
@@ -91,7 +91,7 @@ public extension View {
     }
     
     func toolbarBurgerButton(completion: @escaping () -> Void) -> some View {
-        return Button {
+        Button {
             completion()
         } label: {
             burgerItem

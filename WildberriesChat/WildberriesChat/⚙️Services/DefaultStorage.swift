@@ -9,11 +9,22 @@ import SwiftUI
 import Contacts
 
 final class DefaultStorage: ObservableObject {
-    @Published var contacts: [Contact] = []
+    var contacts: [Contact]
     
     private let store = CNContactStore()
     private let userDefaults = UserDefaults.standard
     private let userKey = "user"
+    
+    init(contacts: [Contact] = []) {
+        self.contacts = contacts
+        Task {
+            do {
+                try await fetchContacts()
+            } catch {
+                print("Error")
+            }
+        }
+    }
     
     var user: LocalUser? {
         get {
@@ -47,18 +58,15 @@ final class DefaultStorage: ObservableObject {
     func fetchContacts() async throws {
         try await checkAuthorization()
         contacts = try await withCheckedThrowingContinuation { continuation in
-            let keysToFetch = [CNContactPhoneNumbersKey, CNContactGivenNameKey, CNContactImageDataKey]
+            let keysToFetch = [CNContactPhoneNumbersKey, CNContactGivenNameKey, CNContactFamilyNameKey, CNContactImageDataKey]
             let request = CNContactFetchRequest(keysToFetch: keysToFetch as [CNKeyDescriptor])
             var newContacts: [Contact] = Contact.contacts
             do {
-                // Enumerate through the contacts and convert them to custom Contact objects.
                 try store.enumerateContacts(with: request) { contact, _ in
                     newContacts.append(contact.toContact())
                 }
-                // Resume the continuation with the retrieved contacts on success.
                 return continuation.resume(with: .success(newContacts))
             } catch {
-                // Resume the continuation with an error if an exception occurs.
                 return continuation.resume(throwing: error)
             }
         }
@@ -67,10 +75,20 @@ final class DefaultStorage: ObservableObject {
 
 extension CNContact {
     func toContact() -> Contact {
-        Contact(image: self.imageData, 
-                firstName: self.givenName, 
+        Contact(imageData: self.imageData,
+                firstName: self.givenName + " \(self.familyName)",
                 onlineStatus: "",
                 activeStories: false,
                 phoneNumber: self.phoneNumbers.first?.value.stringValue ?? "")
+    }
+}
+
+extension LocalUser {
+    func toContact() -> Contact {
+        Contact(imageData: self.photo,
+                firstName: self.firstName,
+                onlineStatus: "Online",
+                activeStories: false,
+                phoneNumber: self.phoneNumber)
     }
 }

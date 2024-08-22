@@ -33,7 +33,8 @@ struct ContactDetails: View {
     
     var body: some View {
         VStack {
-            AvatarProfile(avatarURL: contact.avatarURL)
+            AvatarProfile(contact: contact)
+                .frame(width: 200, height: 200)
                 .padding(.bottom, 20)
             VStack {
                 Text(contact.firstName)
@@ -48,6 +49,7 @@ struct ContactDetails: View {
         }
         .frame(maxHeight: .infinity, alignment: .top)
         .padding(.top, 46)
+        .navigationBarBackButtonHidden(true)
         
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
@@ -58,7 +60,7 @@ struct ContactDetails: View {
             titleItem("Profile")
             editProfileItem
         }
-        .navigationBarBackButtonHidden(true)
+        .modifier(AppBackground())
     }
 }
 
@@ -66,4 +68,5 @@ struct ContactDetails: View {
     NavigationStack {
         ContactDetails(contact: Contact.contacts.last!)
     }
+    .environment(Router())
 }

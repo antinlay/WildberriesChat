@@ -9,96 +9,83 @@ import SwiftUI
 import UISystem
 
 struct More: View {
+    @Environment(Router.self) private var router
     @EnvironmentObject private var defaultStorage: DefaultStorage
-
-    var body: some View {
-        
-        VStack(alignment: .leading) {
-            HStack {
-                Image(systemName: "person.circle")
-                    .resizable()
-                    .frame(width: 50, height: 50)
-                    .foregroundColor(.gray)
-                
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(defaultStorage.user?.firstName ?? "Иван Иванов")
-                        .font(.headline)
-                        .foregroundColor(.primary)
-                    Text(defaultStorage.user?.phoneNumber.getRussianPhoneMask() ?? "+7 999 999-99-99")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
+    
+    private func userContainer(user: Contact) -> some View {
+            HStack(spacing: 20) {
+                AvatarProfile(contact: user)
+                    .frame(width: 50)
+                    .padding(.leading)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(user.firstName)
+                        .font(.bodyFirst)
+                        .foregroundStyle(.neutral)
+                        .frame(height: 24)
+                    Text(user.phoneNumber.getRussianPhoneMask())
+                        .font(.metadataFirst)
+                        .foregroundStyle(.appGray)
+                        .frame(height: 20)
                 }
-                
-                Spacer()
-                
-                Image(systemName: "chevron.right")
-                    .foregroundColor(.secondary)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                Image(.shevron)
+                    .foregroundColor(.neutral)
+                    .scaleEffect(x: -1)
+                    .padding(.trailing)
             }
-            .padding()
-            
-            
-            List {
-                NavigationLink(destination: (AccountView())) {
-                    SettingsRow(icon: "person", title: "Аккаунт")
-                }
-                
-                NavigationLink(destination: Chats()) {
-                    SettingsRow(icon: "bubble.left.and.bubble.right", title: "Чаты")
-                }
-                
-                NavigationLink(destination: Chats()) {
-                    SettingsRow(icon: "sun.max", title: "Тема")
-                }
-                
-                NavigationLink(destination: Chats()) {
-                    SettingsRow(icon: "bell", title: "Уведомления")
-                }
-                
-                NavigationLink(destination: Chats()) {
-                    SettingsRow(icon: "shield", title: "Безопасность")
-                }
-                
-                NavigationLink(destination: Chats()) {
-                    SettingsRow(icon: "folder", title: "Память и ресурсы")
-                }
-                
-                Section {
-                    NavigationLink(destination: Chats()) {
-                        SettingsRow(icon: "questionmark.circle", title: "Помощь")
-                    }
-                    
-                    NavigationLink(destination: Chats()) {
-                        SettingsRow(icon: "envelope", title: "Пригласи друга")
-                    }
-                }
-            }
-            .listStyle(InsetGroupedListStyle())
-        }
+            .frame(maxHeight: 66)
     }
     
-    struct SettingsRow: View {
-        var icon: String
-        var title: String
-        
-        var body: some View {
-            HStack {
-                Image(systemName: icon)
-                    .foregroundColor(.primary)
-                Text(title)
-                    .foregroundColor(.primary)
-                Spacer()
+    var body: some View {
+        ScrollView {
+            if let user = defaultStorage.user?.toContact() {
+                NavigationLink {
+                    ContactDetails(contact: user)
+                } label: {
+                    userContainer(user: user)
+                        .padding(.vertical, 8)
+                }
             }
-            .padding(.vertical, 8)
+
+            VStack {
+                Group {
+                    NavigationLink("Account") { AccountSetting() }.buttonStyle(SettingButton(icon: "Account"))
+                    
+                    NavigationLink("Chats") { ChatsSetting() }.buttonStyle(SettingButton(icon: "Chats"))
+                    
+                }
+                .padding(.vertical, 8)
+                .padding(.horizontal)
+            }
+            .padding(.bottom, 8)
+            
+            VStack {
+                Group {
+                    NavigationLink("Theme") { ThemeSetting() }.buttonStyle(SettingButton(icon: "Theme"))
+                    
+                    NavigationLink("Notifications") { NotificationSetting() }.buttonStyle(SettingButton(icon: "Notifications"))
+                    
+                    NavigationLink("Privacy") { SecuritySetting() }.buttonStyle(SettingButton(icon: "Privacy"))
+                    
+                    NavigationLink("Storage") { StorageSetting() }.buttonStyle(SettingButton(icon: "Storage"))
+                    
+                    Divider()
+                    NavigationLink("Help") { HelpSetting() }.buttonStyle(SettingButton(icon: "Help"))
+                    
+                    NavigationLink("Invite") { InviteFriendSetting() }.buttonStyle(SettingButton(icon: "Invite"))
+                }
+                .padding(.vertical, 8)
+                .padding(.horizontal)
+            }
+            
         }
+        .modifier(AppBackground())
     }
 }
 
-struct AccountView: View {
-    var body: some View {
-        Text("Аккаунт")
-    }
-}
 
 #Preview {
     More()
+        .environment(Router())
+        .environmentObject(DefaultStorage())
 }

@@ -20,10 +20,12 @@ final class ChatViewModel: ObservableObject {
     }
     
     func filteredChats(_ searchQuery: String) -> [Chat] {
-        chats.filter { chat in
-            let contactMatch = chat.contact.firstName.lowercased().contains(searchQuery)
-            let messageMatch = chat.messages.compactMap { $0.text.contains(searchQuery) }.first
-            return contactMatch || messageMatch ?? false
+        guard !searchQuery.isEmpty else { return chats }
+        
+        return chats.filter { chat in
+            let contactMatch = chat.contact.firstName.localizedStandardContains(searchQuery)
+            let messageMatch = !chat.messages.filter { $0.text.localizedStandardContains(searchQuery) }.isEmpty
+            return contactMatch || messageMatch
         }
     }
 }
@@ -34,10 +36,9 @@ struct Chats: View {
     @EnvironmentObject private var defaultStorage: DefaultStorage
 
     @State private var contacts: [Contact] = Contact.contacts
-    @State private var chats: [Chat] = [Chat.chat0, Chat.chat1, Chat.chat2]
+    @State private var chats: [Chat] = []
     
     private var yourStory: some View {
-        
         VStack {
             ZStack {
                 RoundedRectangle(cornerRadius: 18)
@@ -105,10 +106,15 @@ struct Chats: View {
             Divider()
             chatContainers
         }
+        .onAppear {
+            chats = chatViewModel.chats
+        }
+        .modifier(AppBackground())
     }
 }
 
 #Preview {
     Chats()
         .environment(Search())
+        .environmentObject(ChatViewModel())
 }

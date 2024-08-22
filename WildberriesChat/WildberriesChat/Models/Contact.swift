@@ -11,7 +11,7 @@ import ExyteChat
 struct Contact: Identifiable {
     var id = UUID()
     var avatarURL: URL?
-    var image: Data?
+    var imageData: Data?
     var firstName: String
     var onlineStatus: String
     var activeStories: Bool

@@ -27,3 +27,29 @@ public struct ActionButton: ButtonStyle {
             .animation(.interactiveSpring(), value: configuration.isPressed)
     }
 }
+
+public struct SettingButton: ButtonStyle {
+    var icon: String
+    
+    public init(icon: String) {
+        self.icon = icon
+    }
+    
+    public func makeBody(configuration: Configuration) -> some View {
+        HStack(spacing: 6) {
+            Rectangle()
+                .fill(.clear)
+                .frame(width: 24, height: 24)
+                .overlay(alignment: .leading, content: {
+                    Image("Settings/\(icon)", bundle: .main)
+                })
+            configuration.label
+                .font(.bodyFirst)
+                .frame(maxWidth: .infinity, maxHeight: 40, alignment: .leading)
+            Image("Shevron", bundle: .main)
+                .foregroundColor(Color("NeutralColor", bundle: .main))
+                .scaleEffect(x: -1)
+        }
+    }
+}
+

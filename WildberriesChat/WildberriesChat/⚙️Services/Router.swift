@@ -56,6 +56,30 @@ enum MoreRoutes: Route, CaseIterable {
     case storage
     case help
     case inviteFriend
+
+    @ViewBuilder
+    var view: some View {
+        switch self {
+        case .profile:
+            ProfileSetting()
+        case .account:
+            AccountSetting()
+        case .chats:
+            ChatsSetting()
+        case .theme:
+            ThemeSetting()
+        case .notification:
+            NotificationSetting()
+        case .security:
+            SecuritySetting()
+        case .storage:
+            StorageSetting()
+        case .help:
+            HelpSetting()
+        case .inviteFriend:
+            InviteFriendSetting()
+        }
+    }
 }
 
 enum BottomBarRoutes: Route, CaseIterable {

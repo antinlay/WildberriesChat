@@ -12,25 +12,36 @@ struct Avatar: View {
     var contact: Contact
     @StateObject private var imageLoader = ImageLoader()
     
-    var body: some View {
+    @ViewBuilder private var avatarLoader: some View {
         let initials = getInitials(from: contact.firstName)
         
-        switch contact.avatarURL {
-        case .some(let avatarURL):
-            if let avatar = imageLoader.image {
-                AvatarThumbnail(avatar: avatar)
-                    .clipShape(.rect(cornerRadius: 16))
-            } else {
+        Group {
+            switch contact.avatarURL {
+            case .some(let avatarURL):
+                if let avatar = imageLoader.image {
+                    AvatarThumbnail(avatar: avatar)
+                        .clipShape(.rect(cornerRadius: 16))
+                } else {
+                    AvatarContactInitials(initials: initials)
+                        .overlay {
+                            ProgressView()
+                        }
+                        .onAppear {
+                            imageLoader.load(from: avatarURL)
+                        }
+                }
+            case .none:
                 AvatarContactInitials(initials: initials)
-                    .overlay {
-                        ProgressView()
-                    }
-                    .onAppear {
-                        imageLoader.load(from: avatarURL)
-                    }
             }
-        case .none:
-            AvatarContactInitials(initials: initials)
+        }
+    }
+    
+    var body: some View {
+        if let imageData = contact.imageData, let avatar = UIImage(data: imageData) {
+            AvatarThumbnail(avatar: avatar)
+                .clipShape(.rect(cornerRadius: 16))
+        } else {
+            avatarLoader
         }
     }
     

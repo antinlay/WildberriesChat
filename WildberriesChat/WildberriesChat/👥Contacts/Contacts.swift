@@ -36,15 +36,8 @@ struct Contacts: View {
                 }
             }
         }
-        .onReceive(defaultStorage.$contacts, perform: { newContacts in
-                contacts = newContacts
-        })
-        .task {
-            do {
-                try await defaultStorage.fetchContacts()
-            } catch {
-                print("Error")
-            }
+        .onAppear {
+            contacts = defaultStorage.contacts
         }
         .onChange(of: search.text) { _, newValue in
             withAnimation(.interactiveSpring) {
